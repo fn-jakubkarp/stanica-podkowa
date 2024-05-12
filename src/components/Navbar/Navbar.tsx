@@ -16,21 +16,46 @@ const Navbar: React.FC = () => {
         className={`fixed inset-0 bg-text bg-opacity-75 z-10 transition-opacity duration-300 ${isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <nav className="bg-accent h-screen">
-          <ul className="text-white flex flex-col h-screen justify-around p-16">
-            <li className="border">
-              <a href="#">O nas</a>
+          <ul className="text-white flex flex-col h-screen justify-around py-16">
+            <li className="border flex-1 h-auto">
+              <a
+                href="#"
+                className="h-full w-full text-center flex items-center px-8"
+              >
+                O nas
+              </a>
             </li>
-            <li>
-              <a href="#">Atrakcje</a>
+            <li className="border flex-1 h-auto">
+              <a
+                href="#"
+                className="h-full w-full text-center flex items-center px-8"
+              >
+                Atrakcje
+              </a>
             </li>
-            <li>
-              <a href="#">Galeria</a>
+            <li className="border flex-1 h-auto">
+              <a
+                href="#"
+                className="h-full w-full text-center flex items-center px-8"
+              >
+                Galeria
+              </a>
             </li>
-            <li>
-              <a href="#">Jak dojechać</a>
+            <li className="border flex-1 h-auto">
+              <a
+                href="#"
+                className="h-full w-full text-center flex items-center px-8"
+              >
+                Jak dojechać
+              </a>
             </li>
-            <li>
-              <a href="#">Kontakt</a>
+            <li className="border flex-1 h-auto">
+              <a
+                href="#"
+                className="h-full w-full text-center flex items-center px-8"
+              >
+                Kontakt
+              </a>
             </li>
           </ul>
         </nav>
@@ -49,5 +74,3 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
-// }
-// className={`${isNavVisible ? "flex" : "hidden"} md:flex md:absolute md:bg-white md:min-h-[60vh] md:flex-col  md:top-1/2 md:right-0 md:translate-y-[-50%] md:w-[200px] md:items-center md:gap-4`}
