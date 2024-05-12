@@ -7,15 +7,15 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ clicked }) => {
     <>
       <span
         id="line-1"
-        className={`block h-0.5 w-full bg-black transition-transform duration-300 ${clicked ? "transform rotate-45 translate-y-2" : ""}`}
+        className={`block h-0.5 w-full bg-text transition-transform duration-300 ${clicked ? "transform rotate-45 translate-y-2" : ""}`}
       ></span>
       <span
         id="line-2"
-        className={`block h-0.5 w-full bg-black transition-opacity duration-300 ${clicked ? "opacity-0" : "opacity-100"}`}
+        className={`block h-0.5 w-full bg-text transition-opacity duration-300 ${clicked ? "opacity-0" : "opacity-100"}`}
       ></span>
       <span
         id="line-3"
-        className={`block h-0.5 w-full bg-black transition-transform duration-300 ${clicked ? "transform -rotate-45 -translate-y-2" : ""}`}
+        className={`block h-0.5 w-full bg-text transition-transform duration-300 ${clicked ? "transform -rotate-45 -translate-y-2 " : ""}`}
       ></span>
     </>
   );
