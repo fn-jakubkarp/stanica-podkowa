@@ -27,14 +27,20 @@ function App() {
           className="flex flex-col h-screen justify-center"
         >
           {/* noclegi - konie - grill - sauna - imprezy */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {/* <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> */}
+          <Card image="../src/assets/background.JPG" alt="Sauna">
+            <h3 className="text-3xl font-bold mb-2">Grill</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Similique, nulla.
+            </p>
+          </Card>
+          {/* <Card image="../src/assets/background.JPG" name="Sauna" />
             <Card image="../src/assets/background.JPG" name="Sauna" />
             <Card image="../src/assets/background.JPG" name="Sauna" />
             <Card image="../src/assets/background.JPG" name="Sauna" />
-            <Card image="../src/assets/background.JPG" name="Sauna" />
-            <Card image="../src/assets/background.JPG" name="Sauna" />
-            <Card image="../src/assets/background.JPG" name="Sauna" />
-          </div>
+            <Card image="../src/assets/background.JPG" name="Sauna" /> */}
+          {/* </div> */}
         </section>
 
         <section id="galeria" className="flex flex-col h-screen justify-center">
@@ -49,7 +55,7 @@ function App() {
         </section>
 
         <section id="kontakt" className="flex flex-col h-screen justify-center">
-          Tel: 222 Email: dd@gmail.com
+          Tel: +48 730 698 503 Email: dd@gmail.com
         </section>
       </main>
     </>
