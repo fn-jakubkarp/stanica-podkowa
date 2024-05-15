@@ -13,6 +13,7 @@ const Card: React.FC<CardProps> = ({ image, alt, children, ...props }) => {
       <img
         src={image}
         alt={alt}
+        loading="lazy"
         className="group-hover:scale-110 transition-transform duration-300 aspect-video object-cover max-h-60 w-full h-full"
       />
       <div className="absolute flex inset-0 items-end bg-gradient-to-t from-black/60 to-transparent">

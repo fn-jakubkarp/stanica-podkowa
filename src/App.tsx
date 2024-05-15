@@ -10,7 +10,7 @@ import Accordion from "./components/UI/Accordion/Accordion";
 import StickyContact from "./components/UI/StickyContact/StickyContact";
 
 // Assets
-import background from "./assets/background.jpg";
+import background from "./assets/background.webp";
 import grill from "./assets/grill.jpg";
 import sauna from "./assets/sauna.jpg";
 import imprezy from "./assets/imprezy.jpg";
