@@ -1,14 +1,16 @@
-import Card from "./components/Card/Card";
+import Card from "./components/UI/Card/Card";
 import Navbar from "./components/Navbar/Navbar";
+import Accordion from "./components/UI/Accordion/Accordion";
 import Footer from "./components/Footer/Footer";
 import "./styles/main.css";
+import StickyContact from "./components/UI/StickyContact/StickyContact";
 
 function App() {
   return (
     <>
-      <main className="bg-background flex flex-col min-h-screen flex-column justify-center items-center  scroll-smooth">
+      <main className="bg-background flex flex-col min-h-screen flex-column justify-center items-center scroll-smooth">
         <Navbar />
-
+        <StickyContact />
         {/* HERO */}
         <img
           src="../src/assets/background.jpg"
@@ -28,8 +30,11 @@ function App() {
         </section>
 
         {/* O NAS */}
-        <section id="o-nas" className="flex flex-col h-screen justify-center">
-          <h2>Doświadcz uroku Stanicy Podkowa</h2>
+        <section
+          id="o-nas"
+          className="flex flex-col h-screen justify-center px-4 gap-2"
+        >
+          <h2 className="text-4xl">Doświadcz uroku Stanicy Podkowa</h2>
           <p>
             Witaj w Stanicy <span>Podkowa</span>, gdzie oferujemy autentyczne
             agroturystyczne doświadczenie. Naszą misją jest zapewnienie
@@ -46,8 +51,7 @@ function App() {
             experience the joys of farm life. We are committed to sustainable
             farming practices and fostering a sense of community.
           </p>
-          <h3>Poznaj nas</h3>
-          Kamil i Kasia
+          <h3 className="text-3xl">Poznaj nas</h3>
           <img src="../src/assets/my.jpg" className="w-[200px]" />
           <ul>
             <li>Authentic farm experiences</li>
@@ -60,9 +64,9 @@ function App() {
         {/* ATRAKCJE */}
         <section
           id="atrakcje"
-          className="flex flex-col h-screen justify-center"
+          className="flex flex-col min-h-screen justify-center"
         >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="flex flex-wrap">
             <Card image="../src/assets/grill.jpg" alt="Grill">
               <h3 className="text-3xl font-bold mb-2">Grill</h3>
               <p>
@@ -77,7 +81,6 @@ function App() {
                 odprężając ciało i umysł
               </p>
             </Card>
-
             <Card image="../src/assets/imprezy.jpg" alt="Imprezy">
               <h3 className="text-3xl font-bold mb-2">Imprezy</h3>
               <p>
@@ -117,20 +120,96 @@ function App() {
         {/* JAK DOJECHAC */}
         <section
           id="jak-dojechac"
-          className="flex flex-col h-screen justify-center"
+          className="flex flex-col w-screen  justify-center"
         >
           <p>Męcina Wielka 115, 38-307 Sękowa</p>
-          {/* <iframe
+          <iframe
             src="https://snazzymaps.com/embed/607749"
             width="100%"
-            height="600px"
+            height="300px"
             className="border-none"
-          ></iframe> */}
+          ></iframe>
         </section>
 
         {/* KONTAKT */}
         <section id="kontakt" className="flex flex-col h-screen justify-center">
-          Tel: +48 730 698 503 Email: dd@gmail.com
+          <div className="flex min-h-screen items-center justify-start">
+            <div className="mx-auto w-full max-w-lg">
+              <h1 className="text-4xl font-medium">Skontaktuj się</h1>
+
+              <form action="https://api.web3forms.com/submit" className="mt-10">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="YOUR_ACCESS_KEY_HERE"
+                />
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="relative z-0">
+                    <input
+                      type="text"
+                      name="name"
+                      className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                      placeholder=" "
+                    />
+                    <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+                      Imie
+                    </label>
+                  </div>
+                  <div className="relative z-0">
+                    <input
+                      type="text"
+                      name="email"
+                      className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                      placeholder=" "
+                    />
+                    <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+                      Email
+                    </label>
+                  </div>
+                  <div className="relative z-0 col-span-2">
+                    <textarea
+                      name="message"
+                      className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                      placeholder=" "
+                    ></textarea>
+                    <label className="absolute top-3 -z-10 origin-[0] -translate-y-6 scale-75 transform text-sm text-gray-500 duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-blue-600 peer-focus:dark:text-blue-500">
+                      Twoja wiadomość
+                    </label>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  className="mt-5 rounded-md bg-black px-10 py-2 text-white"
+                >
+                  Wyślij
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section
+          id="faq"
+          className="flex flex-col w-screen p-4 justify-center gap-4 bg-accent"
+        >
+          <h3 className="text-3xl pb-2">Najczęściej zadawane pytania</h3>
+          <Accordion
+            question="Czy termin jest dostępny?"
+            answer="Zadzwoń i zapytaj"
+          />
+          <Accordion
+            question="Czy można zoorganizować u Państwa wieczór kawalerski?"
+            answer="Nie."
+          />
+          <Accordion
+            question="Czy można przyjechac do Państwa z psem?"
+            answer="Nie."
+          />
+          <Accordion
+            question="Czy sauna i balia jest w cenie noclegu?"
+            answer="Sauna i balia są odpłatne osobno"
+          />
         </section>
       </main>
       <Footer />
