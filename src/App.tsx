@@ -6,6 +6,8 @@ import "./styles/main.css";
 import StickyContact from "./components/UI/StickyContact/StickyContact";
 
 function App() {
+
+
   return (
     <>
       <main className="bg-background flex flex-col min-h-screen flex-column justify-center items-center scroll-smooth">
