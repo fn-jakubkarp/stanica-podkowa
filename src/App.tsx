@@ -1,9 +1,23 @@
-import Card from "./components/UI/Card/Card";
-import Navbar from "./components/Navbar/Navbar";
-import Accordion from "./components/UI/Accordion/Accordion";
-import Footer from "./components/Footer/Footer";
 import "./styles/main.css";
+
+// Import layout components
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
+
+// Import UI components
+import Card from "./components/UI/Card/Card";
+import Accordion from "./components/UI/Accordion/Accordion";
 import StickyContact from "./components/UI/StickyContact/StickyContact";
+
+// Assets
+import background from "./assets/background.jpg";
+import grill from "./assets/grill.jpg";
+import sauna from "./assets/sauna.jpg";
+import imprezy from "./assets/imprezy.jpg";
+import konie from "./assets/konie.jpg";
+import my from "./assets/my.jpg";
+import noclegi from "./assets/noclegi.jpg";
+import paintball from "./assets/paintball.jpg";
 
 function App() {
   return (
@@ -13,7 +27,7 @@ function App() {
         <StickyContact />
         {/* HERO */}
         <img
-          src="/public/background.jpg"
+          src={background}
           className="absolute top-0 left-0 h-screen object-cover object-left"
         />
 
@@ -52,7 +66,7 @@ function App() {
             farming practices and fostering a sense of community.
           </p>
           <h3 className="text-3xl">Poznaj nas</h3>
-          <img src="../src/assets/my.jpg" className="w-[200px]" />
+          <img src={my} className="w-[200px]" />
           <ul>
             <li>Authentic farm experiences</li>
             <li>Sustainable farming practices</li>
@@ -67,42 +81,42 @@ function App() {
           className="flex flex-col min-h-screen justify-center"
         >
           <div className="flex flex-wrap">
-            <Card image="/assets/grill.jpg" alt="Grill">
+            <Card image={grill} alt="Grill">
               <h3 className="text-3xl font-bold mb-2">Grill</h3>
               <p>
                 Rozkoszuj się soczystymi grillowanymi potrawami w naszym
                 ogrodzie!
               </p>
             </Card>
-            <Card image="../src/assets/sauna.jpg" alt="Sauna">
+            <Card image={sauna} alt="Sauna">
               <h3 className="text-3xl font-bold mb-2">Bania i sauna</h3>
               <p>
                 Zrelaksuj się w naszej autentycznej fińskiej banii i saunie,
                 odprężając ciało i umysł
               </p>
             </Card>
-            <Card image="../src/assets/imprezy.jpg" alt="Imprezy">
+            <Card image={imprezy} alt="Imprezy">
               <h3 className="text-3xl font-bold mb-2">Imprezy</h3>
               <p>
                 Organizujemy niezapomniane imprezy i wydarzenia w malowniczej
                 scenerii.
               </p>
             </Card>
-            <Card image="../src/assets/konie.jpg" alt="Jazda konna">
+            <Card image={konie} alt="Jazda konna">
               <h3 className="text-3xl font-bold mb-2">Jazda konna</h3>
               <p>
                 Odkryj piękno natury podczas jazdy konnej z naszymi
                 doświadczonymi instruktorami.
               </p>
             </Card>
-            <Card image="../src/assets/paintball.jpg" alt="Paintball">
+            <Card image={paintball} alt="Paintball">
               <h3 className="text-3xl font-bold mb-2">Paintball</h3>
               <p>
                 Adrenalina i zabawa czekają na Ciebie na naszym polu do
                 paintballa
               </p>
             </Card>
-            <Card image="../src/assets/noclegi.jpg" alt="Noclegi">
+            <Card image={noclegi} alt="Noclegi">
               <h3 className="text-3xl font-bold mb-2">Noclegi</h3>
               <p>
                 Oferujemy komfortowe noclegi w przytulnych pokojach z widokiem
