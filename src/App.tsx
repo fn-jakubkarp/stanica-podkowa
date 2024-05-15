@@ -67,7 +67,7 @@ function App() {
           className="flex flex-col min-h-screen justify-center"
         >
           <div className="flex flex-wrap">
-            <Card image="../src/assets/grill.jpg" alt="Grill">
+            <Card image="/assets/grill.jpg" alt="Grill">
               <h3 className="text-3xl font-bold mb-2">Grill</h3>
               <p>
                 Rozkoszuj się soczystymi grillowanymi potrawami w naszym
