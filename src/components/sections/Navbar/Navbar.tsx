@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Logo from "../UI/Logo/Logo";
-import HamburgerMenu from "../UI/HamburgerMenu/HamburgerMenu";
+import Logo from "../../UI/Logo/Logo";
+import HamburgerMenu from "../../UI/HamburgerMenu/HamburgerMenu";
 
 const Navbar: React.FC = () => {
   const [isNavVisible, setIsNavVisible] = useState(false);
