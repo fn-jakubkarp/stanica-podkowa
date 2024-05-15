@@ -1,11 +1,11 @@
-import Logo from "../Logo/Logo";
+import Logo from "../UI/Logo/Logo";
 
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <footer className="bg-white" aria-labelledby="footer-heading">
+      <footer className="bg-white h-auto" aria-labelledby="footer-heading">
         <h2 id="footer-heading" className="sr-only">
           Footer
         </h2>
