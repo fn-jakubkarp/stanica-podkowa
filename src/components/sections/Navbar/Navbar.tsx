@@ -2,9 +2,11 @@ import { useState } from "react";
 import Logo from "../../UI/Logo/Logo";
 import HamburgerMenu from "../../UI/HamburgerMenu/HamburgerMenu";
 
-const Navbar: React.FC = () => {
-  const [isNavVisible, setIsNavVisible] = useState(false);
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
+const Navbar: React.FC = () => {
+  // Hide/show navigation on mobile
+  const [isNavVisible, setIsNavVisible] = useState(false);
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
@@ -19,15 +21,36 @@ const Navbar: React.FC = () => {
     }
   };
 
+  // Hide navigation on page scroll
+  const [hidden, setHidden] = useState(false);
+  const { scrollY } = useScroll();
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+    // @ts-ignore
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
+
   return (
-    <header className="flex justify-between items-center w-full p-4 fixed top-0 left-0 z-20 ">
+    <motion.header
+      className="flex justify-between items-center w-full p-4 fixed top-0 left-0 z-20"
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+    >
       <button>
         <a href="#hero">
           <Logo />
         </a>
       </button>
       <div
-        className={`fixed inset-0 bg-text bg-opacity-75 z-10 transition-opacity duration-300 ${isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 bg-opacity-75 z-10 transition-opacity duration-300 ${isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
       >
         <nav className="bg-accent h-screen">
           <ul className="text-white flex flex-col h-screen justify-around py-16">
@@ -88,7 +111,7 @@ const Navbar: React.FC = () => {
           <HamburgerMenu clicked={isNavVisible} />
         </button>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
