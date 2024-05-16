@@ -5,7 +5,6 @@ import Navbar from "./components/sections/Navbar/Navbar";
 import Footer from "./components/sections/Footer/Footer";
 import Hero from "./components/sections/Hero/Hero";
 import ONas from "./components/sections/ONas/ONas";
-import TestComponent from "./components/TestComponent";
 // import Atrakcje from "./components/sections/Atrakcje/Atrakcje";
 // import Galeria from "./components/sections/Galeria/Galeria";
 // import JakDojechac from "./components/sections/JakDojechac/JakDojechac";
@@ -26,7 +25,6 @@ function App() {
         {/* SECTIONS */}
         <Hero />
         {/* <ONas /> */}
-        {/* <TestComponent /> */}
         {/* <Atrakcje />
         <Galeria />
         <JakDojechac />
