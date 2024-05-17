@@ -1,8 +1,6 @@
 import { useTrail, useInView } from "@react-spring/web";
-import { RefObject, useRef } from "react";
 
 function useInViewTrailAnimation(items: string[], duration = 300) {
-  const ref = useRef(null) as RefObject<HTMLDivElement>;
   const [inViewRef, inView] = useInView({});
 
   const trail = useTrail(items.length, {
