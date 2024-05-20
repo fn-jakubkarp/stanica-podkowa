@@ -23,10 +23,9 @@ function App() {
         {/* <StickyContact /> */}
 
         {/* SECTIONS */}
-        <div className="flex flex-col min-h-screen justify-center items-center scroll-smooth">
-          <Hero />
-        </div>
-        <ScrollGallery />
+        <Hero />
+        <p>PIZDA NAD GŁOWĄ</p>
+        {/* <ScrollGallery /> */}
         {/* <ONas /> */}
         {/* <Atrakcje /> */}
         {/* <JakDojechac /> */}

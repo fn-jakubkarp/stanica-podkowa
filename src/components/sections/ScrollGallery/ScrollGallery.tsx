@@ -1,22 +1,16 @@
 import { animated } from "@react-spring/web";
 import { CardType } from "../../UI/Card/Card";
 import Card from "../../UI/Card/Card";
-import Slider from "react-slick";
 
 const ScrollGallery = () => {
   return (
-    // <div className="flex w-[300vw] overflow-y-hidden items-center">
-    //   <animated.div className="flex w-full h-full overflow-x-scroll scroll">
-    //     {cards.map((card) => (
-    //       <Card key={card.id} card={card} />
-    //     ))}
-    //   </animated.div>
-    // </div>
-    <Slider>
-      {cards.map((card) => (
-        <Card key={card.id} card={card} />
-      ))}
-    </Slider>
+    <div className="flex overflow-y-hidden items-center">
+      <animated.div className="flex w-full h-full overflow-x-scroll scroll">
+        {cards.map((card) => (
+          <Card key={card.id} card={card} />
+        ))}
+      </animated.div>
+    </div>
   );
 };
 
