@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Logo from "../../UI/Logo/Logo";
 import HamburgerMenu from "../../UI/HamburgerMenu/HamburgerMenu";
 
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { animated, useSpring } from "@react-spring/web";
 
 const Navbar: React.FC = () => {
   // Hide/show navigation on mobile
@@ -23,26 +23,37 @@ const Navbar: React.FC = () => {
 
   // Hide navigation on page scroll
   const [hidden, setHidden] = useState(false);
-  const { scrollY } = useScroll();
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    const previous = scrollY.getPrevious();
-    // @ts-ignore
-    if (latest > previous && latest > 150) {
-      setHidden(true);
-    } else {
-      setHidden(false);
-    }
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const threshold = 15;
+
+      if (currentScrollY > lastScrollY && currentScrollY > threshold) {
+        setHidden(true);
+      } else {
+        setHidden(false);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
+  const headerSpring = useSpring({
+    to: { transform: hidden ? "translateY(-100%)" : "translateY(0%)" },
+    config: { duration: 350 },
   });
 
   return (
-    <motion.header
+    <animated.header
       className="flex justify-between items-center w-full p-4 fixed top-0 left-0 z-20"
-      variants={{
-        visible: { y: 0 },
-        hidden: { y: "-100%" },
-      }}
-      animate={hidden ? "hidden" : "visible"}
-      transition={{ duration: 0.35, ease: "easeInOut" }}
+      style={headerSpring}
     >
       <button>
         <a href="#hero">
@@ -111,7 +122,7 @@ const Navbar: React.FC = () => {
           <HamburgerMenu clicked={isNavVisible} />
         </button>
       </div>
-    </motion.header>
+    </animated.header>
   );
 };
 
