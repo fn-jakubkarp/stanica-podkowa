@@ -9,7 +9,7 @@ const AnimatedImage: React.FC<AnimatedImageProps> = ({}) => {
   const imageClip = useSpring({
     clipPath: scrollYProgress.to(
       [0, 0.2],
-      ["inset(0% 0% 0% 0%)", "inset(25% 0% 25% 0%)"],
+      ["inset(0% 0% 0% 0%)", "inset(55% 0% 25% 0%)"],
     ),
   });
 

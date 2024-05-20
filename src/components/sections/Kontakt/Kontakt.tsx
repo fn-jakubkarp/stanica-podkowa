@@ -3,8 +3,8 @@ interface KontaktProps {}
 const Kontakt: React.FC<KontaktProps> = ({}) => {
   return (
     <>
-      <section id="kontakt" className="flex flex-col h-screen justify-center">
-        <div className="flex min-h-screen items-center justify-start">
+      <section id="kontakt" className="flex flex-col justify-center">
+        <div className="flex items-center justify-start">
           <div className="mx-auto w-full max-w-lg">
             <h1 className="text-4xl font-medium">Skontaktuj się</h1>
 

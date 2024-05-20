@@ -7,9 +7,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
   return (
     <>
       <AnimatedImage />
-      <div className="relative">
-        <Uroki />
-      </div>
+      <Uroki />
     </>
   );
 };

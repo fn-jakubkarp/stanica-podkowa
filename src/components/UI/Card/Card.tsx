@@ -1,7 +1,7 @@
 const Card = ({ card }: { card: CardType }) => {
   return (
     <>
-      <div className="relative overflow-hidden shadow-lg group md:rounded-md h-full w-full">
+      <div className="relative overflow-hidden shadow-lg group md:rounded-md h-1/2 w-screen">
         <img
           src={card.url}
           alt={card.alt}

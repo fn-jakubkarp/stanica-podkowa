@@ -6,7 +6,7 @@ const Faq: React.FC<FaqProps> = ({}) => {
     <>
       <section
         id="faq"
-        className="flex flex-col w-screen p-4 justify-center gap-4 bg-accent"
+        className="flex flex-col w-screen mt-4 p-4 justify-center gap-4 bg-accent"
       >
         <h3 className="text-3xl pb-2">Najczęściej zadawane pytania</h3>
         <Accordion
