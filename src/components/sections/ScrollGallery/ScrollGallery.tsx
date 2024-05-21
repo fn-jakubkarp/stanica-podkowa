@@ -1,16 +1,41 @@
-import { animated } from "@react-spring/web";
+// Swiper imports
+import { Mousewheel, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "../../../styles/main.css";
+
+import "swiper/css";
+import "swiper/css/mousewheel";
+
+// Custom card component
 import { CardType } from "../../UI/Card/Card";
 import Card from "../../UI/Card/Card";
 
 const ScrollGallery = () => {
   return (
-    <div className="flex overflow-y-hidden items-center">
-      <animated.div className="flex w-full h-full overflow-x-scroll scroll">
-        {cards.map((card) => (
-          <Card key={card.id} card={card} />
-        ))}
-      </animated.div>
-    </div>
+    <>
+      <div className="relative w-full h-1/2 md:w-1/2">
+        <Swiper
+          direction={"horizontal"}
+          slidesPerView={"auto"}
+          spaceBetween={30}
+          mousewheel={true}
+          loop={true}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[Mousewheel, Autoplay]}
+          className="mySwiper w-full h-full"
+        >
+          {cards.map((card) => (
+            <SwiperSlide>
+              <Card key={card.id} card={card} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </>
   );
 };
 
