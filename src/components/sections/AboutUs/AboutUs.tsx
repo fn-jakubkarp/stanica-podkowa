@@ -1,10 +1,12 @@
 import my from "../../../assets/my.jpg";
+import Charms from "./Charms/Charms";
 
-interface ONasProps {}
+interface AboutUsProps {}
 
-const ONas: React.FC<ONasProps> = ({}) => {
+const AboutUs: React.FC<AboutUsProps> = ({}) => {
   return (
     <>
+      <Charms />
       <section
         id="o-nas"
         className="flex flex-col h-screen justify-center px-4 gap-2"
@@ -39,4 +41,4 @@ const ONas: React.FC<ONasProps> = ({}) => {
   );
 };
 
-export default ONas;
+export default AboutUs;

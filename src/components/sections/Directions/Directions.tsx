@@ -1,6 +1,6 @@
-interface JakDojechacProps {}
+interface DirectionsProps {}
 
-const JakDojechac: React.FC<JakDojechacProps> = ({}) => {
+const Directions: React.FC<DirectionsProps> = ({}) => {
   return (
     <>
       <section
@@ -19,4 +19,4 @@ const JakDojechac: React.FC<JakDojechacProps> = ({}) => {
   );
 };
 
-export default JakDojechac;
+export default Directions;
