@@ -15,7 +15,7 @@ import Card from "../../UI/Card/Card";
 const ScrollGallery = () => {
   return (
     <>
-      <div className="relative w-full h-1/2 md:w-1/2">
+      <div className="relative w-full h-1/2 md:w-1/2 my-8">
         <Swiper
           direction={"horizontal"}
           slidesPerView={"auto"}

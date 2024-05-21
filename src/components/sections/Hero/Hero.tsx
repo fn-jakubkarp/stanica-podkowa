@@ -25,7 +25,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <animated.div
-      className="relative w-screen overflow-hidden"
+      className="relative w-dvw overflow-hidden"
       style={sectionCrop}
     >
       <animated.section
@@ -34,10 +34,13 @@ const Hero: React.FC<HeroProps> = ({}) => {
       >
         <animated.img
           src={background}
-          style={{ ...imageClip, ...imageTransform }}
-          className="absolute top-0 left-0 h-full w-full object-cover"
+          style={{
+            ...imageClip,
+            ...imageTransform,
+          }}
+          className="absolute top-0 left-0 h-full w-full object-cover object-left"
         />
-        <animated.h1 className="text-4xl z-10 text-background text-center">
+        <animated.h1 className="text-5xl z-10 text-text-LIGHT text-center relative bottom-1/4">
           Stanica Podkowa
         </animated.h1>
       </animated.section>
