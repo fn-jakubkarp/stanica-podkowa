@@ -30,7 +30,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
     >
       <animated.section
         id="hero"
-        className="flex flex-col relative  min-h-screen h-screen justify-center w-screen overflow-hidden top-0"
+        className="flex flex-col relative min-h-dvh h-dvh justify-center w-screen overflow-hidden top-0"
       >
         <animated.img
           src={background}

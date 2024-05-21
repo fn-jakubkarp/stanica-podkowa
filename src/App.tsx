@@ -16,7 +16,7 @@ import StickyContact from "./components/UI/StickyContact/StickyContact";
 function App() {
   return (
     <>
-      <main className="flex flex-col min-h-screen justify-center items-center scroll-smooth">
+      <main className="flex flex-col min-h-dvh justify-center items-center scroll-smooth">
         <Navbar />
 
         <StickyContact />
