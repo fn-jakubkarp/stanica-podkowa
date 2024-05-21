@@ -20,14 +20,14 @@ const Charms: React.FC<CharmsProps> = ({}) => {
   return (
     <>
       <animated.section
-        className="flex flex-col w-full items-center justify-center py-8 gap-y-12"
+        className="flex flex-col w-full items-center justify-center py-8 my-6 gap-y-12 h-full"
         ref={lettersRef}
       >
         <div className="relative inline-block text-7xl self-end pr-4">
           {lettersTrail.map((props, index) => (
             <animated.span
               key={index}
-              className="text-[#eae6e0] pr-1"
+              className="text-text-LIGHT pr-1"
               style={props}
             >
               {letters[index]}
@@ -36,7 +36,7 @@ const Charms: React.FC<CharmsProps> = ({}) => {
 
           <animated.div
             ref={wordsRef}
-            className="absolute inset-0 text-xl text-[#928474] font-thin flex items-end justify-end pr-6"
+            className="absolute inset-0 text-xl text-text-DARK font-thin flex items-end justify-end pr-6"
           >
             {wordsTrail.map((props, index) => (
               <animated.span key={index} className="mr-1" style={props}>
@@ -50,9 +50,9 @@ const Charms: React.FC<CharmsProps> = ({}) => {
           alt="Zdjęcie nocnego nieba"
           className="h-[150px] w-[350px] object-cover self-start"
         />
-        <animated.div className="text-[#928474] text-3xl -mt-6 font-light">
-          <span className="">TRUE </span>
-          <span className="">PERFECTION.</span>
+        <animated.div className="text-text-DARK text-3xl -mt-6 font-light">
+          <span className="">PRAWDZIWA </span>
+          <span className="">PERFEKCJA.</span>
         </animated.div>
       </animated.section>
     </>

@@ -23,7 +23,8 @@ const config = {
           DEFAULT: "#BC9968",
         },
         text: {
-          DEFAULT: "#0f0800",
+          DARK: "#928474",
+          LIGHT: "#eae6e0",
         },
       },
     },

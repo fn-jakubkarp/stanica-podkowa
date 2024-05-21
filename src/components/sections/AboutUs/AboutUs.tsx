@@ -6,37 +6,30 @@ interface AboutUsProps {}
 const AboutUs: React.FC<AboutUsProps> = ({}) => {
   return (
     <>
-      <Charms />
-      <section
-        id="o-nas"
-        className="flex flex-col h-screen justify-center px-4 gap-2"
-      >
-        <h2 className="text-4xl">Doświadcz uroku Stanicy Podkowa</h2>
-        <p>
-          Witaj w Stanicy <span>Podkowa</span>, gdzie oferujemy autentyczne
-          agroturystyczne doświadczenie. Naszą misją jest zapewnienie
-          wyjątkowego doświadczenia, które połączy Cię z pięknem życia na
-          farmie.
-        </p>
-        <p>
-          Stanica Podkowa was founded in 2000. What started as a small family
-          farm has grown into a thriving agrotourism destination, attracting
-          visitors from all over the world.
-        </p>
-        <p>
-          Our mission is to provide a welcoming environment where guests can
-          experience the joys of farm life. We are committed to sustainable
-          farming practices and fostering a sense of community.
-        </p>
-        <h3 className="text-3xl">Poznaj nas</h3>
-        <img src={my} className="w-[200px]" />
-        <ul>
-          <li>Authentic farm experiences</li>
-          <li>Sustainable farming practices</li>
-          <li>Family-friendly activities</li>
-          <li>Highly rated by our visitors</li>
-        </ul>
-      </section>
+      <div className="flex flex-col h-screen">
+        <Charms />
+        <section
+          id="o-nas"
+          className="flex flex-col justify-center gap-2 text-text-DARK font-light text-sm "
+        >
+          <h3 className="text-3xl px-4">Poznaj nas</h3>
+          <p className="px-4 text-justify">
+            Witaj w <span className="font-bold">Stanicy Podkowa</span>, gdzie
+            oferujemy autentyczne agroturystyczne doświadczenie. Naszą misją
+            jest zapewnienie wyjątkowego doświadczenia, które połączy Cię z
+            pięknem życia na farmie.
+          </p>
+          <img
+            src={my}
+            className="w-[350px] h-[150px] object-cover self-end my-4"
+          />
+          <p className="px-4 text-justify">
+            Stanica Podkowa was founded in 2000. What started as a small family
+            farm has grown into a thriving agrotourism destination, attracting
+            visitors from all over the world.
+          </p>
+        </section>
+      </div>
     </>
   );
 };
