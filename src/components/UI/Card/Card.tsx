@@ -10,6 +10,7 @@ const Card = ({ card }: { card: CardType }) => {
         />
         <div className="absolute flex inset-0 items-end bg-gradient-to-t from-black/60 to-transparent">
           <div className="p-4 text-background disabled">
+            <h3 className="text-3xl font-bold mb-2">{card.title}</h3>
             <p>{card.text}</p>
           </div>
         </div>
@@ -23,6 +24,7 @@ export default Card;
 export type CardType = {
   url: string;
   alt: string;
+  title: string;
   text: string;
   id: number;
 };
