@@ -5,8 +5,7 @@ import Navbar from "./components/sections/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import AboutUs from "./components/sections/AboutUs/AboutUs";
 import ScrollGallery from "./components/sections/ScrollGallery/ScrollGallery";
-// import Atrakcje from "./components/sections/Atrakcje/Atrakcje";
-import Directions from "./components/sections/Directions/Directions";
+// import Directions from "./components/sections/Directions/Directions";
 import Contact from "./components/sections/Contact/Contact";
 import Faq from "./components/sections/Faq/Faq";
 import Footer from "./components/sections/Footer/Footer";
@@ -27,7 +26,7 @@ function App() {
         <Hero />
         <AboutUs />
         <ScrollGallery />
-        <Directions />
+        {/* <Directions /> */}
         <Contact />
         <Faq />
       </main>

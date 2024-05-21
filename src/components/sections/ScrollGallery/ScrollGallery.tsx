@@ -1,11 +1,12 @@
 // Swiper imports
-import { Mousewheel, Autoplay } from "swiper/modules";
+import { Mousewheel, Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "../../../styles/main.css";
 
 import "swiper/css";
 import "swiper/css/mousewheel";
+import "swiper/css/pagination";
 
 // Custom card component
 import { CardType } from "../../UI/Card/Card";
@@ -21,11 +22,18 @@ const ScrollGallery = () => {
           spaceBetween={30}
           mousewheel={true}
           loop={true}
+          pagination={{
+            clickable: true,
+          }}
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
           }}
-          modules={[Mousewheel, Autoplay]}
+          style={{
+            // @ts-ignore
+            "--swiper-pagination-color": "#fff",
+          }}
+          modules={[Mousewheel, Autoplay, Pagination]}
           className="mySwiper w-full h-full"
         >
           {cards.map((card) => (
