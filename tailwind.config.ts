@@ -9,6 +9,10 @@ const config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        josefin: ["Josefin Sans"],
+        open: ["Open Sans"],
+      },
       colors: {
         primary: {
           DEFAULT: "#301c15",
