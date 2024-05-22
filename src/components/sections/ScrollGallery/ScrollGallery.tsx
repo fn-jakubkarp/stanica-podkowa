@@ -51,42 +51,42 @@ export default ScrollGallery;
 
 const cards: CardType[] = [
   {
-    url: "/src/assets/grill.jpg",
+    url: "../../../../src/assets/grill.jpg",
     title: "Grill",
     alt: "Grill",
     text: "Rozkoszuj się soczystymi grillowanymi potrawami w naszym ogrodzie!",
     id: 1,
   },
   {
-    url: "/src/assets/imprezy.jpg",
+    url: "../../../../src/assets/imprezy.jpg",
     title: "Imprezy",
     alt: "Imprezy",
     text: "Organizujemy niezapomniane imprezy i wydarzenia w malowniczej scenerii.",
     id: 2,
   },
   {
-    url: "/src/assets/konie.jpg",
+    url: "/../../../../src/assets/konie.jpg",
     title: "Konie",
     alt: "Konie",
     text: "Odkryj piękno natury podczas jazdy konnej z naszymi doświadczonymi instruktorami.",
     id: 3,
   },
   {
-    url: "/src/assets/noclegi.jpg",
+    url: "/../../../../src/assets/noclegi.jpg",
     title: "Noclegi",
     alt: "Noclegi",
     text: "Oferujemy komfortowe noclegi w przytulnych pokojach z widokiem na naturę.",
     id: 4,
   },
   {
-    url: "/src/assets/sauna.jpg",
+    url: "/../../../../src/assets/sauna.jpg",
     title: "Sauna",
     alt: "Sauna",
     text: "Zrelaksuj się w naszej autentycznej fińskiej banii i saunie, odprężając ciało i umysł",
     id: 5,
   },
   {
-    url: "/src/assets/paintball.jpg",
+    url: "/../../../../src/assets/paintball.jpg",
     title: "Paintball",
     alt: "Paintball",
     text: "Adrenalina i zabawa czekają na Ciebie na naszym polu do paintballa",
