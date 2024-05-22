@@ -1,50 +1,63 @@
-import background from "../../../assets/background.webp";
-import { animated, useScroll, useSpring } from "@react-spring/web";
+import nocne_niebo from "../../../assets/nocne_niebo.webp";
+
+import { animated } from "@react-spring/web";
+import useInViewTrailAnimation from "../../../hooks/useInViewTrailAnimation";
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = ({}) => {
-  const { scrollYProgress } = useScroll();
+  const letters = ["P", "O", "Z", "N", "A", "J"];
+  const words = ["NASZE", "UROKI"];
 
-  const imageClip = useSpring({
-    clipPath: scrollYProgress.to(
-      [0, 0.2],
-      ["inset(0% 0% 0% 0%)", "inset(55% 0% 25% 0%)"],
-    ),
-  });
-
-  const imageTransform = useSpring({
-    transform: scrollYProgress.to(
-      [0, 0.4], // Adjust range to start after clipPath
-      ["translateX(0%)", "translateX(50%)"],
-    ),
-  });
-
-  const sectionCrop = useSpring({
-    height: scrollYProgress.to([0, 0.2], ["100vh", "10vh"]),
-  });
+  const { ref: lettersRef, trail: lettersTrail } = useInViewTrailAnimation(
+    letters,
+    200,
+  );
+  const { ref: wordsRef, trail: wordsTrail } = useInViewTrailAnimation(
+    words,
+    400,
+  );
 
   return (
-    <animated.div
-      className="relative w-dvw overflow-hidden"
-      style={sectionCrop}
-    >
+    <>
       <animated.section
-        id="hero"
-        className="flex flex-col relative min-h-dvh h-dvh justify-center w-screen overflow-hidden top-0"
+        className="Hero flex flex-col w-screen items-center py-4 justify-center gap-y-12 mt-16 h-full"
+        ref={lettersRef}
       >
-        <animated.img
-          src={background}
-          style={{
-            ...imageClip,
-            ...imageTransform,
-          }}
-          className="absolute top-0 left-0 h-full w-full object-cover object-left"
+        <div className="POZNAJ relative inline-block text-7xl mx-4 my-2 self-start">
+          {lettersTrail.map((props, index) => (
+            <animated.span
+              key={index}
+              className="text-text-LIGHT font-josefin pr-1"
+              style={props}
+            >
+              {letters[index]}
+            </animated.span>
+          ))}
+
+          {/* Nasze uroki span */}
+          <animated.div
+            ref={wordsRef}
+            className="NASZEUROKI absolute inset-0 text-xl text-text-DARK font-thin flex items-end justify-end pr-1.5 font-open"
+          >
+            {wordsTrail.map((props, index) => (
+              <animated.span key={index} className="mr-1" style={props}>
+                {words[index]}
+              </animated.span>
+            ))}
+          </animated.div>
+        </div>
+        <img
+          src={nocne_niebo}
+          alt="Zdjęcie nocnego nieba"
+          className="h-[350px] w-[350px] object-cover self-end rounded-l-md"
         />
-        <animated.h1 className="text-5xl z-10 text-text-LIGHT text-center relative bottom-1/4">
-          Stanica Podkowa
-        </animated.h1>
+        <animated.div className="text-text-DARK text-3xl -mt-6 font-light font-open">
+          <span className="">ODKRYJ </span>
+          <span className="">PERFEKCJĘ.</span>
+        </animated.div>
       </animated.section>
-    </animated.div>
+    </>
   );
 };
+
 export default Hero;
