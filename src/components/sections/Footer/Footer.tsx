@@ -13,22 +13,22 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="xl:grid xl:grid-cols-3 xl:gap-8">
             <div className="space-y-8">
               <Logo />
-              <p className="text-sm leading-6 text-gray-600">
+              <p className="text-sm leading-6 text-gray-600 font-josefin">
                 Doświadczenie, którego nie zapomnisz!
               </p>
-              <div className="flex space-x-6">
+              {/* <div className="flex space-x-6">
                 <a href="#" className="text-gray-400 hover:text-gray-500">
                   <span className="sr-only">Facebook</span>
                 </a>
-              </div>
+              </div> */}
             </div>
             <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
               <div className="md:grid md:grid-cols-2 md:gap-8">
                 <div>
-                  <h3 className="text-sm font-semibold leading-6 text-gray-900">
+                  <h3 className="text-sm font-semibold font-open leading-6 text-gray-900">
                     Poznaj się na nas
                   </h3>
-                  <ul role="list" className="mt-6 space-y-4">
+                  <ul role="list" className="mt-6 space-y-4 font-josefin">
                     <li>
                       <a
                         href="#"

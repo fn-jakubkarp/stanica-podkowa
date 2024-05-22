@@ -8,10 +8,12 @@ const Card = ({ card }: { card: CardType }) => {
           loading="lazy"
           className="group-hover:scale-110 transition-transform duration-300 aspect-video object-cover max-h-60 w-full h-full"
         />
-        <div className="absolute flex inset-0 items-end bg-gradient-to-t from-black/60 to-transparent">
-          <div className="p-4 text-background disabled">
-            <h3 className="text-3xl font-bold mb-2">{card.title}</h3>
-            <p>{card.text}</p>
+        <div className="absolute flex inset-0 items-end bg-gradient-to-t from-black/50 to-transparent">
+          <div className="p-4 text-background disabled pb-8">
+            <h3 className="text-3xl mb-2 font-open">{card.title}</h3>
+            <p className="font-joseph text-sm flex flex-wrap pr-8">
+              {card.text}
+            </p>
           </div>
         </div>
       </div>

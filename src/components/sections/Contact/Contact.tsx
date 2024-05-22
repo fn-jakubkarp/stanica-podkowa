@@ -3,17 +3,14 @@ interface ContactProps {}
 const Contact: React.FC<ContactProps> = ({}) => {
   return (
     <>
-      <section id="kontakt" className="flex flex-col justify-center h-[50vh]">
+      <section id="kontakt" className="flex flex-col justify-center h-[50vh] ">
         <div className="flex items-center justify-start">
           <div className="mx-auto w-full max-w-lg">
-            <h1 className="text-4xl font-medium">Skontaktuj się</h1>
+            <h1 className="text-4xl font-medium font-josefin">
+              Skontaktuj się
+            </h1>
 
             <form action="https://api.web3forms.com/submit" className="mt-10">
-              <input
-                type="hidden"
-                name="access_key"
-                value="YOUR_ACCESS_KEY_HERE"
-              />
               <div className="grid gap-6 sm:grid-cols-2">
                 <div className="relative z-0">
                   <input
@@ -52,7 +49,7 @@ const Contact: React.FC<ContactProps> = ({}) => {
                 type="submit"
                 className="mt-5 rounded-md bg-black px-10 py-2 text-white"
               >
-                Wyślij
+                Zadzwoń
               </button>
             </form>
           </div>

@@ -13,19 +13,19 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
     <div className="py-2">
       <button
         onClick={() => setTabOpen(!tabOpen)}
-        className="flex items-start justify-between w-full"
+        className="flex items-start justify-between w-full flex-nowrap"
       >
-        <span>{question}</span>
+        <span className="text-sm font-open">{question}</span>
         {tabOpen ? (
-          <RiArrowDropDownFill className="text-3xl rotate-180" />
+          <RiArrowDropDownFill className="text-xl rotate-180" />
         ) : (
-          <RiArrowDropDownFill className="transition rotate-0 text-3xl" />
+          <RiArrowDropDownFill className="transition rotate-0 text-xl" />
         )}
       </button>
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out text-text opacity-90 text-sm ${tabOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden">{answer}</div>
+        <div className="overflow-hidden font-open">{answer}</div>
       </div>
     </div>
   );
