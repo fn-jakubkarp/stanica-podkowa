@@ -15,7 +15,7 @@ import Card from "../../UI/Card/Card";
 const ScrollGallery = () => {
   return (
     <>
-      <div className="relative w-full h-1/2 md:w-1/2 my-8">
+      <div className="relative w-full h-1/2 md:w-1/2 my-8 px-4">
         <Swiper
           direction={"horizontal"}
           slidesPerView={"auto"}
@@ -34,7 +34,7 @@ const ScrollGallery = () => {
             "--swiper-pagination-color": "#fff",
           }}
           modules={[Mousewheel, Autoplay, Pagination]}
-          className="mySwiper w-full h-full"
+          className="mySwiper w-full h-full rounded-md px-4"
         >
           {cards.map((card) => (
             <SwiperSlide>
