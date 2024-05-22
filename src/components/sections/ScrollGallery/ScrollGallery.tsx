@@ -8,6 +8,13 @@ import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/pagination";
 
+import grill from "../../../assets/grill.jpg";
+import imprezy from "../../../assets/imprezy.jpg";
+import konie from "../../../assets/konie.jpg";
+import noclegi from "../../../assets/noclegi.jpg";
+import sauna from "../../../assets/sauna.jpg";
+import paintball from "../../../assets/paintball.jpg";
+
 // Custom card component
 import { CardType } from "../../UI/Card/Card";
 import Card from "../../UI/Card/Card";
@@ -51,42 +58,42 @@ export default ScrollGallery;
 
 const cards: CardType[] = [
   {
-    url: "../../../../src/assets/grill.jpg",
+    url: grill,
     title: "Grill",
     alt: "Grill",
     text: "Rozkoszuj się soczystymi grillowanymi potrawami w naszym ogrodzie!",
     id: 1,
   },
   {
-    url: "../../../../src/assets/imprezy.jpg",
+    url: imprezy,
     title: "Imprezy",
     alt: "Imprezy",
     text: "Organizujemy niezapomniane imprezy i wydarzenia w malowniczej scenerii.",
     id: 2,
   },
   {
-    url: "/../../../../src/assets/konie.jpg",
+    url: konie,
     title: "Konie",
     alt: "Konie",
     text: "Odkryj piękno natury podczas jazdy konnej z naszymi doświadczonymi instruktorami.",
     id: 3,
   },
   {
-    url: "/../../../../src/assets/noclegi.jpg",
+    url: noclegi,
     title: "Noclegi",
     alt: "Noclegi",
     text: "Oferujemy komfortowe noclegi w przytulnych pokojach z widokiem na naturę.",
     id: 4,
   },
   {
-    url: "/../../../../src/assets/sauna.jpg",
+    url: sauna,
     title: "Sauna",
     alt: "Sauna",
     text: "Zrelaksuj się w naszej autentycznej fińskiej banii i saunie, odprężając ciało i umysł",
     id: 5,
   },
   {
-    url: "/../../../../src/assets/paintball.jpg",
+    url: paintball,
     title: "Paintball",
     alt: "Paintball",
     text: "Adrenalina i zabawa czekają na Ciebie na naszym polu do paintballa",
