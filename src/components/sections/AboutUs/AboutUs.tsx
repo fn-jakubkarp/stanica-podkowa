@@ -9,7 +9,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
 
   return (
     <>
-      <div className="flex h-full flex-col">
+      <div className="mb-4 flex h-full flex-col">
         <section
           id="o-nas"
           className="flex flex-col justify-center  text-sm font-light text-text-DARK"
