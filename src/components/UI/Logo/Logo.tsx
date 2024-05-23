@@ -4,8 +4,8 @@ interface LogoProps {}
 
 const Logo: React.FC<LogoProps> = () => {
   return (
-    <div className="flex gap-2 items-center">
-      <img src={logo} alt="Logo" className="w-[100px] h-auto " />
+    <div className="flex items-center gap-2">
+      <img src={logo} alt="Logo" className="h-auto w-[100px] " />
       {/* <span className="text-text">Stanica Podkowa</span> */}
     </div>
   );

@@ -42,11 +42,11 @@ const StickyContact: React.FC = () => {
 
   return (
     <animated.div
-      className="fixed flex justify-around bottom-0 transform -translate-x-1/2 bg-white text-text w-full z-50 h-[50px] sm:hidden"
+      className="text-text fixed bottom-0 z-50 flex h-[50px] w-full -translate-x-1/2 transform justify-around bg-white sm:hidden"
       style={stickySpring}
     >
       <button
-        className="border-r flex items-center justify-center w-1/4 hover:bg-gray-200 "
+        className="flex w-1/4 items-center justify-center border-r hover:bg-gray-200 "
         aria-label="Map"
         role="button"
       >
@@ -54,7 +54,7 @@ const StickyContact: React.FC = () => {
       </button>
       <button
         onClick={handleCall}
-        className="flex items-center gap-2 w-3/4 justify-center hover:bg-gray-200 "
+        className="flex w-3/4 items-center justify-center gap-2 hover:bg-gray-200 "
         aria-label="Call for reservation"
         role="button"
       >

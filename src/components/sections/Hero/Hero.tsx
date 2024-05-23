@@ -20,14 +20,14 @@ const Hero: React.FC<HeroProps> = ({}) => {
   return (
     <>
       <animated.section
-        className="Hero flex flex-col w-screen items-center py-4 justify-center gap-y-12 mt-16 h-full"
+        className="Hero mt-16 flex h-full w-screen flex-col items-center justify-center gap-y-12 py-4"
         ref={lettersRef}
       >
-        <div className="POZNAJ relative inline-block text-7xl mx-4 my-2 self-start">
+        <div className="POZNAJ relative mx-4 my-2 inline-block self-start text-7xl">
           {lettersTrail.map((props, index) => (
             <animated.span
               key={index}
-              className="text-text-LIGHT font-josefin pr-1"
+              className="pr-1 font-josefin text-text-LIGHT"
               style={props}
             >
               {letters[index]}
@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           {/* Nasze uroki span */}
           <animated.div
             ref={wordsRef}
-            className="NASZEUROKI absolute inset-0 text-xl text-text-DARK font-light flex items-end justify-end pr-1.5 font-open"
+            className="NASZEUROKI absolute inset-0 flex items-end justify-end pr-1.5 font-open text-xl font-light text-text-DARK"
           >
             {wordsTrail.map((props, index) => (
               <animated.span key={index} className="mr-1" style={props}>
@@ -49,9 +49,9 @@ const Hero: React.FC<HeroProps> = ({}) => {
         <img
           src={nocne_niebo}
           alt="Zdjęcie nocnego nieba"
-          className="h-[350px] w-[350px] object-cover self-end rounded-l-md"
+          className="h-[350px] w-[350px] self-end rounded-l-md object-cover"
         />
-        <animated.div className="text-text-DARK text-3xl -mt-6 font-light font-open">
+        <animated.div className="-mt-6 font-open text-3xl font-light text-text-DARK">
           <span className="">ODKRYJ </span>
           <span className="">PERFEKCJĘ.</span>
         </animated.div>

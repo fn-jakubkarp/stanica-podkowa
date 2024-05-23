@@ -5,7 +5,6 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:tailwindcss/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
@@ -17,5 +16,3 @@ module.exports = {
     ],
   },
 };
-import tailwind from "eslint-plugin-tailwindcss";
-export default [...tailwind.configs["flat/recommended"]];

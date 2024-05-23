@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
 
   return (
     <animated.header
-      className="flex justify-between items-center w-full p-4 fixed top-0 left-0 z-20"
+      className="fixed left-0 top-0 z-20 flex  w-screen items-center justify-between p-4"
       style={headerSpring}
     >
       <button>
@@ -61,50 +61,50 @@ const Navbar: React.FC = () => {
         </a>
       </button>
       <div
-        className={`fixed inset-0 bg-opacity-75 z-10 transition-opacity duration-300 ${isNavVisible ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        className={`fixed inset-0 z-10 bg-opacity-75 transition-opacity duration-300 ${isNavVisible ? "opacity-100" : "pointer-events-none opacity-0"}`}
       >
-        <nav className="bg-accent h-screen">
-          <ul className="text-white flex flex-col h-screen justify-around py-16">
-            <li className="border flex-1 h-auto">
+        <nav className="h-screen bg-accent">
+          <ul className="flex h-screen flex-col justify-around py-16 text-white">
+            <li className="h-auto flex-1 border">
               <a
                 href="#o-nas"
                 onClick={() => scrollToSection("o-nas")}
-                className="h-full w-full text-center flex items-center px-8"
+                className="flex h-full w-full items-center px-8 text-center"
               >
                 O nas
               </a>
             </li>
-            <li className="border flex-1 h-auto">
+            <li className="h-auto flex-1 border">
               <a
                 href="#atrakcje"
-                className="h-full w-full text-center flex items-center px-8"
+                className="flex h-full w-full items-center px-8 text-center"
                 onClick={() => scrollToSection("atrakcje")}
               >
                 Atrakcje
               </a>
             </li>
-            <li className="border flex-1 h-auto">
+            <li className="h-auto flex-1 border">
               <a
                 href="#galeria"
-                className="h-full w-full text-center flex items-center px-8"
+                className="flex h-full w-full items-center px-8 text-center"
                 onClick={() => scrollToSection("galeria")}
               >
                 Galeria
               </a>
             </li>
-            <li className="border flex-1 h-auto">
+            <li className="h-auto flex-1 border">
               <a
                 href="#jak-dojechac"
-                className="h-full w-full text-center flex items-center px-8"
+                className="flex h-full w-full items-center px-8 text-center"
                 onClick={() => scrollToSection("jak-dojechac")}
               >
                 Jak dojechać
               </a>
             </li>
-            <li className="border flex-1 h-auto">
+            <li className="h-auto flex-1 border">
               <a
                 href="#kontakt"
-                className="h-full w-full text-center flex items-center px-8"
+                className="flex h-full w-full items-center px-8 text-center"
                 onClick={() => scrollToSection("kontakt")}
               >
                 Kontakt
@@ -113,11 +113,11 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
       </div>
-      <div className="flex h-6 w-6 md:hidden text-2xl text-text z-30 items-center justify-center">
+      <div className="text-text z-30 flex h-6 w-6 items-center justify-center text-2xl md:hidden">
         <button
           onClick={toggleNav}
           aria-expanded={isNavVisible}
-          className="flex flex-col justify-around h-full w-full items-end"
+          className="flex h-full w-full flex-col items-end justify-around"
         >
           <HamburgerMenu clicked={isNavVisible} />
         </button>

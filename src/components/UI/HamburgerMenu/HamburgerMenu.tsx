@@ -7,7 +7,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ clicked }) => {
     <>
       <span
         id="line-1"
-        className={`block h-0.5 w-full bg-background transition-transform duration-300 ${clicked ? "transform rotate-45 translate-y-2" : ""}`}
+        className={`block h-0.5 w-full bg-background transition-transform duration-300 ${clicked ? "translate-y-2 rotate-45 transform" : ""}`}
       ></span>
       <span
         id="line-2"
@@ -15,7 +15,7 @@ const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ clicked }) => {
       ></span>
       <span
         id="line-3"
-        className={`block h-0.5 w-full bg-background transition-transform duration-300 ${clicked ? "transform -rotate-45 -translate-y-2 " : ""}`}
+        className={`block h-0.5 w-full bg-background transition-transform duration-300 ${clicked ? "-translate-y-2 -rotate-45 transform " : ""}`}
       ></span>
     </>
   );

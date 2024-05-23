@@ -1,17 +1,17 @@
 const Card = ({ card }: { card: CardType }) => {
   return (
     <>
-      <div className="relative overflow-hidden shadow-lg group md:rounded-md h-1/2 w-screen">
+      <div className="group relative h-1/2 w-screen overflow-hidden shadow-lg md:rounded-md">
         <img
           src={card.url}
           alt={card.alt}
           loading="lazy"
-          className="group-hover:scale-110 transition-transform duration-300 aspect-video object-cover max-h-60 w-full h-full"
+          className="aspect-video h-full max-h-60 w-full object-cover transition-transform duration-300 group-hover:scale-110"
         />
-        <div className="absolute flex inset-0 items-end bg-gradient-to-t from-black/50 to-transparent">
-          <div className="p-4 text-background disabled pb-8">
-            <h3 className="text-3xl mb-2 font-open">{card.title}</h3>
-            <p className="font-joseph text-sm flex flex-wrap pr-8">
+        <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent">
+          <div className="disabled p-4 pb-8 text-background">
+            <h3 className="mb-2 font-open text-3xl">{card.title}</h3>
+            <p className="font-joseph flex flex-wrap pr-8 text-sm">
               {card.text}
             </p>
           </div>

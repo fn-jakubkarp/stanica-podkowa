@@ -12,17 +12,17 @@ const Footer: React.FC<FooterProps> = () => {
               <a href="#" className="flex items-center">
                 <img
                   src={LOGOTYP}
-                  className="h-8 me-3"
+                  className="me-3 h-8"
                   alt="Stanica Podkowa Logo"
                 />
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               <div>
-                <h2 className="mb-6 text-md uppercase font-open font-bold text-text-DARK">
+                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
                   Sekcje
                 </h2>
-                <ul className="font-josefin text-md text-text-DARK">
+                <ul className="text-md font-josefin text-text-DARK">
                   <li>
                     <a href="#" className="hover:underline">
                       Idź do góry
@@ -52,10 +52,10 @@ const Footer: React.FC<FooterProps> = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-md uppercase font-open font-bold text-text-DARK">
+                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
                   Kontakt
                 </h2>
-                <ul className="font-josefin text-md text-text-DARK">
+                <ul className="text-md font-josefin text-text-DARK">
                   <li className="hover:underline">
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
                   </li>
@@ -69,10 +69,10 @@ const Footer: React.FC<FooterProps> = () => {
 
               {/* Adres */}
               <div>
-                <h2 className="mb-6 text-md uppercase font-open font-bold text-text-DARK">
+                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
                   Adres
                 </h2>
-                <ul className="font-josefin text-md text-text-DARK">
+                <ul className="text-md font-josefin text-text-DARK">
                   <li className="mb-4">
                     <a
                       href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
@@ -89,24 +89,24 @@ const Footer: React.FC<FooterProps> = () => {
           </div>
 
           {/* Copyrights section */}
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="font-josefin text-md text-text-DARK">
+            <span className="text-md font-josefin text-text-DARK">
               © 2024{" "}
               <a href="#" className="hover:underline">
                 Stanica Podkowa™
               </a>
               . Wszelkie prawa zastrzeżone.
             </span>
-            <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <div className="mt-4 flex sm:mt-0 sm:justify-center">
               <a
                 href="https://www.facebook.com/agroturystykapodkowa/"
-                className="font-josefin text-md text-text-DARK"
+                className="text-md font-josefin text-text-DARK"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <svg
-                  className="w-4 h-4"
+                  className="h-4 w-4"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"

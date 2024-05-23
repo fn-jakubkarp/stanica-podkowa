@@ -5,7 +5,7 @@ const Directions: React.FC<DirectionsProps> = ({}) => {
     <>
       <section
         id="jak-dojechac"
-        className="flex flex-col w-screen  justify-center"
+        className="flex w-screen flex-col  justify-center"
       >
         <p>Męcina Wielka 115, 38-307 Sękowa</p>
 
