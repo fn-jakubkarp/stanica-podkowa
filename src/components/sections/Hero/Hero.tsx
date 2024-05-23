@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           {/* Nasze uroki span */}
           <animated.div
             ref={wordsRef}
-            className="NASZEUROKI absolute inset-0 text-xl text-text-DARK font-thin flex items-end justify-end pr-1.5 font-open"
+            className="NASZEUROKI absolute inset-0 text-xl text-text-DARK font-light flex items-end justify-end pr-1.5 font-open"
           >
             {wordsTrail.map((props, index) => (
               <animated.span key={index} className="mr-1" style={props}>
