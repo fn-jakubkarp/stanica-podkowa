@@ -1,16 +1,19 @@
 import "./styles/main.css";
 
 // Import layout components
-import Navbar from "./components/sections/Navbar/Navbar";
+import Navbar from "./components/layout/Navbar/Navbar";
+import Footer from "./components/layout/Footer/Footer";
+
+// Import section components
 import Hero from "./components/sections/Hero/Hero";
 import AboutUs from "./components/sections/AboutUs/AboutUs";
-import ScrollGallery from "./components/UI/ScrollGallery/ScrollGallery";
+import OurOffer from "./components/sections/OurOffer/OurOffer";
 import Directions from "./components/sections/Directions/Directions";
 import Contact from "./components/sections/Contact/Contact";
 import Faq from "./components/sections/Faq/Faq";
-import Footer from "./components/sections/Footer/Footer";
 
 // Import UI components
+import ScrollGallery from "./components/UI/ScrollGallery/ScrollGallery";
 import StickyContact from "./components/UI/StickyContact/StickyContact";
 
 function App() {
@@ -23,6 +26,7 @@ function App() {
         {/* SECTIONS */}
         <Hero />
         <AboutUs />
+        <OurOffer />
         <ScrollGallery />
         <Contact />
         <Directions />
