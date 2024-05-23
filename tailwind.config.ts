@@ -21,7 +21,7 @@ const config = {
           DEFAULT: "#efe0c9",
         },
         secondary: {
-          DEFAULT: "#de643b",
+          DEFAULT: "#eae6e0",
         },
         accent: {
           DEFAULT: "#BC9968",
