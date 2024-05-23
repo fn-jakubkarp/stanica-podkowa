@@ -4,7 +4,7 @@ import "./styles/main.css";
 import Navbar from "./components/sections/Navbar/Navbar";
 import Hero from "./components/sections/Hero/Hero";
 import AboutUs from "./components/sections/AboutUs/AboutUs";
-import ScrollGallery from "./components/sections/ScrollGallery/ScrollGallery";
+import ScrollGallery from "./components/UI/ScrollGallery/ScrollGallery";
 import Directions from "./components/sections/Directions/Directions";
 import Contact from "./components/sections/Contact/Contact";
 import Faq from "./components/sections/Faq/Faq";

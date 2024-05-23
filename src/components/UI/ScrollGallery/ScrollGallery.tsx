@@ -16,8 +16,8 @@ import sauna from "../../../assets/sauna.jpg";
 import paintball from "../../../assets/paintball.jpg";
 
 // Custom card component
-import { CardType } from "../../UI/Card/Card";
-import Card from "../../UI/Card/Card";
+import { CardType } from "../Card/Card";
+import Card from "../Card/Card";
 
 const ScrollGallery = () => {
   return (
