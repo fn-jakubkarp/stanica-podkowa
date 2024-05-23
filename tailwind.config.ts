@@ -35,6 +35,9 @@ const config = {
     },
   },
   plugins: [daisyui],
+  daisyui: {
+    themes: ["default"],
+  },
 };
 
 export default config;
