@@ -22,14 +22,14 @@ const Hero: React.FC<HeroProps> = ({}) => {
   return (
     <>
       <animated.section
-        className="Hero mt-16 flex h-full w-screen flex-col items-center justify-center gap-y-12 py-4"
+        className="Hero mt-16 flex h-full w-screen flex-col items-center justify-center gap-y-12 py-4 md:py-8"
         ref={lettersRef}
       >
-        <div className="POZNAJ relative mx-4 my-2 inline-block self-start text-7xl">
+        <div className="POZNAJ relative mx-4 md:mx-8 my-2 inline-block self-start text-7xl">
           {lettersTrail.map((props, index) => (
             <animated.span
               key={index}
-              className="pr-1 font-josefin text-text-LIGHT"
+              className="pr-1 font-josefin text-text-DARK"
               style={props}
             >
               {letters[index]}
@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           {/* Nasze uroki span */}
           <animated.div
             ref={wordsRef}
-            className="NASZEUROKI absolute inset-0 flex items-end justify-end pr-1.5 font-open text-xl font-light text-text-DARK"
+            className="NASZEUROKI absolute inset-0 flex items-end justify-end pr-1.5 font-open text-xl md:text-3xl font-light text-text-DARK"
           >
             {wordsTrail.map((props, index) => (
               <animated.span key={index} className="mr-1" style={props}>
@@ -51,9 +51,9 @@ const Hero: React.FC<HeroProps> = ({}) => {
         <img
           src={nocne_niebo}
           alt="Zdjęcie nocnego nieba"
-          className="h-[350px] w-[350px] self-end rounded-l-md object-cover"
+          className="h-[320px] w-[320px] self-end rounded-l-md object-cover md:aspect-square md:h-auto md:w-2/3"
         />
-        <animated.div className="-mt-6 font-open text-3xl font-light text-text-DARK">
+        <animated.div className="-mt-6 font-open text-3xl md:text-5xl font-light text-text-DARK">
           <span className="">ODKRYJ </span>
           <span className="">PERFEKCJĘ.</span>
         </animated.div>

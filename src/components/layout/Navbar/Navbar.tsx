@@ -52,7 +52,7 @@ const Navbar: React.FC = () => {
 
   return (
     <animated.header
-      className="fixed left-0 top-0 z-20 flex  w-screen items-center justify-between p-4"
+      className="fixed left-0 top-0 z-20 flex  w-screen items-center justify-between p-4 md:p-8"
       style={headerSpring}
     >
       <button>
@@ -113,7 +113,7 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
       </div>
-      <div className="text-text z-30 flex h-6 w-6 items-center justify-center text-2xl md:hidden">
+      <div className="text-text z-30 flex h-6 w-6 items-center justify-center text-2xl lg:hidden">
         <button
           onClick={toggleNav}
           aria-expanded={isNavVisible}
