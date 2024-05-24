@@ -12,8 +12,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
       <div className="mb-4 flex h-full flex-col">
         <section
           id="o-nas"
-          className="flex flex-col justify-center text-sm md:text-base font-light text-text-DARK"
-          ref={textRef}
+          className="flex flex-col justify-center text-base md:text-base font-light text-text-DARK"
         >
           <p className="px-4 md:px-8 text-justify font-josefin md:text-xl">
             Witaj w <span className="font-bold">Stanicy Podkowa</span>, gdzie
@@ -29,6 +28,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
             <p
               className="px-4 text-justify md:pl-4 md:pr-8 md:text-xl md:text-left"
               style={slidingText(textView)}
+              ref={textRef}
             >
               Stanica Podkowa was founded in 2000. What started as a small
               family farm has grown into a thriving agrotourism destination,
