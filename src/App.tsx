@@ -5,6 +5,7 @@ import RootLayout from "./layouts/RootLayout";
 
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const PriceList = lazy(() => import("./pages/PriceList"));
 
 const router = createBrowserRouter([
   {
@@ -23,10 +24,21 @@ const router = createBrowserRouter([
         path: "/loader",
         element: <Loader />,
       },
-
+      {
+        path: "/cennik",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <PriceList />
+          </Suspense>
+        ),
+      },
       {
         path: "*",
-        element: <NotFound />,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <NotFound />
+          </Suspense>
+        ),
       },
     ],
   },
