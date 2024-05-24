@@ -17,14 +17,14 @@ body {
 
 h1,
 h2,
-h3,
-span {
-  @apply font-josefin;
+h3 {
+  @apply font-open;
 }
 
 div,
 p,
 a,
-button {
-  @apply font-open;
+button,
+span {
+  @apply font-josefin;
 }
