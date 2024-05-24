@@ -1,40 +1,35 @@
-import "./styles/main.css";
+import { Suspense, lazy } from "react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Loader from "./pages/Loader";
+import RootLayout from "./layouts/RootLayout";
 
-// Import layout components
-import Navbar from "./components/layout/Navbar/Navbar";
-import Footer from "./components/layout/Footer/Footer";
+const Home = lazy(() => import("./pages/Home"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
-// Import section components
-import Hero from "./components/sections/Hero/Hero";
-import AboutUs from "./components/sections/AboutUs/AboutUs";
-import OurOffer from "./components/sections/OurOffer/OurOffer";
-import Directions from "./components/sections/Directions/Directions";
-import Contact from "./components/sections/Contact/Contact";
-import Faq from "./components/sections/Faq/Faq";
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      {
+        index: true,
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Home />
+          </Suspense>
+        ),
+      },
 
-// Import UI components
-import ScrollGallery from "./components/UI/ScrollGallery/ScrollGallery";
-import StickyContact from "./components/UI/StickyContact/StickyContact";
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
+  },
+]);
 
 function App() {
-  return (
-    <>
-      <main className="flex h-full flex-col items-center justify-center overflow-hidden scroll-smooth">
-        <Navbar />
-        <StickyContact />
-
-        {/* SECTIONS */}
-        <Hero />
-        <AboutUs />
-        <OurOffer />
-        <ScrollGallery />
-        <Contact />
-        <Directions />
-        <Faq />
-      </main>
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
