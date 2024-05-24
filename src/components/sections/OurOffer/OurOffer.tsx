@@ -51,6 +51,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
             <div className="p-4">
               <img src={stary_dom} className="rounded-md" />
             </div>
+
           </div>
         </div>
       </section>
