@@ -11,10 +11,12 @@ const Hero: React.FC<HeroProps> = ({}) => {
   const { ref: lettersRef, trail: lettersTrail } = useInViewTrailAnimation(
     letters,
     200,
+    false,
   );
   const { ref: wordsRef, trail: wordsTrail } = useInViewTrailAnimation(
     words,
     400,
+    false,
   );
 
   return (
