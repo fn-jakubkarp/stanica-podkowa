@@ -1,3 +1,5 @@
+import { CardType } from "./CardType";
+
 const Card = ({ card }: { card: CardType }) => {
   return (
     <>
@@ -6,7 +8,7 @@ const Card = ({ card }: { card: CardType }) => {
           src={card.url}
           alt={card.alt}
           loading="lazy"
-          className="aspect-video h-full max-h-60 w-full object-cover transition-transform duration-300 group-hover:scale-110"
+          className="aspect-video h-full max-h-60 w-full object-cover"
         />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent">
           <div className="disabled p-4 pb-8 text-background">
@@ -22,11 +24,3 @@ const Card = ({ card }: { card: CardType }) => {
 };
 
 export default Card;
-
-export type CardType = {
-  url: string;
-  alt: string;
-  title: string;
-  text: string;
-  id: number;
-};
