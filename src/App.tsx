@@ -19,6 +19,10 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      {
+        path: "/loader",
+        element: <Loader />,
+      },
 
       {
         path: "*",
