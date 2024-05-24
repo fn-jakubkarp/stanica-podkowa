@@ -19,7 +19,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
   };
 
   const { ref: imageRef, inView: imageView } = useInView({ threshold: 0.5 });
-  const { ref: textRef, inView: textView } = useInView({ threshold: 0.5 });
+  const { ref: textRef, inView: textView } = useInView({ threshold: 0.25 });
 
   return (
     <>
@@ -62,7 +62,10 @@ const OurOffer: React.FC<OurOfferProps> = () => {
         <div className="p-4">
           <img src={stary_dom} className="rounded-md" />
         </div>
-        <ul className="flex h-full w-full flex-col items-start justify-start px-4">
+        <ul
+          className="flex h-full w-full flex-col items-start justify-start px-4"
+          ref={textRef}
+        >
           <ListItem>
             <span>Domek z kominkiem</span>
           </ListItem>

@@ -1,8 +1,10 @@
+import React from "react";
 import bullet_point from "../../../assets/bullet_point.svg";
 
 interface ListItemProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
 const ListItem: React.FC<ListItemProps> = ({ children, className = "" }) => {

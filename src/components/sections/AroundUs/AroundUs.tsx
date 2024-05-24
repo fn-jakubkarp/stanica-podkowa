@@ -1,12 +1,13 @@
 // Swiper imports
-import { Autoplay, FreeMode, Mousewheel, Pagination } from "swiper/modules";
+import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
+import "swiper/swiper-bundle.css";
 import "../../../styles/main.css";
 
-import "swiper/css";
-import "swiper/css/mousewheel";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/mousewheel";
+// import "swiper/css/pagination";
 
 import grill from "../../../assets/grill.jpg";
 import imprezy from "../../../assets/imprezy.jpg";
@@ -22,30 +23,39 @@ import { CardType } from "../../UI/Card/CardType";
 const AroundUs = () => {
   return (
     <>
-      <div className="relative my-8 h-1/2 w-full px-4 md:w-1/2">
+      <section className="my-8 md:my-12">
+        <div className="flex flex-col justify-center items-center mb-4 md:mb-8">
+          <h2 className="text-4xl text-text-DARK">atrakje</h2>
+          <span className="text-2xl text-text-DARK font-light">w okolicy</span>
+        </div>
+
         <Swiper
           direction={"horizontal"}
-          slidesPerView={1.5}
+          slidesPerView={"auto"}
           spaceBetween={30}
-          // mousewheel={true}
           loop={true}
           parallax={true}
           freeMode={true}
           autoplay={{
-            delay: 50,
+            delay: 1,
             disableOnInteraction: false,
+            stopOnLastSlide: false,
           }}
           speed={5000}
-          modules={[Mousewheel, Autoplay, Pagination, FreeMode]}
+          centeredSlides={true}
+          modules={[Autoplay, Pagination, FreeMode]}
           className="mySwiper h-full w-full rounded-md px-4"
         >
           {cards.map((card) => (
-            <SwiperSlide key={card.id}>
+            <SwiperSlide
+              key={card.id}
+              style={{ width: "calc(100% / 1.5 - 30px)" }}
+            >
               <CardSwiper card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
-      </div>
+      </section>
     </>
   );
 };
