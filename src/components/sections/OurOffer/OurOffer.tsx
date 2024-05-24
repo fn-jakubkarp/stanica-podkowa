@@ -19,7 +19,8 @@ const OurOffer: React.FC<OurOfferProps> = () => {
   };
 
   const { ref: imageRef, inView: imageView } = useInView({ threshold: 0.5 });
-  const { ref: textRef, inView: textView } = useInView({ threshold: 0.25 });
+  const { ref: textRef, inView: textView } = useInView({ threshold: 0.5 });
+  const { ref: liRef, inView: liView } = useInView({ threshold: 0.25 });
 
   return (
     <>
@@ -64,7 +65,8 @@ const OurOffer: React.FC<OurOfferProps> = () => {
         </div>
         <ul
           className="flex h-full w-full flex-col items-start justify-start px-4"
-          ref={textRef}
+          ref={liRef}
+          style={slidingText(liView)}
         >
           <ListItem>
             <span>Domek z kominkiem</span>
