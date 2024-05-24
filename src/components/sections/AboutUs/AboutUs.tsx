@@ -5,7 +5,7 @@ import { slidingText } from "../../../utils/animations";
 interface AboutUsProps {}
 
 const AboutUs: React.FC<AboutUsProps> = ({}) => {
-  const { ref: textRef, inView: textView } = useInView({ threshold: 0.5 });
+  const { ref: textRef, inView: textView } = useInView({ threshold: 0.25 });
 
   return (
     <>
