@@ -37,15 +37,15 @@ const ScrollGallery = () => {
             disableOnInteraction: false,
           }}
           style={{
-            // @ts-ignore
+            // @ts-expect-error
             "--swiper-pagination-color": "#fff",
           }}
           modules={[Mousewheel, Autoplay, Pagination]}
           className="mySwiper h-full w-full rounded-md px-4"
         >
           {cards.map((card) => (
-            <SwiperSlide>
-              <Card key={card.id} card={card} />
+            <SwiperSlide key={card.id}>
+              <Card card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
