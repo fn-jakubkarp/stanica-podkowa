@@ -1,5 +1,5 @@
 // Swiper imports
-import { Mousewheel, Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Mousewheel, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "../../../styles/main.css";
@@ -12,12 +12,12 @@ import grill from "../../../assets/grill.jpg";
 import imprezy from "../../../assets/imprezy.jpg";
 import konie from "../../../assets/konie.jpg";
 import noclegi from "../../../assets/noclegi.jpg";
-import sauna from "../../../assets/sauna.jpg";
 import paintball from "../../../assets/paintball.jpg";
+import sauna from "../../../assets/sauna.jpg";
 
 // Custom card component
-import { CardType } from "../Card/CardType";
 import Card from "../Card/Card";
+import { CardType } from "../Card/CardType";
 
 const ScrollGallery = () => {
   return (

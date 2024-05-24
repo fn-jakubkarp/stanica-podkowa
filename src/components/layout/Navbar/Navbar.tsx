@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import Logo from "../../UI/Logo/Logo";
+import { useEffect, useState } from "react";
 import HamburgerMenu from "../../UI/HamburgerMenu/HamburgerMenu";
+import Logo from "../../UI/Logo/Logo";
 
 import { animated, useSpring } from "@react-spring/web";
 

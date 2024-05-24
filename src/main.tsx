@@ -4,8 +4,8 @@ import App from "./App.tsx";
 import "./styles/main.css";
 
 // Analytics
-import { injectSpeedInsights } from "@vercel/speed-insights";
 import { inject } from "@vercel/analytics";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 // Vercel insights
 injectSpeedInsights();

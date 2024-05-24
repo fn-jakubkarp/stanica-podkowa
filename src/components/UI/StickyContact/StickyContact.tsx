@@ -1,7 +1,6 @@
-import { FaMapMarkerAlt } from "react-icons/fa";
-import { FaPhoneAlt } from "react-icons/fa";
 import { animated, useSpring } from "@react-spring/web";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { handleCall } from "../../../utils/handleCall";
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);

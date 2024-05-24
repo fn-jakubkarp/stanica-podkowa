@@ -1,4 +1,4 @@
-import { useTrail, useInView } from "@react-spring/web";
+import { useInView, useTrail } from "@react-spring/web";
 
 function useInViewTrailAnimation(
   items: string[],

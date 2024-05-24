@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 
-import Navbar from "../components/layout/Navbar/Navbar";
-import Footer from "../components/layout/Footer/Footer";
 import StickyContact from "../components/UI/StickyContact/StickyContact";
+import Footer from "../components/layout/Footer/Footer";
+import Navbar from "../components/layout/Navbar/Navbar";
 
 const RootLayout: React.FC = () => {
   return (

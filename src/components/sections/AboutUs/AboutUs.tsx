@@ -1,5 +1,5 @@
-import my from "../../../assets/my.jpg";
 import { useInView } from "react-intersection-observer";
+import my from "../../../assets/my.jpg";
 import { slidingText } from "../../../utils/animations";
 
 interface AboutUsProps {}
