@@ -19,12 +19,19 @@ h1,
 h2,
 h3 {
   @apply font-open;
+  @apply text-text-DARK;
+  @apply text-xl;
+  @apply md:text-3xl;
 }
 
 div,
 p,
 a,
 button,
-span {
+span,
+ul,
+li {
   @apply font-josefin;
+  @apply text-text-DARK;
+  @apply font-light;
 }
