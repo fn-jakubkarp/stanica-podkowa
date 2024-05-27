@@ -25,7 +25,7 @@ const AroundUs = () => {
     <>
       <section className="my-8 md:my-12">
         <div className="flex flex-col justify-center items-center mb-4 md:mb-8">
-          <h2 className="text-4xl">atrakje</h2>
+          <h2 className="text-4xl">atrakcje</h2>
           <span className="text-2xl">w okolicy</span>
         </div>
 
