@@ -35,3 +35,21 @@ li {
   @apply text-text-DARK;
   @apply font-light;
 }
+
+.masked {
+  mask-image: url("../assets/masks/1.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url("../assets/masks/1.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+}
+
+.masked2 {
+  mask-image: url("../assets/masks/2.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url("../assets/masks/2.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+}

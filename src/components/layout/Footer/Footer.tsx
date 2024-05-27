@@ -5,7 +5,7 @@ interface FooterProps {}
 const Footer: React.FC<FooterProps> = () => {
   return (
     <>
-      <footer className="bg-gray-900">
+      <footer className="">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">

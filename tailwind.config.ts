@@ -28,7 +28,7 @@ const config = {
           DEFAULT: "#BC9968",
         },
         text: {
-          DARK: "#928474",
+          DARK: "#64554F",
           LIGHT: "#eae6e0",
         },
       },
