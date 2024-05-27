@@ -15,11 +15,7 @@ const NotFound: React.FC = () => {
     <div className="flex h-screen w-screen flex-col items-center justify-center gap-8">
       <div ref={lettersRef}>
         {lettersTrail.map((props, index) => (
-          <animated.span
-            key={index}
-            className="pr-1 font-josefin text-text-DARK"
-            style={props}
-          >
+          <animated.span key={index} className="pr-1" style={props}>
             {letters[index]}
           </animated.span>
         ))}

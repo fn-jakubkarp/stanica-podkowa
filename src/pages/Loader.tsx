@@ -15,16 +15,12 @@ const Loader: React.FC = () => {
     <div className="flex h-screen w-screen flex-col items-center justify-center gap-4">
       <div ref={lettersRef}>
         {lettersTrail.map((props, index) => (
-          <animated.span
-            key={index}
-            className="pr-1 font-josefin text-text-DARK"
-            style={props}
-          >
+          <animated.span key={index} className="pr-1" style={props}>
             {letters[index]}
           </animated.span>
         ))}
       </div>
-      <span className="loading loading-dots loading-lg text-text-DARK"></span>
+      <span className="loading loading-dots loading-lg "></span>
     </div>
   );
 };

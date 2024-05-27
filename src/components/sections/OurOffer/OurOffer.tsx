@@ -40,20 +40,17 @@ const OurOffer: React.FC<OurOfferProps> = () => {
 
         {/* Header (nasze, twoje domki) */}
         <div className="flex w-screen flex-col">
-          <div className="mt-2 flex w-full justify-center font-open text-3xl font-light text-text-DARK">
+          <div className="mt-2 flex w-full justify-center text-3xl">
             <span className="italic line-through">NASZE</span>
           </div>
-          <div className="ml-6 flex w-full justify-center font-open text-3xl font-light text-text-DARK">
+          <div className="ml-6 flex w-full justify-center text-3xl">
             <span className="mr-3 pl-12">TWOJE</span>
             <span>DOMKI</span>
           </div>
         </div>
 
         <div className="overflow-hidden" ref={textRef}>
-          <p
-            style={slidingText(textView)}
-            className="font-joseph px-4 text-sm text-text-DARK"
-          >
+          <p style={slidingText(textView)} className="px-4">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium corporis nisi nobis, nihil totam est illum fugiat natus,
             vel temporibus facilis? Unde commodi maxime aspernatur tenetur esse
@@ -77,10 +74,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
           <ListItem>
             <span>Do 10 osób</span>
           </ListItem>
-          <li
-            onClick={handleClick}
-            className="mt-2 font-open text-base font-medium text-text-DARK underline"
-          >
+          <li onClick={handleClick} className="mt-2 underline">
             Poznaj całą ofertę
           </li>
         </ul>

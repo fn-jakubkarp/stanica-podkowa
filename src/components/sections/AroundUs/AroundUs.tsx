@@ -17,7 +17,7 @@ import paintball from "../../../assets/paintball.jpg";
 import sauna from "../../../assets/sauna.jpg";
 
 // Custom card component
-import CardSwiper from "../../UI/Card/CardSwiper";
+import CardSwiper from "../../UI/Card/CardAtractions";
 import { CardType } from "../../UI/Card/CardType";
 
 const AroundUs = () => {
@@ -25,8 +25,8 @@ const AroundUs = () => {
     <>
       <section className="my-8 md:my-12">
         <div className="flex flex-col justify-center items-center mb-4 md:mb-8">
-          <h2 className="text-4xl text-text-DARK">atrakje</h2>
-          <span className="text-2xl text-text-DARK font-light">w okolicy</span>
+          <h2 className="text-4xl">atrakje</h2>
+          <span className="text-2xl">w okolicy</span>
         </div>
 
         <Swiper

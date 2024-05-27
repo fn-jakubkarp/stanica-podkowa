@@ -19,10 +19,8 @@ const Footer: React.FC<FooterProps> = () => {
             </div>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               <div>
-                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
-                  Sekcje
-                </h2>
-                <ul className="text-md font-josefin text-text-DARK">
+                <h2 className=" mb-6 font-bold uppercase ">Sekcje</h2>
+                <ul className="  ">
                   <li>
                     <a href="#" className="hover:underline">
                       Idź do góry
@@ -52,10 +50,8 @@ const Footer: React.FC<FooterProps> = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
-                  Kontakt
-                </h2>
-                <ul className="text-md font-josefin text-text-DARK">
+                <h2 className=" mb-6  font-bold uppercase ">Kontakt</h2>
+                <ul className="  ">
                   <li className="hover:underline">
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
                   </li>
@@ -69,10 +65,8 @@ const Footer: React.FC<FooterProps> = () => {
 
               {/* Adres */}
               <div>
-                <h2 className="text-md mb-6 font-open font-bold uppercase text-text-DARK">
-                  Adres
-                </h2>
-                <ul className="text-md font-josefin text-text-DARK">
+                <h2 className=" mb-6  font-bold uppercase ">Adres</h2>
+                <ul className=" ">
                   <li className="mb-4">
                     <a
                       href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
@@ -91,7 +85,7 @@ const Footer: React.FC<FooterProps> = () => {
           {/* Copyrights section */}
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-md font-josefin text-text-DARK">
+            <span className="  ">
               © 2024{" "}
               <a href="#" className="hover:underline">
                 Stanica Podkowa™
@@ -101,7 +95,7 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="mt-4 flex sm:mt-0 sm:justify-center">
               <a
                 href="https://www.facebook.com/agroturystykapodkowa/"
-                className="text-md font-josefin text-text-DARK"
+                className=" "
                 target="_blank"
                 rel="noopener noreferrer"
               >

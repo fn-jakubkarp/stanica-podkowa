@@ -10,11 +10,8 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
   return (
     <>
       <div className="mb-4 flex h-full flex-col">
-        <section
-          id="o-nas"
-          className="flex flex-col justify-center text-base md:text-base font-light text-text-DARK"
-        >
-          <p className="px-4 md:px-8 text-justify font-josefin md:text-xl">
+        <section id="o-nas" className="flex flex-col justify-center ">
+          <p className="px-4 md:px-8 text-justify">
             Witaj w <span className="font-bold">Stanicy Podkowa</span>, gdzie
             oferujemy autentyczne agroturystyczne doświadczenie. Naszą misją
             jest zapewnienie wyjątkowego doświadczenia, które połączy Cię z
@@ -26,7 +23,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
               className="my-4 h-[230px] w-[320px] self-start rounded-r-md object-cover md:h-auto md:w-3/5"
             />
             <p
-              className="px-4 text-justify md:pl-4 md:pr-8 md:text-xl md:text-left"
+              className="px-4 text-justify md:pl-4 md:pr-8 md:text-left"
               style={slidingText(textView)}
               ref={textRef}
             >
