@@ -2,13 +2,12 @@ import { Outlet } from "react-router-dom";
 
 import StickyContact from "../components/UI/StickyContact/StickyContact";
 import Footer from "../components/layout/Footer/Footer";
-import ExperimentalNavbar from "../components/layout/Navbar/ExperimentalNavbar";
+import Header from "../components/layout/Header/Header";
 
 const RootLayout: React.FC = () => {
   return (
     <div className="flex min-h-screen flex-col">
-      {/* <Navbar /> */}
-      <ExperimentalNavbar />
+      <Header />
       <main className="">
         <Outlet />
       </main>
