@@ -62,3 +62,12 @@ li {
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
 }
+
+.masked4 {
+  mask-image: url("../assets/masks/4.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url("../assets/masks/4.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+}
