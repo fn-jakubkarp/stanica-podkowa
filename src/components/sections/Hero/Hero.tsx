@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section className="Hero mt-16 flex h-full w-screen flex-col items-center justify-center gap-y-6 py-4 md:py-8">
+      <animated.section className="Hero mt-8 flex h-full w-screen flex-col items-center justify-center gap-y-6 py-4 md:py-8">
         <div className="px-4 md:px-8 w-screen">
           <animated.div className="flex" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
