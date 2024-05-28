@@ -1,4 +1,4 @@
-import LOGOTYP from "../../../assets/LOGOTYP.svg";
+import { logo } from "../../../utils/assets";
 import { handleCall } from "../../../utils/handleCall";
 interface FooterProps {}
 
@@ -11,7 +11,7 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
                 <img
-                  src={LOGOTYP}
+                  src={logo}
                   className="me-3 h-8"
                   alt="Stanica Podkowa Logo"
                 />

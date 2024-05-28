@@ -9,19 +9,19 @@ import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
 import CardPictureOnly from "../components/UI/Card/CardPictureOnly";
 import { CardType } from "../components/UI/Card/CardType";
 
-// Assets
-import bathroom from "../assets/Inside/New_house/bathroom.jpg";
-import kid_section from "../assets/Inside/New_house/kid_section.jpg";
-import kitchen from "../assets/Inside/New_house/kitchen.jpg";
-import living_room from "../assets/Inside/New_house/living_room.jpg";
-import room from "../assets/Inside/New_house/room.jpg";
-import headerPricelist from "../assets/headerPricelist.jpg";
+import {
+  nh_bathroom,
+  nh_kid_section,
+  nh_kitchen,
+  nh_living_room,
+  nh_room,
+  oh_bathroom,
+  oh_kitchen,
+  oh_living_room,
+  oh_room,
+  pricelist_header,
+} from "../utils/assets";
 
-import { useEffect, useState } from "react";
-import bathroom_old from "../assets/Inside/Old_house/bathroom_old.jpg";
-import kitchen_old from "../assets/Inside/Old_house/kitchen_old.jpg";
-import livingroom_old from "../assets/Inside/Old_house/livingroom_old.jpg";
-import room_old from "../assets/Inside/Old_house/room_old.jpg";
 
 const PriceList: React.FC = () => {
   const letters = ["C", "E", "N", "N", "I", "K"];
@@ -31,25 +31,13 @@ const PriceList: React.FC = () => {
     false,
   );
 
-  const totalImages = cards_new_house.length + cards_old_house.length;
-  const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [loadedCount, setLoadedCount] = useState(0);
 
-  useEffect(() => {
-    if (loadedCount === totalImages) {
-      setImagesLoaded(true);
-    }
-  }, [loadedCount, totalImages]);
-
-  const handleImageLoad = () => {
-    setLoadedCount((prev) => prev + 1);
-  };
 
   return (
     <div className="flex flex-col h-full w-screen items-center justify-center bg-secondary px-4 gap-12">
       <div className="w-screen relative flex justify-center items-center">
         <img
-          src={headerPricelist}
+          src={pricelist_header}
           alt="Tło strony, zdjęcie pokoju"
           className="opacity-70 masked"
         />
@@ -99,7 +87,7 @@ const PriceList: React.FC = () => {
             <SwiperSlide key={card.id} className="w-full object-cover ">
               <CardPictureOnly
                 card={card}
-                onLoad={handleImageLoad}
+                
                 className=""
               />
             </SwiperSlide>
@@ -144,7 +132,7 @@ const PriceList: React.FC = () => {
         >
           {cards_old_house.map((card) => (
             <SwiperSlide key={card.id} className="w-full object-cover  ">
-              <CardPictureOnly card={card} onLoad={handleImageLoad} />
+              <CardPictureOnly card={card} />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -192,27 +180,27 @@ export default PriceList;
 
 const cards_new_house: CardType[] = [
   {
-    url: room,
+    url: nh_room,
     alt: "Zdjęcie pokoju",
     id: 1,
   },
   {
-    url: bathroom,
+    url: nh_bathroom,
     alt: "Zdjęcie łazienki",
     id: 2,
   },
   {
-    url: living_room,
+    url: nh_living_room,
     alt: "Zdjęcie salonu",
     id: 3,
   },
   {
-    url: kitchen,
+    url: nh_kitchen,
     alt: "Zdjęcie kuchnii",
     id: 4,
   },
   {
-    url: kid_section,
+    url: nh_kid_section,
     alt: "Zdjęcie sekcji dla dzieci",
     id: 5,
   },
@@ -220,22 +208,22 @@ const cards_new_house: CardType[] = [
 
 const cards_old_house: CardType[] = [
   {
-    url: room_old,
+    url: oh_room,
     alt: "Zdjęcie pokoju",
     id: 1,
   },
   {
-    url: bathroom_old,
+    url: oh_bathroom,
     alt: "Zdjęcie łazienki",
     id: 2,
   },
   {
-    url: livingroom_old,
+    url: oh_living_room,
     alt: "Zdjęcie salonu",
     id: 3,
   },
   {
-    url: kitchen_old,
+    url: oh_kitchen,
     alt: "Zdjęcie kuchnii",
     id: 4,
   },

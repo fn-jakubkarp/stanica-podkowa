@@ -1,6 +1,6 @@
 import { useInView } from "react-intersection-observer";
-import my from "../../../assets/my.jpg";
 import { slidingText } from "../../../utils/animations";
+import { hero_us } from "../../../utils/assets";
 
 interface AboutUsProps {}
 
@@ -19,7 +19,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
           </p>
           <div className="flex flex-col md:flex-row md:items-center">
             <img
-              src={my}
+              src={hero_us}
               className="my-4 h-[230px] w-[320px] self-start rounded-r-md object-cover md:h-auto md:w-3/5"
             />
             <p

@@ -9,12 +9,13 @@ import "../../../styles/main.css";
 // import "swiper/css/mousewheel";
 // import "swiper/css/pagination";
 
-import grill from "../../../assets/grill.jpg";
-import imprezy from "../../../assets/imprezy.jpg";
-import konie from "../../../assets/konie.jpg";
-import noclegi from "../../../assets/noclegi.jpg";
-import paintball from "../../../assets/paintball.jpg";
-import sauna from "../../../assets/sauna.jpg";
+import {
+  hero_accommodation,
+  hero_events,
+  hero_grill,
+  hero_horses,
+  hero_sauna,
+} from "../../../utils/assets";
 
 // Custom card component
 import CardSwiper from "../../UI/Card/CardAtractions";
@@ -64,45 +65,38 @@ export default AroundUs;
 
 const cards: CardType[] = [
   {
-    url: grill,
+    url: hero_grill,
     title: "Grill",
     alt: "Grill",
     text: "Rozkoszuj się soczystymi grillowanymi potrawami w naszym ogrodzie!",
     id: 1,
   },
   {
-    url: imprezy,
+    url: hero_events,
     title: "Imprezy",
     alt: "Imprezy",
     text: "Organizujemy niezapomniane imprezy i wydarzenia w malowniczej scenerii.",
     id: 2,
   },
   {
-    url: konie,
+    url: hero_horses,
     title: "Konie",
     alt: "Konie",
     text: "Odkryj piękno natury podczas jazdy konnej z naszymi doświadczonymi instruktorami.",
     id: 3,
   },
   {
-    url: noclegi,
+    url: hero_accommodation,
     title: "Noclegi",
     alt: "Noclegi",
     text: "Oferujemy komfortowe noclegi w przytulnych pokojach z widokiem na naturę.",
     id: 4,
   },
   {
-    url: sauna,
+    url: hero_sauna,
     title: "Sauna",
     alt: "Sauna",
     text: "Zrelaksuj się w naszej autentycznej fińskiej banii i saunie, odprężając ciało i umysł",
     id: 5,
-  },
-  {
-    url: paintball,
-    title: "Paintball",
-    alt: "Paintball",
-    text: "Adrenalina i zabawa czekają na Ciebie na naszym polu do paintballa",
-    id: 6,
   },
 ];

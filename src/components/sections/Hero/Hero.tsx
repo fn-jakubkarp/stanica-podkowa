@@ -1,4 +1,4 @@
-import nocne_niebo from "../../../assets/nocne_niebo.webp";
+import { hero_night_sky } from "../../../utils/assets";
 
 import { animated } from "@react-spring/web";
 import useInViewTrailAnimation from "../../../hooks/useInViewTrailAnimation";
@@ -45,7 +45,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
         </div>
 
         <img
-          src={nocne_niebo}
+          src={hero_night_sky}
           alt="Zdjęcie nocnego nieba"
           className="h-[320px] w-[320px] self-end rounded-l-md object-cover md:aspect-square md:h-auto md:w-2/3"
         />

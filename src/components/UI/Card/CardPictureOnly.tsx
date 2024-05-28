@@ -1,11 +1,11 @@
 import { CardType } from "./CardType";
 const CardPictureOnly = ({
   card,
-  onLoad,
+
   className = "",
 }: {
   card: CardType;
-  onLoad?: () => void;
+
   className?: string;
 }) => {
   return (
@@ -14,7 +14,6 @@ const CardPictureOnly = ({
         <img
           src={card.url}
           alt={card.alt}
-          onLoad={onLoad}
           loading="lazy"
           className={`aspect-video h-full max-h-60 w-full object-cover ${className}`}
         />

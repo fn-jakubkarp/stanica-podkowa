@@ -6,8 +6,9 @@ import ListItem from "../../UI/ListItem/ListItem";
 import { revealImageFromBelow, slidingText } from "../../../utils/animations";
 
 // Assets
-import macro from "../../../assets/macro.jpg";
-import stary_dom from "../../../assets/stary_dom.jpg";
+
+
+import { hero_macro, hero_old_house } from "../../../utils/assets";
 
 interface OurOfferProps {}
 
@@ -31,7 +32,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
           ref={imageRef}
         >
           <img
-            src={macro}
+            src={hero_macro}
             className="relative left-0 top-0 h-full w-full object-cover"
             alt="Doniczka"
             style={revealImageFromBelow(imageView)}
@@ -58,7 +59,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
           </p>
         </div>
         <div className="p-4">
-          <img src={stary_dom} className="rounded-md" />
+          <img src={hero_old_house} className="rounded-md" />
         </div>
         <ul
           className="flex h-full w-full flex-col items-start justify-start px-4"
