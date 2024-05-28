@@ -53,3 +53,12 @@ li {
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
 }
+
+.masked3 {
+  mask-image: url("../assets/masks/3.png");
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  -webkit-mask-image: url("../assets/masks/3.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-repeat: no-repeat;
+}
