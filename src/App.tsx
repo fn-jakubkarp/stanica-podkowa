@@ -6,7 +6,11 @@ import Loader from "./pages/Loader";
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PriceList = lazy(() => import("./pages/PriceList"));
-const Gallery = lazy(() => import("./pages/Gallery"));
+const Gallery = lazy(() => import("./pages/Gallery/Gallery"));
+const Mansion = lazy(() => import("./pages/Gallery/Mansion"));
+const Interior = lazy(() => import("./pages/Gallery/Interior"));
+const Summer = lazy(() => import("./pages/Gallery/Summer"));
+const Winter = lazy(() => import("./pages/Gallery/Winter"));
 
 const router = createBrowserRouter([
   {
@@ -35,9 +39,42 @@ const router = createBrowserRouter([
       },
       {
         path: "/galeria",
+
         element: (
           <Suspense fallback={<Loader />}>
             <Gallery />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/galeria/posiadlosc",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Mansion />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/galeria/wnetrze",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Interior />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/galeria/zima",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Winter />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/galeria/lato",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Summer />
           </Suspense>
         ),
       },
