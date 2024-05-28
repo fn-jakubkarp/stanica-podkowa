@@ -1,5 +1,5 @@
 interface HamburgerMenuProps {
-  clicked: boolean;
+  clicked?: boolean;
 }
 
 const HamburgerMenu: React.FC<HamburgerMenuProps> = ({ clicked }) => {
