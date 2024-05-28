@@ -6,6 +6,7 @@ import Loader from "./pages/Loader";
 const Home = lazy(() => import("./pages/Home"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const PriceList = lazy(() => import("./pages/PriceList"));
+const Gallery = lazy(() => import("./pages/Gallery"));
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<Loader />}>
             <PriceList />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/galeria",
+        element: (
+          <Suspense fallback={<Loader />}>
+            <Gallery />
           </Suspense>
         ),
       },
