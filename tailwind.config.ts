@@ -15,17 +15,8 @@ const config = {
         open: ["Open Sans"],
       },
       colors: {
-        primary: {
-          DEFAULT: "#301c15",
-        },
-        background: {
-          DEFAULT: "#efe0c9",
-        },
         secondary: {
           DEFAULT: "#eae6e0",
-        },
-        accent: {
-          DEFAULT: "#BC9968",
         },
         text: {
           DARK: "#64554F",
