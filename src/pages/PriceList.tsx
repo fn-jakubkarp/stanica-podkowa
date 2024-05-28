@@ -17,6 +17,7 @@ import living_room from "../assets/Inside/New_house/living_room.jpg";
 import room from "../assets/Inside/New_house/room.jpg";
 import headerPricelist from "../assets/headerPricelist.jpg";
 
+import { useEffect, useState } from "react";
 import bathroom_old from "../assets/Inside/Old_house/bathroom_old.jpg";
 import kitchen_old from "../assets/Inside/Old_house/kitchen_old.jpg";
 import livingroom_old from "../assets/Inside/Old_house/livingroom_old.jpg";
@@ -29,6 +30,20 @@ const PriceList: React.FC = () => {
     200,
     false,
   );
+
+  const totalImages = cards_new_house.length + cards_old_house.length;
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  useEffect(() => {
+    if (loadedCount === totalImages) {
+      setImagesLoaded(true);
+    }
+  }, [loadedCount, totalImages]);
+
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => prev + 1);
+  };
 
   return (
     <div className="flex flex-col h-full w-screen items-center justify-center bg-secondary px-4 gap-12">
@@ -70,7 +85,7 @@ const PriceList: React.FC = () => {
           autoplay={{
             delay: 750,
             disableOnInteraction: false,
-            stopOnLastSlide: false,
+            stopOnLastSlide: true,
           }}
           style={{
             // @ts-expect-error
@@ -82,7 +97,11 @@ const PriceList: React.FC = () => {
         >
           {cards_new_house.map((card) => (
             <SwiperSlide key={card.id} className="w-full object-cover ">
-              <CardPictureOnly card={card} />
+              <CardPictureOnly
+                card={card}
+                onLoad={handleImageLoad}
+                className=""
+              />
             </SwiperSlide>
           ))}
         </Swiper>
@@ -111,7 +130,7 @@ const PriceList: React.FC = () => {
           pagination={true}
           freeMode={true}
           autoplay={{
-            delay: 750,
+            delay: 1000,
             disableOnInteraction: false,
             stopOnLastSlide: false,
           }}
@@ -124,8 +143,8 @@ const PriceList: React.FC = () => {
           className="mySwiper w-full masked2"
         >
           {cards_old_house.map((card) => (
-            <SwiperSlide key={card.id} className="w-full object-cover ">
-              <CardPictureOnly card={card} />
+            <SwiperSlide key={card.id} className="w-full object-cover  ">
+              <CardPictureOnly card={card} onLoad={handleImageLoad} />
             </SwiperSlide>
           ))}
         </Swiper>
