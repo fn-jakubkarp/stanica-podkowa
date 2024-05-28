@@ -1,4 +1,4 @@
-import LOGOTYP from "../../../../public/LOGOTYP.svg";
+import LOGOTYP from "../../../assets/LOGOTYP.svg";
 import { handleCall } from "../../../utils/handleCall";
 interface FooterProps {}
 
