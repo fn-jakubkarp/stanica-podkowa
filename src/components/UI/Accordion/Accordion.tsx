@@ -15,7 +15,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
         onClick={() => setTabOpen(!tabOpen)}
         className="flex w-full flex-nowrap items-start justify-between"
       >
-        <span className="text-left">{question}</span>
+        <span className="text-left text-xl">{question}</span>
         {tabOpen ? (
           <RiArrowDropDownFill className="rotate-180 text-xl" />
         ) : (
@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out ${tabOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden px-4">{answer}</div>
+        <div className="overflow-hidden pt-4 text-xl">{answer}</div>
       </div>
     </div>
   );
