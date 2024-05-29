@@ -9,9 +9,6 @@ import Faq from "../components/sections/Faq/Faq";
 import Hero from "../components/sections/Hero/Hero";
 import OurOffer from "../components/sections/OurOffer/OurOffer";
 
-// Import UI components
-// import ScrollGallery from "../components/UI/ScrollGallery/ScrollGallery";
-
 const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
@@ -19,7 +16,6 @@ const Home: React.FC = () => {
       <AboutUs />
       <OurOffer />
       <AroundUs />
-      {/* <ScrollGallery /> */}
       <Contact />
       <Directions />
       <Faq />
