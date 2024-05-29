@@ -31,18 +31,20 @@ const PriceList: React.FC = () => {
   );
 
   return (
-    <div className="flex flex-col h-full w-screen items-center justify-center bg-secondary px-4 gap-12">
-      <div className="w-screen relative flex justify-center items-center">
+    <div className="flex h-full w-screen flex-col items-center justify-center  bg-secondary">
+      <div className="relative flex w-screen items-center justify-center">
         <img
           src={pricelist_header}
           alt="Tło strony, zdjęcie pokoju"
-          className="opacity-70 masked"
+          className="masked object-cover md:h-[30vh]"
         />
-        <animated.header className="flex absolute" ref={lettersRef}>
+        <div className="masked absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black to-black opacity-45"></div>
+
+        <animated.header className="absolute flex" ref={lettersRef}>
           {lettersTrail.map((props, index) => (
             <animated.h1
               key={index}
-              className="text-5xl pr-1 sm:text-7xl"
+              className="pr-1 text-5xl text-text-LIGHT sm:text-7xl"
               style={props}
             >
               {letters[index]}
@@ -50,8 +52,8 @@ const PriceList: React.FC = () => {
           ))}
         </animated.header>
       </div>
-      <div className="flex flex-col">
-        <h2 className="sm:mb-2 sm:text-5xl ">Pokoje</h2>
+      <div className="defaultPaddings flex w-screen flex-col">
+        <h2 className="text-3xl sm:mb-2 sm:text-5xl">Pokoje</h2>
         <p>
           W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo
           powstały dom. Drewniany domek posiada 3 dwuosobowe sypialnie oraz
@@ -62,9 +64,11 @@ const PriceList: React.FC = () => {
           łazienkę
         </p>
       </div>
-      <div className="gap-2 flex flex-col items-center justify-center h-full w-full">
-        <h3 className="self-start w-full f;ex">Nowy dom</h3>
-        <div className="w-full flex items-center">
+      <div className="defaultPaddings flex h-full w-full flex-col items-center justify-center gap-4">
+        <h3 className="flex w-full self-start text-3xl sm:text-5xl">
+          Nowy dom
+        </h3>
+        <div className="flex w-full flex-col items-center gap-4 md:flex-row">
           <Swiper
             direction={"horizontal"}
             slidesPerView={1}
@@ -83,7 +87,7 @@ const PriceList: React.FC = () => {
             }}
             speed={1500}
             modules={[Autoplay, Pagination, FreeMode]}
-            className="flex mySwiper w-full masked2"
+            className="mySwiper flex w-full rounded-md md:m-8 md:rounded-xl"
           >
             {cards_new_house.map((card) => (
               <SwiperSlide key={card.id} className="w-full object-cover ">
@@ -91,7 +95,7 @@ const PriceList: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="flex flex-col items-center w-full sm:w-1/2">
+          <div className="flex w-full flex-col items-center">
             <p>
               <span>*</span>Ceny:
             </p>
@@ -103,54 +107,59 @@ const PriceList: React.FC = () => {
             </ul>
           </div>
         </div>
-        <p className="flex sm:px-4 sm:w-screen">
+        <p className="flex sm:w-full">
           <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
           wynajmie na jedną dobę ceny ustalane są indywidualnie
         </p>
       </div>
-      <div className="gap-2 flex flex-col items-center justify-center h-full w-full">
-        <h3 className="self-start text-3xl">Stary domek</h3>
-        <Swiper
-          direction={"horizontal"}
-          slidesPerView={1}
-          spaceBetween={0}
-          loop={true}
-          pagination={true}
-          freeMode={true}
-          autoplay={{
-            delay: 1000,
-            disableOnInteraction: false,
-            stopOnLastSlide: false,
-          }}
-          style={{
-            // @ts-expect-error
-            "--swiper-pagination-color": "#fff",
-          }}
-          speed={1500}
-          modules={[Autoplay, Pagination, FreeMode]}
-          className="mySwiper w-full masked2"
-        >
-          {cards_old_house.map((card) => (
-            <SwiperSlide key={card.id} className="w-full object-cover">
-              <CardPictureOnly card={card} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <p>
+      <div className="defaultPaddings flex h-full w-full flex-col items-center justify-center gap-4">
+        <h3 className="flex w-full self-start text-3xl sm:text-5xl">
+          Stary domek
+        </h3>
+        <div className="flex w-full flex-col items-center md:flex-row">
+          <Swiper
+            direction={"horizontal"}
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={true}
+            pagination={true}
+            freeMode={true}
+            autoplay={{
+              delay: 750,
+              disableOnInteraction: false,
+              stopOnLastSlide: false,
+            }}
+            style={{
+              // @ts-expect-error
+              "--swiper-pagination-color": "#fff",
+            }}
+            speed={1500}
+            modules={[Autoplay, Pagination, FreeMode]}
+            className="mySwiper flex w-full rounded-md md:m-8 md:rounded-xl"
+          >
+            {cards_old_house.map((card) => (
+              <SwiperSlide key={card.id} className="w-full object-cover ">
+                <CardPictureOnly card={card} className="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex w-full flex-col items-center"></div>
+        </div>
+        <p className="defaultPaddings flex sm:w-screen">
           Domek wynajmowany jest jako całość i mieści do 10 osób. Cena jest
           ustalana indywidualnie.{" "}
         </p>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full sm:items-start">
-        <h3 className="self-start text-3xl">Dodatkowe atrakcje</h3>
+      <div className="defaultPaddings flex h-full w-full flex-col justify-center gap-2">
+        <h3 className="">Dodatkowe atrakcje</h3>
         <ul>
           <li>Sauna & Balia - cena ustalana indywidualnie</li>
           <li>Śniadania/obiad - cena ustalana indywidualnie</li>
           <li>Grill (taczka drewna) / 50 zł</li>
         </ul>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full sm:items-start">
-        <h3 className="self-start text-3xl">Potwierdzenie rezerwacji</h3>
+      <div className="defaultPaddings flex h-full w-full flex-col justify-center gap-2">
+        <h3 className="">Potwierdzenie rezerwacji</h3>
         <p className="">
           Rezerwacji pobytu można dokonać osobiście, telefonicznie lub pocztą
           elektroniczną. Potwierdzeniem rezerwacji jest wpłata 40% kosztów
@@ -160,7 +169,7 @@ const PriceList: React.FC = () => {
           przyjazdu, kończy o godzinie 11.00 w dniu wyjazdu.
         </p>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full pb-12 sm:items-start">
+      <div className="defaultPaddings mb-12 flex h-full w-full flex-col justify-center gap-2">
         <h3 className="self-start text-3xl">Dane do przelewu</h3>
         <span className="self-start">na poczet zadatku</span>
         <ul>
