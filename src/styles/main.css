@@ -21,7 +21,7 @@ h3 {
   @apply font-open;
   @apply text-text-DARK;
   @apply text-xl;
-  @apply md:text-3xl;
+  @apply sm:text-3xl;
 }
 
 div,
@@ -34,6 +34,7 @@ li {
   @apply font-josefin;
   @apply text-text-DARK;
   @apply font-light;
+  @apply sm:text-xl;
 }
 
 .masked {
@@ -70,4 +71,9 @@ li {
   -webkit-mask-image: url("../assets/masks/4.png");
   -webkit-mask-size: cover;
   -webkit-mask-repeat: no-repeat;
+}
+
+.clearmask {
+  mask-image: none;
+  -webkit-mask-image: none;
 }
