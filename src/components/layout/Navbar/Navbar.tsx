@@ -9,13 +9,25 @@ interface NavLinksProps {
 const NavLinks: React.FC<NavLinksProps> = ({ closeDrawer }) => {
   return (
     <>
-      <NavLink to="/" className="hover:underline" onClick={closeDrawer}>
+      <NavLink
+        to="/"
+        className="hover:underline lg:text-2xl"
+        onClick={closeDrawer}
+      >
         Strona główna
       </NavLink>
-      <NavLink to="/cennik" className="hover:underline" onClick={closeDrawer}>
+      <NavLink
+        to="/cennik"
+        className="hover:underline lg:text-2xl"
+        onClick={closeDrawer}
+      >
         Cennik
       </NavLink>
-      <NavLink to="/galeria" className="hover:underline" onClick={closeDrawer}>
+      <NavLink
+        to="/galeria"
+        className="hover:underline lg:text-2xl"
+        onClick={closeDrawer}
+      >
         Galeria
       </NavLink>
     </>
@@ -35,7 +47,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="flex w-1/3 justify-end">
+      <nav className="flex sm:w-1/2 lg:w-1/3  justify-end">
         <div className="hidden md:flex w-full justify-between">
           <NavLinks closeDrawer={closeDrawer} />
         </div>
