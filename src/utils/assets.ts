@@ -30,6 +30,7 @@ import hero_us from "../assets/HeroAssets/us.jpg";
 // SVGS //
 import bullet_point from "../assets/svgs/bullet_point.svg";
 import logo from "../assets/svgs/logo.svg";
+import mask5 from "../assets/masks/5.svg"
 // * ----- * //
 
 // Gallery
@@ -64,6 +65,7 @@ import w_oh_terrace from "../assets/GalleryAssets/Winter/w_oh_terrace.jpg";
 import w_sauna from "../assets/GalleryAssets/Winter/w_sauna.jpg";
 
 export {
+  mask5,
   bullet_point,
   hero_accommodation,
   hero_events,

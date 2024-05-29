@@ -10,6 +10,7 @@ import CardPictureOnly from "../components/UI/Card/CardPictureOnly";
 import { CardType } from "../components/UI/Card/CardType";
 
 import {
+  mask5,
   nh_bathroom,
   nh_kid_section,
   nh_kitchen,
@@ -32,19 +33,24 @@ const PriceList: React.FC = () => {
 
   return (
     <div className="flex h-full w-screen flex-col items-center justify-center  bg-secondary">
-      <div className="relative flex w-screen items-center justify-center">
+      <div className="relative flex w-screen items-center justify-center lg:h-[50vh]">
         <img
           src={pricelist_header}
           alt="Tło strony, zdjęcie pokoju"
-          className="masked object-cover md:h-[30vh]"
+          className="z-10 w-screen object-cover"
         />
-        <div className="masked absolute left-0 top-0 h-full w-full bg-gradient-to-t from-black to-black opacity-45"></div>
+        <img
+          src={mask5}
+          alt="Additional Overlay"
+          className="absolute left-0 top-0 z-20 w-screen h-full object-cover"
+        />
+        <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-black to-black opacity-45"></div>
 
         <animated.header className="absolute flex" ref={lettersRef}>
           {lettersTrail.map((props, index) => (
             <animated.h1
               key={index}
-              className="pr-1 text-5xl text-text-LIGHT sm:text-7xl"
+              className="z-10 mb-12 pr-1 text-5xl text-text-LIGHT sm:text-7xl md:mb-14 lg:mb-24"
               style={props}
             >
               {letters[index]}
