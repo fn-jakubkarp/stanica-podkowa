@@ -20,10 +20,10 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
           <div className="flex flex-col md:flex-row md:items-center">
             <img
               src={hero_us}
-              className="my-4 h-[230px] w-[320px] self-start rounded-r-md object-cover md:h-auto md:w-3/5"
+              className="my-4 h-[230px] w-[320px] self-start rounded-r-md object-cover sm:h-auto sm:w-3/5"
             />
             <p
-              className="px-4 text-justify md:pl-4 md:pr-8 md:text-left"
+              className="px-4 text-justify md:pl-4 md:pr-8 md:text-left md:w-1/2"
               style={slidingText(textView)}
               ref={textRef}
             >
