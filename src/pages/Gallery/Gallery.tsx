@@ -17,18 +17,24 @@ const Gallery: React.FC = () => {
           <img
             src={hero_hero}
             alt="Tło strony, zdjęcie pokoju"
-            className="opacity-70 masked"
+            className="masked "
           />
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black to-black opacity-50 masked"></div>
+          {/* <img className="tinted-image masked"></img> */}
           <animated.header className="flex absolute" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
-              <animated.h1 key={index} className=" text-5xl pr-1" style={props}>
+              <animated.h1
+                key={index}
+                className=" text-5xl pr-1 text-bold text-text-LIGHT"
+                style={props}
+              >
                 {letters[index]}
               </animated.h1>
             ))}
           </animated.header>
         </div>
 
-        <section className="flex flex-col ">
+        <section className="flex flex-col">
           <div className="">
             <img src={hero_hero} alt="" className="" />
           </div>
