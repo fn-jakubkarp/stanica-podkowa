@@ -21,8 +21,9 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section className="Hero mt-8 flex h-full w-screen flex-col items-center justify-center gap-y-6 py-4 md:py-8">
-        <div className="px-4 md:px-8 w-screen">
+      <animated.section className=" mt-8 flex h-full w-screen flex-col items-center justify-center gap-y-6 py-4 md:py-8">
+        <div className="px-4 md:px-8 w-full max-w-[820px]">
+          {/* POZNAJ */}
           <animated.div className="flex" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
               <animated.h1
@@ -35,12 +36,12 @@ const Hero: React.FC<HeroProps> = ({}) => {
             ))}
           </animated.div>
 
-          {/* Nasze uroki span */}
-          <animated.h3 ref={wordsRef} className="flex items-end justify-end ">
+          {/* Nasze uroki */}
+          <animated.h3 ref={wordsRef} className="flex justify-end ">
             {wordsTrail.map((props, index) => (
               <animated.span
                 key={index}
-                className="mr-1 mt-4 sm:text-4xl"
+                className="mr-1 mt-4 text-3xl sm:text-4xl"
                 style={props}
               >
                 {words[index]}
@@ -52,11 +53,11 @@ const Hero: React.FC<HeroProps> = ({}) => {
         <img
           src={hero_night_sky}
           alt="Zdjęcie nocnego nieba"
-          className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3"
+          className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3 md:h-[35vh] md:w-[35vw] md:self-center"
         />
         <animated.div className="">
-          <span className="sm:text-5xl">ODKRYJ </span>
-          <span className="sm:text-5xl">PERFEKCJĘ.</span>
+          <span className="text-3xl sm:text-5xl">ODKRYJ </span>
+          <span className="text-3xl sm:text-5xl">PERFEKCJĘ.</span>
         </animated.div>
       </animated.section>
     </>
