@@ -7,7 +7,6 @@ import { revealImageFromBelow, slidingText } from "../../../utils/animations";
 
 // Assets
 
-
 import { hero_macro, hero_old_house } from "../../../utils/assets";
 
 interface OurOfferProps {}
@@ -25,10 +24,10 @@ const OurOffer: React.FC<OurOfferProps> = () => {
 
   return (
     <>
-      <section className="relative mt-20 flex w-screen flex-col items-center justify-center bg-secondary py-4">
+      <section className="relative mt-20 sm:mt-24 flex w-screen flex-col items-center justify-center bg-secondary py-4">
         {/* Image reveal */}
         <div
-          className="absolute left-8 top-[-50px] h-[100px] w-[100px] overflow-hidden bg-accent"
+          className="absolute left-8 top-[-50px] h-[100px] w-[100px] overflow-hidden bg-accent sm:h-[150px] sm:w-[150px] sm:top-[-75px]"
           ref={imageRef}
         >
           <img
@@ -41,17 +40,17 @@ const OurOffer: React.FC<OurOfferProps> = () => {
 
         {/* Header (nasze, twoje domki) */}
         <div className="flex w-screen flex-col">
-          <div className="mt-2 flex w-full justify-center text-3xl">
-            <span className="italic line-through">NASZE</span>
+          <div className="mt-2 flex w-full justify-center ">
+            <span className="italic line-through text-3xl">NASZE</span>
           </div>
-          <div className="ml-6 flex w-full justify-center text-3xl">
-            <span className="mr-3 pl-12">TWOJE</span>
-            <span>DOMKI</span>
+          <div className="ml-6 flex w-full justify-center ">
+            <span className="mr-3 pl-12 text-3xl">TWOJE</span>
+            <span className="text-3xl">DOMKI</span>
           </div>
         </div>
 
         <div className="overflow-hidden" ref={textRef}>
-          <p style={slidingText(textView)} className="px-4">
+          <p style={slidingText(textView)} className="px-4 sm:py-6">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium corporis nisi nobis, nihil totam est illum fugiat natus,
             vel temporibus facilis? Unde commodi maxime aspernatur tenetur esse
