@@ -8,7 +8,7 @@ const Card = ({ card }: { card: CardType }) => {
           src={card.url}
           alt={card.alt}
           loading="lazy"
-          className="aspect-video h-full max-h-60 w-full object-cover"
+          className="aspect-video h-full w-full object-cover"
         />
         <div className="absolute inset-0 flex items-end bg-gradient-to-t from-black/50 to-transparent">
           <div className="disabled p-4 pb-8">
