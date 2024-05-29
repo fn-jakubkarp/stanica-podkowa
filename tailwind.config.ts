@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-import daisyui from "daisyui";
+import plugin from "tailwindcss/plugin";
 
 const config = {
   content: [
@@ -25,10 +25,27 @@ const config = {
       },
     },
   },
-  plugins: [daisyui],
-  daisyui: {
-    themes: ["default"],
-  },
+  plugins: [
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        ".masked2": {
+          "-webkit-mask-image": 'url("../assets/masks/2.png")',
+          "-webkit-mask-size": "cover",
+          "-webkit-mask-repeat": "no-repeat",
+          "mask-image": 'url("../assets/masks/2.png")',
+          "mask-size": "cover",
+          "mask-repeat": "no-repeat",
+        },
+        ".clearmask": {
+          "-webkit-mask-image": "none",
+          "mask-image": "none",
+        },
+      };
+
+      // Add utilities without specifying variants
+      addUtilities(newUtilities);
+    }),
+  ],
 };
 
 export default config;
