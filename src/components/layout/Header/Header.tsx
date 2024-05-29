@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <animated.header
       style={headerSpring}
-      className="sticky top-0 flex items-center justify-between p-4 sm:px-8 sm:py-6 border-b z-20 border-text-DARK bg-white flex-wrap"
+      className="defaultPaddings sticky top-0 z-20 flex flex-wrap items-center justify-between border-b border-text-DARK bg-white"
     >
       <Logo />
       <Navbar />
