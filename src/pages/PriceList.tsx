@@ -22,7 +22,6 @@ import {
   pricelist_header,
 } from "../utils/assets";
 
-
 const PriceList: React.FC = () => {
   const letters = ["C", "E", "N", "N", "I", "K"];
   const { ref: lettersRef, trail: lettersTrail } = useInViewTrailAnimation(
@@ -30,8 +29,6 @@ const PriceList: React.FC = () => {
     200,
     false,
   );
-
-
 
   return (
     <div className="flex flex-col h-full w-screen items-center justify-center bg-secondary px-4 gap-12">
@@ -43,14 +40,18 @@ const PriceList: React.FC = () => {
         />
         <animated.header className="flex absolute" ref={lettersRef}>
           {lettersTrail.map((props, index) => (
-            <animated.h1 key={index} className=" text-5xl pr-1" style={props}>
+            <animated.h1
+              key={index}
+              className="text-5xl pr-1 sm:text-7xl"
+              style={props}
+            >
               {letters[index]}
             </animated.h1>
           ))}
         </animated.header>
       </div>
       <div className="flex flex-col">
-        <h2>Pokoje</h2>
+        <h2 className="sm:mb-2 sm:text-5xl ">Pokoje</h2>
         <p>
           W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo
           powstały dom. Drewniany domek posiada 3 dwuosobowe sypialnie oraz
@@ -62,48 +63,47 @@ const PriceList: React.FC = () => {
         </p>
       </div>
       <div className="gap-2 flex flex-col items-center justify-center h-full w-full">
-        <h3 className="self-start text-3xl">Nowy dom</h3>
-        <Swiper
-          direction={"horizontal"}
-          slidesPerView={1}
-          spaceBetween={0}
-          loop={true}
-          pagination={true}
-          freeMode={true}
-          autoplay={{
-            delay: 750,
-            disableOnInteraction: false,
-            stopOnLastSlide: true,
-          }}
-          style={{
-            // @ts-expect-error
-            "--swiper-pagination-color": "#fff",
-          }}
-          speed={1500}
-          modules={[Autoplay, Pagination, FreeMode]}
-          className="mySwiper w-full masked2"
-        >
-          {cards_new_house.map((card) => (
-            <SwiperSlide key={card.id} className="w-full object-cover ">
-              <CardPictureOnly
-                card={card}
-                
-                className=""
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-        <p>
-          <span>*</span>Ceny:
-        </p>
-        <ul>
-          <li>1 osoba/130 zł</li>
-          <li>2 osoby/200 zł</li>
-          <li>3 osoby/270 zł</li>
-          <li>4 osoby/320 zł</li>
-        </ul>
-        <p>
+        <h3 className="self-start w-full f;ex">Nowy dom</h3>
+        <div className="w-full flex items-center">
+          <Swiper
+            direction={"horizontal"}
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={true}
+            pagination={true}
+            freeMode={true}
+            autoplay={{
+              delay: 750,
+              disableOnInteraction: false,
+              stopOnLastSlide: false,
+            }}
+            style={{
+              // @ts-expect-error
+              "--swiper-pagination-color": "#fff",
+            }}
+            speed={1500}
+            modules={[Autoplay, Pagination, FreeMode]}
+            className="flex mySwiper w-full masked2"
+          >
+            {cards_new_house.map((card) => (
+              <SwiperSlide key={card.id} className="w-full object-cover ">
+                <CardPictureOnly card={card} className="" />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          <div className="flex flex-col items-center w-full sm:w-1/2">
+            <p>
+              <span>*</span>Ceny:
+            </p>
+            <ul>
+              <li>1 osoba/130 zł</li>
+              <li>2 osoby/200 zł</li>
+              <li>3 osoby/270 zł</li>
+              <li>4 osoby/320 zł</li>
+            </ul>
+          </div>
+        </div>
+        <p className="flex sm:px-4 sm:w-screen">
           <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
           wynajmie na jedną dobę ceny ustalane są indywidualnie
         </p>
@@ -131,7 +131,7 @@ const PriceList: React.FC = () => {
           className="mySwiper w-full masked2"
         >
           {cards_old_house.map((card) => (
-            <SwiperSlide key={card.id} className="w-full object-cover  ">
+            <SwiperSlide key={card.id} className="w-full object-cover">
               <CardPictureOnly card={card} />
             </SwiperSlide>
           ))}
@@ -141,7 +141,7 @@ const PriceList: React.FC = () => {
           ustalana indywidualnie.{" "}
         </p>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full">
+      <div className="flex gap-2 flex-col items-center justify-center h-full w-full sm:items-start">
         <h3 className="self-start text-3xl">Dodatkowe atrakcje</h3>
         <ul>
           <li>Sauna & Balia - cena ustalana indywidualnie</li>
@@ -149,7 +149,7 @@ const PriceList: React.FC = () => {
           <li>Grill (taczka drewna) / 50 zł</li>
         </ul>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full">
+      <div className="flex gap-2 flex-col items-center justify-center h-full w-full sm:items-start">
         <h3 className="self-start text-3xl">Potwierdzenie rezerwacji</h3>
         <p className="">
           Rezerwacji pobytu można dokonać osobiście, telefonicznie lub pocztą
@@ -160,7 +160,7 @@ const PriceList: React.FC = () => {
           przyjazdu, kończy o godzinie 11.00 w dniu wyjazdu.
         </p>
       </div>
-      <div className="flex gap-2 flex-col items-center justify-center h-full w-full pb-12">
+      <div className="flex gap-2 flex-col items-center justify-center h-full w-full pb-12 sm:items-start">
         <h3 className="self-start text-3xl">Dane do przelewu</h3>
         <span className="self-start">na poczet zadatku</span>
         <ul>
