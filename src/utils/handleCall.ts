@@ -1,12 +1,12 @@
-export const handleCall = () => {
+export const handleCall = (tel: string) => {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   if (isMobile) {
     const userConfirmed = window.confirm(
-      "Do you want to call +48 510 058 955?",
+      `Chcesz zadzwonić do ${tel}?`,
     );
     if (userConfirmed) {
-      window.location.href = "tel:+48510058955";
+      window.location.href = `tel:${tel}`;
     }
   } else {
     window.location.href = "#kontakt";

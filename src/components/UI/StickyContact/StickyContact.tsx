@@ -1,6 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+import { phoneNumbers } from "../../../constants/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);
@@ -49,10 +50,16 @@ const StickyContact: React.FC = () => {
         aria-label="Map"
         role="button"
       >
-        <FaMapMarkerAlt aria-hidden="true" />
+        <a
+          href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaMapMarkerAlt aria-hidden="true" />
+        </a>
       </button>
       <button
-        onClick={handleCall}
+        onClick={() => handleCall(phoneNumbers.kamil)}
         className="flex w-3/4 items-center justify-center gap-2 hover:bg-gray-200 "
         aria-label="Call for reservation"
         role="button"
