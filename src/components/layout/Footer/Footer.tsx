@@ -1,5 +1,6 @@
-import { logo } from "../../../utils/assets";
+import { phoneNumbers } from "../../../constants/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
+import Logo from "../../UI/Logo/Logo";
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
@@ -10,11 +11,7 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
-                <img
-                  src={logo}
-                  className="me-3 h-8"
-                  alt="Stanica Podkowa Logo"
-                />
+                <Logo className={`mr-4`} />
               </a>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
@@ -56,7 +53,10 @@ const Footer: React.FC<FooterProps> = () => {
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="#kontakt" onClick={handleCall}>
+                    <a
+                      href="#kontakt"
+                      onClick={() => handleCall(phoneNumbers.kamil)}
+                    >
                       Zadzwoń do nas
                     </a>
                   </li>
