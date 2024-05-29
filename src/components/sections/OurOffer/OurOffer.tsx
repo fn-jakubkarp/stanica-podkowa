@@ -40,11 +40,8 @@ const OurOffer: React.FC<OurOfferProps> = () => {
 
         {/* Header (nasze, twoje domki) */}
         <div className="flex w-screen flex-col">
-          <div className="mt-2 flex w-full justify-center ">
-            <span className="italic line-through text-3xl">NASZE</span>
-          </div>
-          <div className="ml-6 flex w-full justify-center ">
-            <span className="mr-3 pl-12 text-3xl">TWOJE</span>
+          <div className="ml-12 pb-4 flex w-full justify-center ">
+            <span className="pr-2 text-3xl">TWOJE</span>
             <span className="text-3xl">DOMKI</span>
           </div>
         </div>
