@@ -11,12 +11,12 @@ const Footer: React.FC<FooterProps> = () => {
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
-                <Logo className={`mr-4`} />
+                <Logo className={`mr-4 md:mr-12`} />
               </a>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               <div>
-                <h2 className=" mb-6 font-bold uppercase ">Sekcje</h2>
+                <h2 className="mb-6 font-semibold uppercase ">Sekcje</h2>
                 <ul className="  ">
                   <li>
                     <a href="#" className="hover:underline">
@@ -47,7 +47,7 @@ const Footer: React.FC<FooterProps> = () => {
                 </ul>
               </div>
               <div>
-                <h2 className=" mb-6  font-bold uppercase ">Kontakt</h2>
+                <h2 className=" mb-6  font-semibold uppercase ">Kontakt</h2>
                 <ul className="  ">
                   <li className="hover:underline">
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
@@ -65,7 +65,7 @@ const Footer: React.FC<FooterProps> = () => {
 
               {/* Adres */}
               <div>
-                <h2 className=" mb-6  font-bold uppercase ">Adres</h2>
+                <h2 className=" mb-6  font-semibold uppercase ">Adres</h2>
                 <ul className=" ">
                   <li className="mb-4">
                     <a
