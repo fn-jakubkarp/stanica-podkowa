@@ -161,7 +161,7 @@ const PriceList: React.FC = () => {
           wynajmie na jedną dobę ceny ustalane są indywidualnie
         </p>
       </div>
-      <div className="mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="">Dodatkowe atrakcje</h3>
         <ul>
           <li>Sauna & Balia - cena ustalana indywidualnie</li>
@@ -169,7 +169,7 @@ const PriceList: React.FC = () => {
           <li>Grill (taczka drewna) / 50 zł</li>
         </ul>
       </div>
-      <div className="mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="">Potwierdzenie rezerwacji</h3>
         <p className="">
           Rezerwacji pobytu można dokonać osobiście, telefonicznie lub pocztą
@@ -180,7 +180,7 @@ const PriceList: React.FC = () => {
           przyjazdu, kończy o godzinie 11.00 w dniu wyjazdu.
         </p>
       </div>
-      <div className="mx-auto mb-12 flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
+      <div className=" defaultPaddings mx-auto mb-12 flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="self-start text-3xl">Dane do przelewu</h3>
         <span className="self-start">na poczet zadatku</span>
         <ul>

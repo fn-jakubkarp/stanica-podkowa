@@ -11,21 +11,21 @@ const NavLinks: React.FC<NavLinksProps> = ({ closeDrawer }) => {
     <>
       <NavLink
         to="/"
-        className="hover:underline lg:text-2xl"
+        className="hover:underline lg:h-full lg:text-2xl"
         onClick={closeDrawer}
       >
         Strona główna
       </NavLink>
       <NavLink
         to="/cennik"
-        className="hover:underline lg:text-2xl"
+        className="hover:underline lg:h-full lg:text-2xl"
         onClick={closeDrawer}
       >
         Cennik
       </NavLink>
       <NavLink
         to="/galeria"
-        className="hover:underline lg:text-2xl"
+        className="hover:underline lg:h-full lg:text-2xl"
         onClick={closeDrawer}
       >
         Galeria
@@ -47,11 +47,11 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="flex sm:w-1/2 lg:w-1/3  justify-end">
-        <div className="hidden md:flex w-full justify-between">
+      <nav className="flex justify-end sm:w-1/2  lg:h-full lg:w-1/3 lg:items-center">
+        <div className="hidden h-full w-full items-center justify-between md:flex">
           <NavLinks closeDrawer={closeDrawer} />
         </div>
-        <div className="md:hidden h-[24px]">
+        <div className="h-[24px] md:hidden">
           <button onClick={toggleDrawer} className="">
             {isDrawerOpen ? (
               <IoCloseOutline size={24} />
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
       {isDrawerOpen && (
-        <div className="flex basis-full flex-col items-center pt-8 text-2xl gap-2">
+        <div className="flex basis-full flex-col items-center gap-2 pt-8 text-2xl">
           <NavLinks closeDrawer={closeDrawer} />
         </div>
       )}

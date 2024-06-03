@@ -4,6 +4,9 @@ import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  server: {
+    host: "0.0.0.0",
+  },
   plugins: [
     react(),
     ViteImageOptimizer({
