@@ -21,14 +21,14 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section className=" mt-8 flex h-full w-screen flex-col items-center justify-center gap-y-6 py-4 md:py-8">
-        <div className="px-4 md:px-8 w-full max-w-[820px]">
+      <animated.section className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 py-4 md:py-8">
+        <div className="w-full max-w-[820px] px-4 md:px-8">
           {/* POZNAJ */}
           <animated.div className="flex" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
               <animated.h1
                 key={index}
-                className="text-7xl pr-1 sm:text-[9rem]"
+                className="pr-1 text-7xl sm:text-[9rem]"
                 style={props}
               >
                 {letters[index]}
@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
             ))}
           </animated.div>
 
-          {/* Nasze uroki */}
+          {/* NASZE UROKI */}
           <animated.h3 ref={wordsRef} className="flex justify-end ">
             {wordsTrail.map((props, index) => (
               <animated.span
@@ -53,11 +53,11 @@ const Hero: React.FC<HeroProps> = ({}) => {
         <img
           src={hero_night_sky}
           alt="Zdjęcie nocnego nieba"
-          className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3 md:h-[35vh] md:w-[35vw] md:self-center"
+          className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3 md:aspect-video md:h-full md:w-full md:self-center"
         />
-        <animated.div className="">
-          <span className="text-3xl sm:text-5xl">ODKRYJ </span>
-          <span className="text-3xl sm:text-5xl">PERFEKCJĘ.</span>
+        <animated.div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center">
+          <span className="text-5xl sm:text-[7rem] sm:pr-6">ODKRYJ</span>
+          <span className="text-5xl sm:text-[7rem]">PERFEKCJĘ.</span>
         </animated.div>
       </animated.section>
     </>
