@@ -7,7 +7,7 @@ const Footer: React.FC<FooterProps> = () => {
   return (
     <>
       <footer className="">
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+        <div className="mx-auto w-full max-w-screen-2xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
               <a href="#" className="flex items-center">
@@ -17,7 +17,7 @@ const Footer: React.FC<FooterProps> = () => {
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               <div>
                 <h2 className="mb-6 font-semibold uppercase ">Sekcje</h2>
-                <ul className="  ">
+                <ul>
                   <li>
                     <a href="#" className="hover:underline">
                       Idź do góry
@@ -47,8 +47,8 @@ const Footer: React.FC<FooterProps> = () => {
                 </ul>
               </div>
               <div>
-                <h2 className=" mb-6  font-semibold uppercase ">Kontakt</h2>
-                <ul className="  ">
+                <h2 className="mb-6 font-semibold uppercase ">Kontakt</h2>
+                <ul>
                   <li className="hover:underline">
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
                   </li>

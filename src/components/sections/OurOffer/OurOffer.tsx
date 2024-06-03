@@ -7,7 +7,7 @@ import { revealImageFromBelow, slidingText } from "../../../utils/animations";
 
 // Assets
 
-import { hero_macro, hero_old_house } from "../../../utils/assets";
+import { hero_macro } from "../../../utils/assets";
 
 interface OurOfferProps {}
 
@@ -24,10 +24,10 @@ const OurOffer: React.FC<OurOfferProps> = () => {
 
   return (
     <>
-      <section className="relative mt-20 sm:mt-24 flex w-screen flex-col items-center justify-center bg-secondary py-4">
+      <section className="relative mt-20 flex w-screen flex-col items-center justify-center bg-secondary py-4 sm:mt-24">
         {/* Image reveal */}
         <div
-          className="absolute left-8 top-[-50px] h-[100px] w-[100px] overflow-hidden bg-accent sm:h-[150px] sm:w-[150px] sm:top-[-75px]"
+          className="bg-accent absolute left-8 top-[-50px] h-[100px] w-[100px] overflow-hidden sm:top-[-75px] sm:h-[150px] sm:w-[150px]"
           ref={imageRef}
         >
           <img
@@ -39,26 +39,22 @@ const OurOffer: React.FC<OurOfferProps> = () => {
         </div>
 
         {/* Header (nasze, twoje domki) */}
-        <div className="flex w-screen flex-col">
-          <div className="ml-12 pb-4 flex w-full justify-center ">
+
+        <div className="defaultPaddings overflow-hidden" ref={textRef}>
+          <div className="flex pb-4 pt-12">
             <span className="pr-2 text-3xl">TWOJE</span>
             <span className="text-3xl">DOMKI</span>
           </div>
-        </div>
-
-        <div className="overflow-hidden" ref={textRef}>
-          <p style={slidingText(textView)} className="px-4 sm:py-6">
+          <p style={slidingText(textView)} className="">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit.
             Praesentium corporis nisi nobis, nihil totam est illum fugiat natus,
             vel temporibus facilis? Unde commodi maxime aspernatur tenetur esse
             impedit sit. Consectetur?
           </p>
         </div>
-        <div className="p-4">
-          <img src={hero_old_house} className="rounded-md" />
-        </div>
+
         <ul
-          className="flex h-full w-full flex-col items-start justify-start px-4"
+          className="defaultPaddings flex h-full w-full flex-col items-start justify-start"
           ref={liRef}
           style={slidingText(liView)}
         >

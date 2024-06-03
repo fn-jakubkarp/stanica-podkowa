@@ -42,7 +42,7 @@ const PriceList: React.FC = () => {
         <img
           src={mask5}
           alt="Additional Overlay"
-          className="absolute left-0 top-0 z-20 w-screen h-full object-cover"
+          className="absolute left-0 top-0 z-20 h-full w-screen object-cover"
         />
         <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-black to-black opacity-45"></div>
 
@@ -58,7 +58,7 @@ const PriceList: React.FC = () => {
           ))}
         </animated.header>
       </div>
-      <div className="defaultPaddings flex w-screen flex-col">
+      <div className="defaultPaddings mx-auto flex max-w-screen-2xl  flex-col">
         <h2 className="text-3xl sm:mb-2 sm:text-5xl">Pokoje</h2>
         <p>
           W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo
@@ -70,7 +70,7 @@ const PriceList: React.FC = () => {
           łazienkę
         </p>
       </div>
-      <div className="defaultPaddings flex h-full w-full flex-col items-center justify-center gap-4">
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
         <h3 className="flex w-full self-start text-3xl sm:text-5xl">
           Nowy dom
         </h3>
@@ -118,11 +118,11 @@ const PriceList: React.FC = () => {
           wynajmie na jedną dobę ceny ustalane są indywidualnie
         </p>
       </div>
-      <div className="defaultPaddings flex h-full w-full flex-col items-center justify-center gap-4">
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
         <h3 className="flex w-full self-start text-3xl sm:text-5xl">
-          Stary domek
+          Nowy dom
         </h3>
-        <div className="flex w-full flex-col items-center md:flex-row">
+        <div className="flex w-full flex-col items-center gap-4 md:flex-row">
           <Swiper
             direction={"horizontal"}
             slidesPerView={1}
@@ -149,14 +149,19 @@ const PriceList: React.FC = () => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="flex w-full flex-col items-center"></div>
+          <div className="flex w-full flex-col items-center">
+            <p className="">
+              Domek wynajmowany jest jako całość i mieści do 10 osób. Cena jest
+              ustalana indywidualnie.{" "}
+            </p>
+          </div>
         </div>
-        <p className="defaultPaddings flex sm:w-screen">
-          Domek wynajmowany jest jako całość i mieści do 10 osób. Cena jest
-          ustalana indywidualnie.{" "}
+        <p className="flex sm:w-full">
+          <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
+          wynajmie na jedną dobę ceny ustalane są indywidualnie
         </p>
       </div>
-      <div className="defaultPaddings flex h-full w-full flex-col justify-center gap-2">
+      <div className="mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="">Dodatkowe atrakcje</h3>
         <ul>
           <li>Sauna & Balia - cena ustalana indywidualnie</li>
@@ -164,7 +169,7 @@ const PriceList: React.FC = () => {
           <li>Grill (taczka drewna) / 50 zł</li>
         </ul>
       </div>
-      <div className="defaultPaddings flex h-full w-full flex-col justify-center gap-2">
+      <div className="mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="">Potwierdzenie rezerwacji</h3>
         <p className="">
           Rezerwacji pobytu można dokonać osobiście, telefonicznie lub pocztą
@@ -175,7 +180,7 @@ const PriceList: React.FC = () => {
           przyjazdu, kończy o godzinie 11.00 w dniu wyjazdu.
         </p>
       </div>
-      <div className="defaultPaddings mb-12 flex h-full w-full flex-col justify-center gap-2">
+      <div className="mx-auto mb-12 flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
         <h3 className="self-start text-3xl">Dane do przelewu</h3>
         <span className="self-start">na poczet zadatku</span>
         <ul>

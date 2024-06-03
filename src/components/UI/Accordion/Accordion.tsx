@@ -10,22 +10,24 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
   const [tabOpen, setTabOpen] = useState(false);
 
   return (
-    <div className="">
+    <div>
       <button
         onClick={() => setTabOpen(!tabOpen)}
         className="flex w-full flex-nowrap items-start justify-between"
       >
-        <span className="text-left text-xl">{question}</span>
+        <span className="text-left">{question}</span>
         {tabOpen ? (
-          <RiArrowDropDownFill className="rotate-180 text-xl" />
+          <RiArrowDropDownFill className="rotate-180 text-xl lg:text-5xl" />
         ) : (
-          <RiArrowDropDownFill className="rotate-0 text-xl transition" />
+          <RiArrowDropDownFill className="rotate-0 text-xl transition lg:text-5xl" />
         )}
       </button>
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out ${tabOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden pt-4 text-xl">{answer}</div>
+        <div className="overflow-hidden border-b border-b-black pt-4 md:pt-0">
+          {answer}
+        </div>
       </div>
     </div>
   );

@@ -2,11 +2,11 @@ const AroundUs = () => {
   return (
     <>
       <section className="my-8 md:my-12">
-        <div className="flex flex-col justify-center items-center mb-4 md:mb-8">
-          <h2 className="text-4xl">ATRAKCJE</h2>
-          <span className="text-2xl">w okolicy</span>
+        <div className="mb-4 flex flex-col items-center justify-center md:mb-8">
+          <h2 className="lg:text-5xl">ATRAKCJE</h2>
+          <span className="lg:text-3xl">w okolicy</span>
         </div>
-        <ul className="flex flex-col px-4 gap-2">
+        <ul className="mx-auto flex max-w-screen-2xl flex-col gap-2 px-4 lg:px-0">
           <li>Uzdrowisko Wapienne - 2km</li>
           <li>Wieża widokowa 'Ferdel' - 5km</li>
           <li>Park linowy w Sękowej - 8km</li>
