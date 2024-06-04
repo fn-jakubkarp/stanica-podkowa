@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 py-4 md:py-8">
+      <animated.section className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8">
         <div className="w-full max-w-[820px] px-4 md:px-8">
           {/* POZNAJ */}
           <animated.div className="flex" ref={lettersRef}>
@@ -56,7 +56,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3 md:aspect-video md:h-full md:w-full md:self-center"
         />
         <animated.div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center">
-          <span className="text-5xl sm:text-[7rem] sm:pr-6">ODKRYJ</span>
+          <span className="text-5xl sm:pr-6 sm:text-[7rem]">ODKRYJ</span>
           <span className="text-5xl sm:text-[7rem]">PERFEKCJĘ.</span>
         </animated.div>
       </animated.section>

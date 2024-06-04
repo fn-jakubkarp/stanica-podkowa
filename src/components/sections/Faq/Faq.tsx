@@ -8,7 +8,7 @@ const Faq: React.FC<FaqProps> = ({}) => {
         id="faq"
         className="mx-auto mt-4  flex max-w-screen-2xl flex-col justify-center gap-4 p-4"
       >
-        <h3 className="pb-2 md:pb-4 lg:pb-8 text-3xl">Najczęściej zadawane pytania</h3>
+        <h3 className="flex w-full justify-center font-bold pb-2 md:pb-4 lg:pb-8">Najczęściej zadawane pytania</h3>
         <Accordion
           question="Czy termin jest dostępny?"
           answer="Zadzwoń i zapytaj"

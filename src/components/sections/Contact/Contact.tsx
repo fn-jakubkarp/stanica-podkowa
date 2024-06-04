@@ -9,7 +9,7 @@ const Contact: React.FC = () => {
         id="kontakt"
         className="mx-auto my-8 flex h-auto max-w-screen-2xl flex-col justify-center gap-4 px-4 lg:px-0"
       >
-        <h3 className="flex lg:text-5xl">SKONTAKTUJ SIĘ</h3>
+        <h3 className="flex justify-center font-bold lg:text-5xl">SKONTAKTUJ SIĘ</h3>
         <p className="">
           Jeśli masz pytania lub chcesz poznać szczegóły zadzwoń
         </p>

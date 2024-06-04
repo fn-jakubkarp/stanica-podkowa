@@ -59,7 +59,9 @@ const PriceList: React.FC = () => {
         </animated.header>
       </div>
       <div className="defaultPaddings mx-auto flex max-w-screen-2xl  flex-col">
-        <h2 className="text-3xl sm:mb-2 sm:text-5xl">Pokoje</h2>
+        <h2 className="mb-2 flex w-full justify-center text-3xl font-bold lg:mb-2 lg:text-5xl">
+          POKOJE
+        </h2>
         <p>
           W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo
           powstały dom. Drewniany domek posiada 3 dwuosobowe sypialnie oraz
@@ -71,7 +73,7 @@ const PriceList: React.FC = () => {
         </p>
       </div>
       <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
-        <h3 className="flex w-full self-start text-3xl sm:text-5xl">
+        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
           Nowy dom
         </h3>
         <div className="flex w-full flex-col items-center gap-4 md:flex-row">
@@ -83,7 +85,7 @@ const PriceList: React.FC = () => {
             pagination={true}
             freeMode={true}
             autoplay={{
-              delay: 750,
+              delay: 2500,
               disableOnInteraction: false,
               stopOnLastSlide: false,
             }}
@@ -102,14 +104,11 @@ const PriceList: React.FC = () => {
             ))}
           </Swiper>
           <div className="flex w-full flex-col items-center">
-            <p>
-              <span>*</span>Ceny:
-            </p>
             <ul>
-              <li>1 osoba/130 zł</li>
-              <li>2 osoby/200 zł</li>
-              <li>3 osoby/270 zł</li>
-              <li>4 osoby/320 zł</li>
+              <li className="text-3xl">1 osoba/130 zł</li>
+              <li className="text-3xl">2 osoby/200 zł</li>
+              <li className="text-3xl">3 osoby/270 zł</li>
+              <li className="text-3xl">4 osoby/320 zł</li>
             </ul>
           </div>
         </div>
@@ -119,8 +118,8 @@ const PriceList: React.FC = () => {
         </p>
       </div>
       <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
-        <h3 className="flex w-full self-start text-3xl sm:text-5xl">
-          Nowy dom
+        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+          Stary domek
         </h3>
         <div className="flex w-full flex-col items-center gap-4 md:flex-row">
           <Swiper
@@ -162,7 +161,9 @@ const PriceList: React.FC = () => {
         </p>
       </div>
       <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="">Dodatkowe atrakcje</h3>
+        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+          Dodatkowe atrakcje
+        </h3>
         <ul>
           <li>Sauna & Balia - cena ustalana indywidualnie</li>
           <li>Śniadania/obiad - cena ustalana indywidualnie</li>
@@ -170,7 +171,9 @@ const PriceList: React.FC = () => {
         </ul>
       </div>
       <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="">Potwierdzenie rezerwacji</h3>
+        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+          Potwierdzenie rezerwacji
+        </h3>
         <p className="">
           Rezerwacji pobytu można dokonać osobiście, telefonicznie lub pocztą
           elektroniczną. Potwierdzeniem rezerwacji jest wpłata 40% kosztów
@@ -181,13 +184,17 @@ const PriceList: React.FC = () => {
         </p>
       </div>
       <div className=" defaultPaddings mx-auto mb-12 flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="self-start text-3xl">Dane do przelewu</h3>
-        <span className="self-start">na poczet zadatku</span>
+        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+          Dane do przelewu
+        </h3>
+        <span className="flex w-full justify-center text-xl font-semibold sm:text-5xl">
+          na poczet zadatku
+        </span>
         <ul>
-          <li className="font-bold">Kamil Haluch</li>
-          <li className="font-bold">Męcina Wielka 115, 38-307 Sękowa</li>
-          <li className="font-bold">04862700013028370086260001</li>
-          <li className="font-bold">
+          <li className="font-semibold">Kamil Haluch</li>
+          <li className="font-semibold">Męcina Wielka 115, 38-307 Sękowa</li>
+          <li className="font-semibold">04862700013028370086260001</li>
+          <li className="font-semibold">
             Tytułem: Zadatek - Imię Nazwisko - termin rezerwacji
           </li>
         </ul>
