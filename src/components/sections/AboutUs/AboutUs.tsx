@@ -15,9 +15,9 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
           />
           <div className="space-y-4">
             <div className="space-y-2">
-              <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 About Our Rural Business
-              </h1>
+              </h2>
               <p className=" overflow-hidden md:text-xl">
                 Welcome to our family-owned rural business, where we take pride
                 in crafting high-quality products and providing exceptional
@@ -27,7 +27,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
               </p>
             </div>
             <div className="space-y-2">
-              <h2 className="text-2xl font-bold">Our History</h2>
+              <h3 className="text-2xl font-bold">Our History</h3>
               <p className=" md:text-lg ">
                 Our story began when our grandparents, John and Jane Doe,
                 decided to turn their passion for farming and local
@@ -37,7 +37,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
               </p>
             </div>
             <div className="space-y-2">
-              <h2 className="text-2xl font-bold">Our Mission</h2>
+              <h3 className="text-2xl font-bold">Our Mission</h3>
               <p className=" md:text-lg ">
                 At the heart of our business is a deep commitment to
                 sustainability, community, and quality. We strive to source our
