@@ -2,7 +2,7 @@
 
 // Import section components
 import AboutUs from "../components/sections/AboutUs/AboutUs";
-import AroundUs from "../components/sections/AroundUs/AroundUs";
+import Attractions from "../components/sections/Attractions/Attractions";
 import Contact from "../components/sections/Contact/Contact";
 import Directions from "../components/sections/Directions/Directions";
 import Faq from "../components/sections/Faq/Faq";
@@ -15,7 +15,8 @@ const Home: React.FC = () => {
       <Hero />
       <AboutUs />
       <OurOffer />
-      <AroundUs />
+      <Attractions />
+
       <Contact />
       <Directions />
       <Faq />
