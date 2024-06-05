@@ -20,7 +20,6 @@ const config = {
         },
         text: {
           DARK: "#64554F",
-          LIGHT: "#eae6e0",
         },
       },
     },
