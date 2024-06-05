@@ -2,7 +2,7 @@ import CardAtractions from "../../UI/Card/CardAtractions";
 
 export default function Attractions() {
   return (
-    <section className="mx-auto w-full max-w-screen-xl py-12 md:py-24 lg:py-32">
+    <section className="mx-auto w-full max-w-screen-xl py-12 md:py-24 lg:py-32 flex justify-center">
       <div className="container px-4 md:px-6">
         <div className="space-y-6">
           <div className="text-center">
@@ -49,13 +49,6 @@ export default function Attractions() {
               card={{
                 title: "Biecz - 20km",
                 text: "Biecz to stare królewskie miasto, znane z wieży ratuszowej z punktem widokowym, XV-wiecznego Kościoła Bożego Ciała, licznych starych muzeów oraz najstarszego szpitala w Polsce.",
-                id: 1,
-              }}
-            />
-            <CardAtractions
-              card={{
-                title: "Szlak Architektury Drewnianej - 23km",
-                text: "255 najcenniejszych zabytkowych obiektów drewnianych tworzy Szlak Architektury Drewnianej w Małopolsce. Szlak został oznakowany i udostępniony do zwiedzania, a w 2003 i 2013 roku osiem obiektów wpisano na Listę Światowego Dziedzictwa UNESCO.",
                 id: 1,
               }}
             />
