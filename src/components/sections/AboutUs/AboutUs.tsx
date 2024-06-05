@@ -12,7 +12,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
       <div className="mx-auto mb-4 flex h-full max-w-screen-2xl flex-col">
         <section id="o-nas" className="flex flex-col justify-center">
           <p className="defaultPaddings text-justify md:text-3xl">
-            Witaj w <span className="font-bold">Stanicy Podkowa</span>, gdzie
+            Witaj w <span className="font-bold md:text-3xl">Stanicy Podkowa</span>, gdzie
             oferujemy autentyczne agroturystyczne doświadczenie. Naszą misją
             jest zapewnienie wyjątkowego doświadczenia, które połączy Cię z
             pięknem życia na farmie.
