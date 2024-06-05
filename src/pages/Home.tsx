@@ -7,14 +7,14 @@ import Contact from "../components/sections/Contact/Contact";
 import Directions from "../components/sections/Directions/Directions";
 import Faq from "../components/sections/Faq/Faq";
 import Hero from "../components/sections/Hero/Hero";
-import OurOffer from "../components/sections/OurOffer/OurOffer";
+import Offer from "../components/sections/Offer/Offer";
 
 const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
       <AboutUs />
-      <OurOffer />
+      <Offer />
       <Attractions />
 
       <Contact />
