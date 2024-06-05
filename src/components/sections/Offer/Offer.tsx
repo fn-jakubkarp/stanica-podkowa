@@ -1,15 +1,14 @@
 import { useNavigate } from "react-router-dom";
 
 export default function Offer() {
+  const navigate = useNavigate();
 
-    const navigate = useNavigate();
-
-    const handleClick = () => {
-      navigate("/cennik");
-    };
+  const handleClick = () => {
+    navigate("/cennik");
+  };
   return (
     <section className="w-full bg-secondary py-12 md:py-24 lg:py-32 ">
-      <div className="container w-full max-w-screen-xl mx-auto px-4 md:px-6 defaultPaddings">
+      <div className="mx-auto px-4 container w-full max-w-screen-xl md:px-6 ">
         <div className="space-y-6 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Nasza oferta
@@ -18,6 +17,13 @@ export default function Offer() {
             Discover the best of rural living with our carefully curated
             experiences and amenities.
           </p>
+          <button
+            onClick={handleClick}
+            aria-label="Poznaj naszą ofertę"
+            className="inline-flex h-12 items-center justify-center rounded-md bg-gray-900 px-8 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+          >
+            Poznaj ofertę w całości
+          </button>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-white p-6 shadow-lg ">
@@ -66,7 +72,7 @@ export default function Offer() {
   );
 }
 
-function FishIcon(props) {
+function FishIcon(props: any) {
   return (
     <svg
       {...props}
@@ -90,7 +96,7 @@ function FishIcon(props) {
   );
 }
 
-function FlameKindlingIcon(props) {
+function FlameKindlingIcon(props: any) {
   return (
     <svg
       {...props}
@@ -111,7 +117,7 @@ function FlameKindlingIcon(props) {
   );
 }
 
-function LeafIcon(props) {
+function LeafIcon(props: any) {
   return (
     <svg
       {...props}
@@ -131,7 +137,7 @@ function LeafIcon(props) {
   );
 }
 
-function MountainIcon(props) {
+function MountainIcon(props: any) {
   return (
     <svg
       {...props}
