@@ -53,10 +53,10 @@ const Hero: React.FC<HeroProps> = ({}) => {
         <img
           src={hero_night_sky}
           alt="Zdjęcie nocnego nieba"
-          className="h-[320px] w-[320px] self-end rounded-l-md object-cover sm:aspect-square sm:h-auto sm:w-2/3 md:aspect-video md:h-full md:w-full md:self-center"
+          className="h-[320px] w-[320px] self-end rounded-l-md object-cover   sm:aspect-video sm:h-full sm:w-full sm:self-center"
         />
         <animated.div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center">
-          <span className="text-5xl sm:pr-6 sm:text-[7rem]">ODKRYJ</span>
+          <span className="text-5xl pr-4 sm:pr-6  sm:text-[7rem]">ODKRYJ</span>
           <span className="text-5xl sm:text-[7rem]">PERFEKCJĘ.</span>
         </animated.div>
       </animated.section>
