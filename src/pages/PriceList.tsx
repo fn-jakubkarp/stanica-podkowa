@@ -1,27 +1,10 @@
-// Libraries
-import { Autoplay, FreeMode, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-// ---
+import { pricelist_header, mask5 } from "../utils/assets";
 import { animated } from "@react-spring/web";
 import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
-// Custom components
-import CardPictureOnly from "../components/UI/Card/CardPictureOnly";
-import { CardType } from "../components/UI/Card/CardType";
 
-import {
-  mask5,
-  nh_bathroom,
-  nh_kid_section,
-  nh_kitchen,
-  nh_living_room,
-  nh_room,
-  oh_bathroom,
-  oh_kitchen,
-  oh_living_room,
-  oh_room,
-  pricelist_header,
-} from "../utils/assets";
+// Custom components
+import DetailedPriceList from "../components/UI/DetailedPriceList/DetailedPriceList";
+import RoomsPriceList from "../components/UI/RoomsPriceList/RoomsPriceList";
 
 const PriceList: React.FC = () => {
   const letters = ["C", "E", "N", "N", "I", "K"];
@@ -72,106 +55,11 @@ const PriceList: React.FC = () => {
           łazienkę
         </p>
       </div>
-      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
-        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
-          Nowy dom
-        </h3>
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row">
-          <Swiper
-            direction={"horizontal"}
-            slidesPerView={1}
-            spaceBetween={0}
-            loop={true}
-            pagination={true}
-            freeMode={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-              stopOnLastSlide: false,
-            }}
-            style={{
-              // @ts-expect-error
-              "--swiper-pagination-color": "#fff",
-            }}
-            speed={1500}
-            modules={[Autoplay, Pagination, FreeMode]}
-            className="mySwiper flex w-full rounded-md md:m-8 md:rounded-xl"
-          >
-            {cards_new_house.map((card) => (
-              <SwiperSlide key={card.id} className="w-full object-cover ">
-                <CardPictureOnly card={card} className="" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="flex w-full flex-col items-center">
-            <ul>
-              <li className="text-3xl">1 osoba/130 zł</li>
-              <li className="text-3xl">2 osoby/200 zł</li>
-              <li className="text-3xl">3 osoby/270 zł</li>
-              <li className="text-3xl">4 osoby/320 zł</li>
-            </ul>
-          </div>
-        </div>
-        <p className="flex sm:w-full">
-          <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
-          wynajmie na jedną dobę ceny ustalane są indywidualnie
-        </p>
-      </div>
-      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col items-center justify-center gap-4">
-        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
-          Stary domek
-        </h3>
-        <div className="flex w-full flex-col items-center gap-4 md:flex-row">
-          <Swiper
-            direction={"horizontal"}
-            slidesPerView={1}
-            spaceBetween={0}
-            loop={true}
-            pagination={true}
-            freeMode={true}
-            autoplay={{
-              delay: 750,
-              disableOnInteraction: false,
-              stopOnLastSlide: false,
-            }}
-            style={{
-              // @ts-expect-error
-              "--swiper-pagination-color": "#fff",
-            }}
-            speed={1500}
-            modules={[Autoplay, Pagination, FreeMode]}
-            className="mySwiper flex w-full rounded-md md:m-8 md:rounded-xl"
-          >
-            {cards_old_house.map((card) => (
-              <SwiperSlide key={card.id} className="w-full object-cover ">
-                <CardPictureOnly card={card} className="" />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-          <div className="flex w-full flex-col items-center">
-            <p className="">
-              Domek wynajmowany jest jako całość i mieści do 10 osób. Cena jest
-              ustalana indywidualnie.{" "}
-            </p>
-          </div>
-        </div>
-        <p className="flex sm:w-full">
-          <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
-          wynajmie na jedną dobę ceny ustalane są indywidualnie
-        </p>
-      </div>
-      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
-          Dodatkowe atrakcje
-        </h3>
-        <ul>
-          <li>Sauna & Balia - cena ustalana indywidualnie</li>
-          <li>Śniadania/obiad - cena ustalana indywidualnie</li>
-          <li>Grill (taczka drewna) / 50 zł</li>
-        </ul>
-      </div>
-      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+      
+      <RoomsPriceList />
+      <DetailedPriceList />
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-xl flex-col justify-center gap-2">
+        <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl">
           Potwierdzenie rezerwacji
         </h3>
         <p className="">
@@ -183,11 +71,11 @@ const PriceList: React.FC = () => {
           przyjazdu, kończy o godzinie 11.00 w dniu wyjazdu.
         </p>
       </div>
-      <div className=" defaultPaddings mx-auto mb-12 flex h-full w-full max-w-screen-2xl flex-col justify-center gap-2">
-        <h3 className="flex w-full justify-center text-3xl font-bold sm:text-5xl">
+      <div className=" defaultPaddings mx-auto mb-12 flex h-full w-full max-w-screen-xl flex-col justify-center gap-2">
+        <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl">
           Dane do przelewu
         </h3>
-        <span className="flex w-full justify-center text-xl font-semibold sm:text-5xl">
+        <span className="flex w-full justify-center text-xl font-semibold md:text-5xl">
           na poczet zadatku
         </span>
         <ul>
@@ -205,53 +93,3 @@ const PriceList: React.FC = () => {
 
 export default PriceList;
 
-const cards_new_house: CardType[] = [
-  {
-    url: nh_room,
-    alt: "Zdjęcie pokoju",
-    id: 1,
-  },
-  {
-    url: nh_bathroom,
-    alt: "Zdjęcie łazienki",
-    id: 2,
-  },
-  {
-    url: nh_living_room,
-    alt: "Zdjęcie salonu",
-    id: 3,
-  },
-  {
-    url: nh_kitchen,
-    alt: "Zdjęcie kuchnii",
-    id: 4,
-  },
-  {
-    url: nh_kid_section,
-    alt: "Zdjęcie sekcji dla dzieci",
-    id: 5,
-  },
-];
-
-const cards_old_house: CardType[] = [
-  {
-    url: oh_room,
-    alt: "Zdjęcie pokoju",
-    id: 1,
-  },
-  {
-    url: oh_bathroom,
-    alt: "Zdjęcie łazienki",
-    id: 2,
-  },
-  {
-    url: oh_living_room,
-    alt: "Zdjęcie salonu",
-    id: 3,
-  },
-  {
-    url: oh_kitchen,
-    alt: "Zdjęcie kuchnii",
-    id: 4,
-  },
-];
