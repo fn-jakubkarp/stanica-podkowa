@@ -1,4 +1,3 @@
-import { pricelist_header, mask5 } from "../utils/assets";
 import { animated } from "@react-spring/web";
 import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
 
@@ -15,25 +14,13 @@ const PriceList: React.FC = () => {
   );
 
   return (
-    <div className="flex h-full w-screen flex-col items-center justify-center  bg-secondary">
-      <div className="relative flex w-screen items-center justify-center lg:h-[50vh]">
-        <img
-          src={pricelist_header}
-          alt="Tło strony, zdjęcie pokoju"
-          className="z-10 w-screen object-cover"
-        />
-        <img
-          src={mask5}
-          alt="Additional Overlay"
-          className="absolute left-0 top-0 z-20 h-full w-screen object-cover"
-        />
-        <div className="absolute left-0 top-0 z-10 h-full w-full bg-gradient-to-t from-black to-black opacity-45"></div>
-
-        <animated.header className="absolute flex" ref={lettersRef}>
+    <div className="mx-auto flex h-full w-screen max-w-screen-xl flex-col items-center justify-center  ">
+      <div className="flex h-[calc(20vh+108px)] flex-col items-center justify-center">
+        <animated.header className=" flex" ref={lettersRef}>
           {lettersTrail.map((props, index) => (
             <animated.h1
               key={index}
-              className="z-10 mb-12 pr-1 text-5xl text-text-LIGHT sm:text-7xl md:mb-14 lg:mb-24"
+              className="text-text-LIGHT z-10 mb-12 pr-1 text-5xl sm:text-7xl md:mb-14 lg:mb-24"
               style={props}
             >
               {letters[index]}
@@ -41,8 +28,8 @@ const PriceList: React.FC = () => {
           ))}
         </animated.header>
       </div>
-      <div className="defaultPaddings mx-auto flex max-w-screen-2xl  flex-col">
-        <h2 className="mb-2 flex w-full justify-center text-3xl font-bold lg:mb-2 lg:text-5xl">
+      <div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-col gap-4">
+        <h2 className="flex w-full justify-center text-3xl font-bold lg:mb-2 lg:text-5xl">
           POKOJE
         </h2>
         <p>
@@ -55,10 +42,11 @@ const PriceList: React.FC = () => {
           łazienkę
         </p>
       </div>
-      
+
       <RoomsPriceList />
       <DetailedPriceList />
-      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-xl flex-col justify-center gap-2">
+
+      <div className="defaultPaddings mx-auto flex h-full w-full max-w-screen-xl flex-col justify-center gap-8">
         <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl">
           Potwierdzenie rezerwacji
         </h3>
@@ -75,16 +63,14 @@ const PriceList: React.FC = () => {
         <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl">
           Dane do przelewu
         </h3>
-        <span className="flex w-full justify-center text-xl font-semibold md:text-5xl">
+        <span className="flex w-full justify-center text-xl font-semibold md:text-4xl">
           na poczet zadatku
         </span>
         <ul>
-          <li className="font-semibold">Kamil Haluch</li>
-          <li className="font-semibold">Męcina Wielka 115, 38-307 Sękowa</li>
-          <li className="font-semibold">04862700013028370086260001</li>
-          <li className="font-semibold">
-            Tytułem: Zadatek - Imię Nazwisko - termin rezerwacji
-          </li>
+          <li className="font-medium">Kamil Haluch</li>
+          <li>Męcina Wielka 115, 38-307 Sękowa</li>
+          <li className="font-medium">04862700013028370086260001</li>
+          <li>Tytułem: Zadatek - Imię Nazwisko - termin rezerwacji</li>
         </ul>
       </div>
     </div>
@@ -92,4 +78,3 @@ const PriceList: React.FC = () => {
 };
 
 export default PriceList;
-
