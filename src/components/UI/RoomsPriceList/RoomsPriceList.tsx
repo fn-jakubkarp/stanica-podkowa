@@ -17,14 +17,14 @@ import { CardType } from "../Card/CardType";
 
 export default function RoomsPriceList() {
   return (
-    <section className="defaultPaddings mx-auto w-full max-w-screen-xl py-12 md:py-16">
+    <section className="defaultPaddings mx-auto w-full max-w-screen-xl py-6 md:py-8">
       <div className="grid gap-8 md:gap-12">
         <div className="grid gap-6 md:grid-cols-2 md:gap-8">
           <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out  hover:shadow-xl">
             <Swiper
               direction={"horizontal"}
               slidesPerView={1}
-              spaceBetween={0}
+              spaceBetween={1}
               loop={true}
               width={600}
               height={400}
@@ -35,17 +35,17 @@ export default function RoomsPriceList() {
                 "--swiper-pagination-color": "#fff",
               }}
               modules={[Autoplay, Pagination, FreeMode]}
-              className="mySwiper "
+              className="mySwiper"
             >
               {cards_new_house.map((card) => (
                 <SwiperSlide key={card.id} className="">
-                  <CardPictureOnly card={card} className="object-cover" />
+                  <CardPictureOnly card={card} className="w-full h-auto object-cover" />
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="bg-white p-4">
+            <div className="bg-secondary p-4">
               <h3 className="font-bold">Nowy dom</h3>
-              <p className="mb-2 text-gray-500 ">
+              <p className="my-4">
                 5 funkcjonalnych sypialnii wyposażonych we własną łazienkę
               </p>
               <h4 className="text-lg font-semibold md:text-xl">
@@ -57,7 +57,7 @@ export default function RoomsPriceList() {
             <Swiper
               direction={"horizontal"}
               slidesPerView={1}
-              spaceBetween={0}
+              spaceBetween={1}
               loop={true}
               width={600}
               height={400}
@@ -76,9 +76,9 @@ export default function RoomsPriceList() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="bg-white p-4">
+            <div className="bg-secondary p-4">
               <h3 className="font-bold">Stary domek</h3>
-              <p className="mb-2 text-gray-500 ">
+              <p className="my-4">
                 Domek z kominkiem, tarasem i altaną. Wynajmowany w całości.
               </p>
               <h4 className="text-lg font-semibold md:text-xl">
@@ -87,7 +87,7 @@ export default function RoomsPriceList() {
             </div>
           </div>
         </div>
-        <div className="defaultPaddings mx-auto my-12 w-full max-w-screen-xl">
+        <div className="defaultPaddings mx-auto lg:py-12 w-full max-w-screen-xl">
           <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl ">
             Nasze ceny za pokój
           </h3>

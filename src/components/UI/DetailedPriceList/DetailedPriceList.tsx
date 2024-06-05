@@ -1,6 +1,6 @@
 export default function DetailedPriceList() {
   return (
-    <div className="defaultPaddings w-full mx-auto my-12 max-w-screen-xl">
+    <div className="defaultPaddings w-full mx-auto max-w-screen-xl">
       <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl py-8">
         Dodatkowe atrakcje
       </h3>
