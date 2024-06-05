@@ -61,13 +61,10 @@ const Gallery: React.FC = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-4 text-center text-white md:px-6">
-            <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-5xl">
-              Discover the Beauty of Rural Tourism
+            <h1 className="text-3xl font-bold tracking-tight md:text-4xl lg:text-7xl text-secondary">
+              GALERIA
             </h1>
-            <p className="mt-4 max-w-3xl text-lg md:text-xl">
-              Immerse yourself in the tranquility of the countryside and
-              experience the authentic charm of our rural tourism offerings.
-            </p>
+
           </div>
         </section>
         <section className="container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
