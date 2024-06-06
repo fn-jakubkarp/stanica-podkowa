@@ -1,16 +1,39 @@
+import { useNavigate } from "react-router-dom";
 import { phoneNumbers } from "../../../constants/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
 import Logo from "../../UI/Logo/Logo";
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
+  const navigate = useNavigate();
+
+  const handleClick =
+    (path: string, id?: string) =>
+    (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      event.preventDefault();
+      if (id) {
+        navigate(`${path}/${id}`);
+      } else {
+        navigate(path);
+      }
+    };
+
+  const handleCallClick = (
+    tel: string,
+  ): React.MouseEventHandler<HTMLAnchorElement> => {
+    return (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      event.preventDefault();
+      handleCall(tel);
+    };
+  };
+
   return (
     <>
       <footer className="">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <a href="#" className="flex items-center">
+              <a onClick={handleClick("/")} className="flex items-center">
                 <Logo className={`mr-4 md:mr-12`} />
               </a>
             </div>
@@ -19,28 +42,35 @@ const Footer: React.FC<FooterProps> = () => {
                 <h2 className="mb-6 font-semibold uppercase ">Sekcje</h2>
                 <ul>
                   <li>
-                    <a href="#" className="hover:underline">
+                    <a onClick={handleClick("/")} className="hover:underline">
                       Idź do góry
                     </a>
                   </li>
                   <li>
-                    <a href="#o-nas" className="hover:underline">
+                    <a
+                      onClick={handleClick("/", "o-nas")}
+                      className="hover:underline"
+                    >
                       O nas
                     </a>
                   </li>
                   <li>
-                    <a href="#galeria" className="hover:underline">
+                    <a
+                      onClick={handleClick("/galeria")}
+                      className="hover:underline"
+                    >
                       Galeria
                     </a>
                   </li>
 
                   <li>
-                    <a href="#jak-dojechac" className="hover:underline">
-                      Jak dojechać?
-                    </a>
+                    <a className="hover:underline">Jak dojechać?</a>
                   </li>
                   <li>
-                    <a href="#faq" className="hover:underline">
+                    <a
+                      onClick={handleClick("/", "faq")}
+                      className="hover:underline"
+                    >
                       FAQ
                     </a>
                   </li>
@@ -53,10 +83,7 @@ const Footer: React.FC<FooterProps> = () => {
                     <a href="mailto:stanica.podkowa@gmail.com">Napisz do nas</a>
                   </li>
                   <li className="hover:underline">
-                    <a
-                      href="#kontakt"
-                      onClick={() => handleCall(phoneNumbers.kamil)}
-                    >
+                    <a onClick={handleCallClick(phoneNumbers.kamil)}>
                       Zadzwoń do nas
                     </a>
                   </li>
@@ -86,11 +113,8 @@ const Footer: React.FC<FooterProps> = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8 dark:border-gray-700" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="  ">
-              © 2024{" "}
-              <a href="#" className="hover:underline">
-                Stanica Podkowa™
-              </a>
-              . Wszelkie prawa zastrzeżone.
+              © 2024 <a className="hover:underline">Stanica Podkowa™</a>.
+              Wszelkie prawa zastrzeżone.
             </span>
             <div className="mt-4 flex sm:mt-0 sm:justify-center">
               <a

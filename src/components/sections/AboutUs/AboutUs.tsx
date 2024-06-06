@@ -4,7 +4,10 @@ interface AboutUsProps {}
 const AboutUs: React.FC<AboutUsProps> = ({}) => {
   return (
     <>
-      <section className="defaultPaddings mx-auto justify-center flex w-full max-w-screen-xl py-12 md:py-24">
+      <section
+        id="o-nas"
+        className="defaultPaddings mx-auto flex w-full max-w-screen-xl justify-center py-12 md:py-24"
+      >
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
           <img
             src={hero_us}

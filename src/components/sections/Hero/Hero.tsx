@@ -21,7 +21,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8">
+      <animated.section id="#" className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8">
         <div className="w-full max-w-[820px] px-4 md:px-8">
           {/* POZNAJ */}
           <animated.div className="flex" ref={lettersRef}>
