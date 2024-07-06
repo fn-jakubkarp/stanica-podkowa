@@ -8,62 +8,70 @@ export default function Offer() {
   };
   return (
     <section className="w-full bg-secondary py-12 md:py-24 lg:py-32 ">
-      <div className="mx-auto px-4 container w-full max-w-screen-xl md:px-6 ">
+      <div className="container mx-auto w-full max-w-screen-xl px-4 md:px-6 ">
         <div className="space-y-6 text-center">
           <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Nasza oferta
           </h2>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
-            Discover the best of rural living with our carefully curated
-            experiences and amenities.
+            Poznaj bogactwo atrakcji i możliwości wypoczynku, jakie oferuje
+            nasza agroturystyka.
           </p>
           <button
             onClick={handleClick}
             aria-label="Poznaj naszą ofertę"
             className="inline-flex h-12 items-center justify-center rounded-md bg-gray-900 px-8 text-base font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
           >
-            Poznaj ofertę w całości
+            Odkryj ofertę w całości
           </button>
         </div>
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
           <div className="rounded-lg bg-white p-6 shadow-lg ">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 ">
-              <LeafIcon className="h-6 w-6 text-green-500 " />
+              <HouseIcon className="h-6 w-6 text-green-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Organic Farm Tour</h3>
+            <h3 className="mb-2 text-xl font-bold">Noclegi</h3>
             <p className="text-gray-500 ">
-              Explore our sustainable farm and learn about our organic farming
-              practices.
+              Zapraszamy do naszych dwóch uroczych domów na wynajem. Każdy
+              oferuje przestronne, przytulnie urządzone pokoje oraz w pełni
+              wyposażoną kuchnię. Z balkonu rozciąga się malowniczy widok, który
+              zachwyca o każdej porze roku.
             </p>
           </div>
           <div className="rounded-lg bg-white p-6 shadow-lg ">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 ">
               <FlameKindlingIcon className="h-6 w-6 text-yellow-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Campfire Experiences</h3>
+            <h3 className="mb-2 text-xl font-bold">Imprezy i Grille</h3>
             <p className="text-gray-500 ">
-              Gather around the campfire for stargazing, storytelling, and
-              s'mores.
+              Organizujemy duże imprezy i grille na świeżym powietrzu. Posiadamy
+              obszerny teren, idealny na urodziny, rocznice, pikniki i spotkania
+              firmowe. Pomożemy też w organizacji każdego szczegółu, aby Wasze
+              wydarzenie było niezapomniane.
             </p>
           </div>
           <div className="rounded-lg bg-white p-6 shadow-lg ">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 ">
-              <FishIcon className="h-6 w-6 text-blue-500 " />
+              <PlaygroundIcon className="h-6 w-6 text-blue-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Fishing Excursions</h3>
+            <h3 className="mb-2 text-xl font-bold">Atrakcje dla Dzieci</h3>
             <p className="text-gray-500 ">
-              Cast your line in our well-stocked ponds and enjoy a peaceful day
-              of fishing.
+              Dla najmłodszych mamy prosty plac zabaw z huśtawkami, zjeżdżalnią
+              i piaskownicą. Jest to idealne miejsce na beztroską zabawę na
+              świeżym powietrzu. Dbamy o to, aby dzieci miały wspaniałe
+              wspomnienia z pobytu.
             </p>
           </div>
           <div className="rounded-lg bg-white p-6 shadow-lg ">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 ">
               <MountainIcon className="h-6 w-6 text-red-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Hiking Trails</h3>
+            <h3 className="mb-2 text-xl font-bold">Jazda Konna</h3>
             <p className="text-gray-500 ">
-              Explore our network of scenic hiking trails and immerse yourself
-              in nature.
+              Oferujemy jazdę konną dla początkujących i zaawansowanych. Nasze
+              dobrze wyszkolone konie gwarantują bezpieczne i przyjemne
+              przejażdżki. Organizujemy lekcje oraz wycieczki po okolicznych
+              szlakach, pozwalając na podziwianie piękna przyrody.
             </p>
           </div>
         </div>
@@ -71,8 +79,7 @@ export default function Offer() {
     </section>
   );
 }
-
-function FishIcon(props: any) {
+function PlaygroundIcon(props: any) {
   return (
     <svg
       {...props}
@@ -86,12 +93,32 @@ function FishIcon(props: any) {
       strokeLinecap="round"
       strokeLinejoin="round"
     >
-      <path d="M6.5 12c.94-3.46 4.94-6 8.5-6 3.56 0 6.06 2.54 7 6-.94 3.47-3.44 6-7 6s-7.56-2.53-8.5-6Z" />
-      <path d="M18 12v.5" />
-      <path d="M16 17.93a9.77 9.77 0 0 1 0-11.86" />
-      <path d="M7 10.67C7 8 5.58 5.97 2.73 5.5c-1 1.5-1 5 .23 6.5-1.24 1.5-1.24 5-.23 6.5C5.58 18.03 7 16 7 13.33" />
-      <path d="M10.46 7.26C10.2 5.88 9.17 4.24 8 3h5.8a2 2 0 0 1 1.98 1.67l.23 1.4" />
-      <path d="m16.01 17.93-.23 1.4A2 2 0 0 1 13.8 21H9.5a5.96 5.96 0 0 0 1.49-3.98" />
+      <path d="M2 4h20" />
+      <path d="M4 4v16" />
+      <path d="M20 4v16" />
+      <rect x="8" y="12" width="8" height="3" rx="1" />
+      <line x1="10" y1="4" x2="10" y2="12" />
+      <line x1="14" y1="4" x2="14" y2="12" />
+    </svg>
+  );
+}
+
+function HouseIcon(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+      <polyline points="9 22 9 12 15 12 15 22" />
     </svg>
   );
 }
@@ -113,26 +140,6 @@ function FlameKindlingIcon(props: any) {
       <path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10a5 5 0 1 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C8 4.5 11 2 12 2Z" />
       <path d="m5 22 14-4" />
       <path d="m5 18 14 4" />
-    </svg>
-  );
-}
-
-function LeafIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12" />
     </svg>
   );
 }

@@ -50,7 +50,7 @@ const Gallery: React.FC = () => {
         plugins={[Thumbnails]}
       />
       <div className="mx-auto flex w-full max-w-screen-xl flex-col items-center justify-center">
-        <div className="h-full min-h-screen flex flex-col items-center justify-center">
+        <div className="flex h-full min-h-screen flex-col items-center justify-center">
           <h1 className="flex justify-center text-7xl">GALERIA</h1>
           <section className="container mx-auto px-4 py-12 md:px-6 md:py-16 lg:py-20">
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-2 lg:gap-8">
@@ -71,7 +71,7 @@ const Gallery: React.FC = () => {
                 <div className="bg-white p-4 ">
                   <h3 className="text-lg font-bold">Posiadłość</h3>
                   <p className="">
-                    Breathtaking vistas of rolling hills and lush meadows.
+                    Zachwyć się malowniczymi widokami naszej posiadłości.
                   </p>
                 </div>
               </div>
@@ -91,9 +91,7 @@ const Gallery: React.FC = () => {
                 />
                 <div className="bg-white p-4 ">
                   <h3 className="text-lg font-bold">Lato</h3>
-                  <p className="">
-                    Explore hiking trails, go horseback riding, and more.
-                  </p>
+                  <p className="">Ciesz się urokami lata w otoczeniu natury.</p>
                 </div>
               </div>
               <div className="group relative overflow-hidden rounded-lg shadow-lg">
@@ -113,7 +111,7 @@ const Gallery: React.FC = () => {
                 <div className="bg-white p-4 ">
                   <h3 className="text-lg font-bold">Wnętrze</h3>
                   <p className="">
-                    Relax in our charming cottages and farmhouses.
+                    Odkryj przytulne i komfortowe wnętrza naszych domów.
                   </p>
                 </div>
               </div>
@@ -134,7 +132,7 @@ const Gallery: React.FC = () => {
                 <div className="bg-white p-4 ">
                   <h3 className="text-lg font-bold">Zima</h3>
                   <p className="">
-                    Savor the flavors of our farm-to-table dining experiences.
+                    Doświadcz magii zimy w naszej malowniczej okolicy.
                   </p>
                 </div>
               </div>

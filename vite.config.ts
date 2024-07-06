@@ -2,6 +2,7 @@
 // import { defineConfig } from "vite";
 // import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 
+// // https://vitejs.dev/config/
 // export default defineConfig({
 //   server: {
 //     host: "0.0.0.0",
@@ -20,19 +21,6 @@
 //   build: {
 //     outDir: "dist",
 //     assetsDir: "assets",
-//     rollupOptions: {
-//       output: {
-//         assetFileNames: (assetInfo) => {
-//           let extType = assetInfo.name.split(".").at(1);
-//           if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-//             extType = "img";
-//           }
-//           return `assets/${extType}/[name]-[hash][extname]`;
-//         },
-//         chunkFileNames: "assets/js/[name]-[hash].js",
-//         entryFileNames: "assets/js/[name]-[hash].js",
-//       },
-//     },
 //   },
 // });
 import react from "@vitejs/plugin-react-swc";
@@ -60,13 +48,11 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: (assetInfo) => {
-          if (assetInfo.name) {
-            const extType = assetInfo.name.split(".").at(1);
-            if (extType && /png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
-              return `assets/img/[name]-[hash][extname]`;
-            }
+          let extType = assetInfo.name.split(".").at(1);
+          if (/png|jpe?g|svg|gif|tiff|bmp|ico/i.test(extType)) {
+            extType = "img";
           }
-          return `assets/[name]-[hash][extname]`;
+          return `assets/${extType}/[name]-[hash][extname]`;
         },
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
