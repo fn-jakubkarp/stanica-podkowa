@@ -23,14 +23,15 @@ import hero_horses from "../assets/HeroAssets/horses.jpg";
 import hero_macro from "../assets/HeroAssets/macro.jpg";
 import hero_night_sky from "../assets/HeroAssets/night_sky.webp";
 import hero_old_house from "../assets/HeroAssets/old_house.jpg";
+import hero_plain from "../assets/HeroAssets/plain.jpg";
 import hero_sauna from "../assets/HeroAssets/sauna.jpg";
 import hero_us from "../assets/HeroAssets/us.jpg";
 // * ------ * //
 
 // SVGS //
+import mask5 from "../assets/masks/5.svg";
 import bullet_point from "../assets/svgs/bullet_point.svg";
 import logo from "../assets/svgs/logo.svg";
-import mask5 from "../assets/masks/5.svg"
 // * ----- * //
 
 // Gallery
@@ -65,7 +66,6 @@ import w_oh_terrace from "../assets/GalleryAssets/Winter/w_oh_terrace.jpg";
 import w_sauna from "../assets/GalleryAssets/Winter/w_sauna.jpg";
 
 export {
-  mask5,
   bullet_point,
   hero_accommodation,
   hero_events,
@@ -75,12 +75,14 @@ export {
   hero_macro,
   hero_night_sky,
   hero_old_house,
+  hero_plain,
   hero_sauna,
   hero_us,
   logo,
   m_arbor,
   m_new_home,
   m_outdoor_look,
+  mask5,
   nh_bathroom,
   nh_bathroom_top,
   nh_hall,
