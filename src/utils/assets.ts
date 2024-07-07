@@ -21,7 +21,7 @@ import hero_grill from "../assets/HeroAssets/grill.jpg";
 import hero_hero from "../assets/HeroAssets/hero.webp";
 import hero_horses from "../assets/HeroAssets/horses.jpg";
 import hero_macro from "../assets/HeroAssets/macro.jpg";
-import hero_night_sky from "../assets/HeroAssets/night_sky.webp";
+import hero_night_sky from "../assets/HeroAssets/night_sky.webp?url";
 import hero_old_house from "../assets/HeroAssets/old_house.jpg";
 import hero_plain from "../assets/HeroAssets/plain.jpg";
 import hero_sauna from "../assets/HeroAssets/sauna.jpg";

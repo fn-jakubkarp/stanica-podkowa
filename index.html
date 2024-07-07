@@ -1,7 +1,20 @@
 <!doctype html>
 <html lang="pl" dir="ltr">
   <head>
+    <title>Stanica Podkowa</title>
+
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="language" content="pl" />
+    <link rel="canonical" href="https://www.stanicapodkowa.pl" />
+    <link
+      rel="alternate"
+      hreflang="pl-PL"
+      href="https://www.stanicapodkowa.pl"
+    />
+
+    <!-- Seo -->
     <meta name="title" content="Stanica Podkowa" />
     <meta
       name="description"
@@ -11,17 +24,19 @@
       name="keywords"
       content="nocleg, agroturystyka, wypoczynek, małopolska, gorlice, grill, imprezy,Nocleg, Agroturystyka, Wypoczynek, Małopolska, Gorlice, Grill, Imprezy, Turystyka wiejska, Wieś"
     />
+
+    <!-- Robots -->
     <meta name="robots" content="index, follow" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="language" content="pl" />
     <meta name="revisit-after" content="30 days" />
-    <link rel="alternate" hreflang="pl" href="https://www.stanicapodkowa.pl" />
 
-    <!-- Facebook -->
+    <!-- Icons -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- RWD -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Facebook card -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://stanicapodkowa.pl/" />
     <meta property="og:title" content="Stanica Podkowa" />
@@ -29,12 +44,9 @@
       property="og:description"
       content="Odwiedź urokliwą Męcinę Małą i odkryj piękno agroturystyki Stanica Podkowa. Zarezerwuj już dziś i zanurz się w magicznej atmosferze Polskiej wsi."
     />
-    <meta
-      property="og:image"
-      content="https://stanicapodkowa.pl/assets/HeroAssets/night_sky.webp"
-    />
+    <meta property="og:image" content="/assets/HeroAssets/night_sky.webp" />
 
-    <!-- Twitter -->
+    <!-- Twitter card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://stanicapodkowa.pl/" />
     <meta name="twitter:title" content="Stanica Podkowa" />
@@ -42,12 +54,44 @@
       name="twitter:description"
       content="Odwiedź urokliwą Męcinę Małą i odkryj piękno agroturystyki Stanica Podkowa. Zarezerwuj już dziś i zanurz się w magicznej atmosferze Polskiej wsi."
     />
-    <meta
-      name="twitter:image"
-      content="https://stanicapodkowa.pl/assets/HeroAssets/night_sky.webp"
-    />
+    <meta name="twitter:image" content="/assets/HeroAssets/night_sky.webp" />
 
-    <title>Stanica Podkowa</title>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-80EBJEXT03"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-80EBJEXT03");
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Stanica Podkowa",
+        "image": "https://stanicapodkowa.pl/assets/webp/night_sky.webp",
+        "description": "Odwiedź urokliwą Męcinę Małą i odkryj piękno agroturystyki Stanica Podkowa. Zarezerwuj już dziś i zanurz się w magicznej atmosferze Polskiej wsi.",
+        "petsAllowed": "No",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Męcina Wielka 115",
+          "addressLocality": "Męcina Wielka",
+          "addressRegion": "Małopolska",
+          "postalCode": "38-307",
+          "addressCountry": "PL"
+        },
+        "telephone": "+48510058955",
+        "url": "https://stanicapodkowa.pl/"
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
