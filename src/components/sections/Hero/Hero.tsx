@@ -25,9 +25,9 @@ const Hero: React.FC<HeroProps> = ({}) => {
         id="top"
         className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8"
       >
-        <div className="w-full max-w-[820px] px-4 md:px-8">
+        <h1 className="w-full max-w-[820px] px-4 md:px-8">
           {/* POZNAJ */}
-          <animated.h1 className="flex" ref={lettersRef}>
+          <animated.span className="flex" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
               <animated.span
                 key={index}
@@ -37,10 +37,10 @@ const Hero: React.FC<HeroProps> = ({}) => {
                 {letters[index]}
               </animated.span>
             ))}
-          </animated.h1>
+          </animated.span>
 
           {/* NASZE UROKI */}
-          <animated.h2 ref={wordsRef} className="flex justify-end ">
+          <animated.span ref={wordsRef} className="flex justify-end ">
             {wordsTrail.map((props, index) => (
               <animated.span
                 key={index}
@@ -50,12 +50,12 @@ const Hero: React.FC<HeroProps> = ({}) => {
                 {words[index]}
               </animated.span>
             ))}
-          </animated.h2>
-        </div>
+          </animated.span>
+        </h1>
 
         <img
           src={hero_night_sky}
-          alt="Zdjęcie nocnego nieba"
+          alt="Drewniany domek na tle gwieździstego nieba"
           className="h-[320px] w-[320px] self-end rounded-l-md object-cover   sm:aspect-video sm:h-full sm:w-full sm:self-center"
         />
         <animated.div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center">

@@ -13,7 +13,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
             src={hero_plain}
             width="550"
             height="550"
-            alt="About Us"
+            alt="Dom i altana na tle lasu"
             className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
           />
           <div className="space-y-4">
