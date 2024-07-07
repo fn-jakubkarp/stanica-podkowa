@@ -3,7 +3,22 @@ import { animated } from "@react-spring/web";
 import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
 
 const NotFound: React.FC = () => {
-  const letters = ["N", "O", "T", " ", "F", "O", "U", "N", "D"];
+  const letters = [
+    "N",
+    "I",
+    "E",
+    " ",
+    "Z",
+    "N",
+    "A",
+    "L",
+    "E",
+    "Z",
+    "I",
+    "O",
+    "N",
+    "O",
+  ];
 
   const { ref: lettersRef, trail: lettersTrail } = useInViewTrailAnimation(
     letters,
