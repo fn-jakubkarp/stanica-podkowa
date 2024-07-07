@@ -25,7 +25,7 @@ const Accordion: React.FC<AccordionProps> = ({ question, answer }) => {
       <div
         className={`grid overflow-hidden transition-all duration-300 ease-in-out ${tabOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
       >
-        <div className="overflow-hidden border-b border-b-text-DARK pt-4 opacity-90 md:pt-0">
+        <div className="overflow-hidden border-b pt-8 opacity-90 md:pt-4">
           {answer}
         </div>
       </div>
