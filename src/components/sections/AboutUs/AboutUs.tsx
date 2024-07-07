@@ -18,9 +18,9 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
           />
           <div className="space-y-4">
             <div className="space-y-2">
-              <h2 className="pb-2 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h3 className="pb-2 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                 Nasza agroturystyka
-              </h2>
+              </h3>
               <p className=" overflow-hidden md:text-xl">
                 Witajcie w <span className="font-bold">Stanicy Podkowa</span>,
                 oazie spokoju i relaksu pośród malowniczych krajobrazów. Nasza

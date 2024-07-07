@@ -7,7 +7,7 @@ export default function Attractions() {
         <div className="space-y-6">
           <div className="text-center">
             <div className="mb-4 flex flex-col items-center justify-center md:mb-8">
-              <h2 className="font-bold lg:text-5xl">ATRAKCJE</h2>
+              <h3 className="font-bold lg:text-5xl">ATRAKCJE</h3>
               <span className="font-semibold lg:text-3xl">w okolicy</span>
             </div>
             <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl ">

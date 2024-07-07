@@ -10,9 +10,9 @@ export default function Offer() {
     <section className="w-full bg-secondary py-12 md:py-24 lg:py-32 ">
       <div className="container mx-auto w-full max-w-screen-xl px-4 md:px-6 ">
         <div className="space-y-6 text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
+          <h3 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Nasza oferta
-          </h2>
+          </h3>
           <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
             Poznaj bogactwo atrakcji i możliwości wypoczynku, jakie oferuje
             nasza agroturystyka.
@@ -30,7 +30,7 @@ export default function Offer() {
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 ">
               <HouseIcon className="h-6 w-6 text-green-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Noclegi</h3>
+            <h4 className="mb-2 text-xl font-bold">Noclegi</h4>
             <p className="text-gray-500 ">
               Zapraszamy do naszych dwóch uroczych domów na wynajem. Każdy
               oferuje przestronne, przytulnie urządzone pokoje oraz w pełni
@@ -42,19 +42,19 @@ export default function Offer() {
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 ">
               <FlameKindlingIcon className="h-6 w-6 text-yellow-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Imprezy i Grille</h3>
+            <h4 className="mb-2 text-xl font-bold">Grill</h4>
             <p className="text-gray-500 ">
-              Organizujemy duże imprezy i grille na świeżym powietrzu. Posiadamy
-              obszerny teren, idealny na urodziny, rocznice, pikniki i spotkania
-              firmowe. Pomożemy też w organizacji każdego szczegółu, aby Wasze
-              wydarzenie było niezapomniane.
+              Nasza przestrzeń grillowa to idealne miejsce na wieczorne
+              spotkania z rodziną i przyjaciółmi. Oferujemy przytulne miejsce do
+              biesiadowania na świeżym powietrzu. Ciesz się smakiem grillowanych
+              potraw w wyjątkowej atmosferze!
             </p>
           </div>
           <div className="rounded-lg bg-white p-6 shadow-lg ">
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 ">
               <PlaygroundIcon className="h-6 w-6 text-blue-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Atrakcje dla Dzieci</h3>
+            <h4 className="mb-2 text-xl font-bold">Atrakcje dla Dzieci</h4>
             <p className="text-gray-500 ">
               Dla najmłodszych mamy prosty plac zabaw z huśtawkami, zjeżdżalnią
               i piaskownicą. Jest to idealne miejsce na beztroską zabawę na
@@ -66,7 +66,7 @@ export default function Offer() {
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 ">
               <MountainIcon className="h-6 w-6 text-red-500 " />
             </div>
-            <h3 className="mb-2 text-xl font-bold">Jazda Konna</h3>
+            <h4 className="mb-2 text-xl font-bold">Jazda Konna</h4>
             <p className="text-gray-500 ">
               Oferujemy jazdę konną dla początkujących i zaawansowanych. Nasze
               dobrze wyszkolone konie gwarantują bezpieczne i przyjemne

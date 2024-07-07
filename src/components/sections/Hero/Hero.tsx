@@ -21,23 +21,26 @@ const Hero: React.FC<HeroProps> = ({}) => {
 
   return (
     <>
-      <animated.section id="#" className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8">
+      <animated.section
+        id="top"
+        className="mx-auto mt-8 flex h-full w-screen max-w-screen-2xl flex-col items-center justify-center gap-y-6 pt-4 md:pt-8"
+      >
         <div className="w-full max-w-[820px] px-4 md:px-8">
           {/* POZNAJ */}
-          <animated.div className="flex" ref={lettersRef}>
+          <animated.h1 className="flex" ref={lettersRef}>
             {lettersTrail.map((props, index) => (
-              <animated.h1
+              <animated.span
                 key={index}
-                className="pr-1 text-7xl sm:text-[9rem]"
+                className="pr-1 font-open text-7xl sm:text-[9rem]"
                 style={props}
               >
                 {letters[index]}
-              </animated.h1>
+              </animated.span>
             ))}
-          </animated.div>
+          </animated.h1>
 
           {/* NASZE UROKI */}
-          <animated.h3 ref={wordsRef} className="flex justify-end ">
+          <animated.h2 ref={wordsRef} className="flex justify-end ">
             {wordsTrail.map((props, index) => (
               <animated.span
                 key={index}
@@ -47,7 +50,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
                 {words[index]}
               </animated.span>
             ))}
-          </animated.h3>
+          </animated.h2>
         </div>
 
         <img
@@ -56,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
           className="h-[320px] w-[320px] self-end rounded-l-md object-cover   sm:aspect-video sm:h-full sm:w-full sm:self-center"
         />
         <animated.div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-wrap items-center justify-center">
-          <span className="text-5xl pr-4 sm:pr-6  sm:text-[7rem]">ODKRYJ</span>
+          <span className="pr-4 text-5xl sm:pr-6  sm:text-[7rem]">ODKRYJ</span>
           <span className="text-5xl sm:text-[7rem]">PERFEKCJĘ.</span>
         </animated.div>
       </animated.section>
