@@ -1,23 +1,10 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { phoneNumbers } from "../../../constants/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
 import Logo from "../../UI/Logo/Logo";
 interface FooterProps {}
 
 const Footer: React.FC<FooterProps> = () => {
-  const navigate = useNavigate();
-
-  const handleClick =
-    (path: string, id?: string) =>
-    (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-      event.preventDefault();
-      if (id) {
-        navigate(`${path}/${id}`);
-      } else {
-        navigate(path);
-      }
-    };
-
   const handleCallClick = (
     tel: string,
   ): React.MouseEventHandler<HTMLAnchorElement> => {
@@ -29,50 +16,43 @@ const Footer: React.FC<FooterProps> = () => {
 
   return (
     <>
-      <footer className="">
+      <footer>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <a onClick={handleClick("/")} className="flex items-center">
+              <Link to="/#top" className="flex items-center">
                 <Logo className={`mr-4 md:mr-12`} />
-              </a>
+              </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
               <div>
                 <h2 className="mb-6 font-semibold uppercase ">Sekcje</h2>
                 <ul>
                   <li>
-                    <a onClick={handleClick("/")} className="hover:underline">
+                    <Link to="/#top" className="hover:underline">
                       Idź do góry
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      onClick={handleClick("/", "o-nas")}
-                      className="hover:underline"
-                    >
+                    <Link to="/#o-nas" className="hover:underline">
                       O nas
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      onClick={handleClick("/galeria")}
-                      className="hover:underline"
-                    >
+                    <Link to="/galeria" className="hover:underline">
                       Galeria
-                    </a>
+                    </Link>
                   </li>
 
                   <li>
-                    <a className="hover:underline">Jak dojechać?</a>
+                    <Link to="/#jak-dojechac" className="hover:underline">
+                      Jak dojechać?
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      onClick={handleClick("/", "faq")}
-                      className="hover:underline"
-                    >
+                    <Link to="/#faq" className="hover:underline">
                       FAQ
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </div>
