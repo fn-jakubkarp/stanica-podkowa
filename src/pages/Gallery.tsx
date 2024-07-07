@@ -5,13 +5,13 @@ import {
   nh_living_room_wide,
   s_signpost,
   w_arbor_bottom,
-} from "../../utils/assets";
+} from "../utils/assets";
 import {
   interiorSlides,
   mansionSlides,
   summerSlides,
   winterSlides,
-} from "../../utils/lightboxSlides";
+} from "../utils/lightboxSlides";
 
 import { Thumbnails } from "yet-another-react-lightbox/plugins";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
@@ -63,7 +63,7 @@ const Gallery: React.FC = () => {
                 </p>
                 <img
                   src={m_arbor}
-                  alt="Posiadłość"
+                  alt="Zdjęcie drewnianej altany, z placem zabaw w tle"
                   width={500}
                   height={400}
                   className="h-64 w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
@@ -84,7 +84,7 @@ const Gallery: React.FC = () => {
                 </p>
                 <img
                   src={s_signpost}
-                  alt="Lato"
+                  alt="Krajobraz zachodu słońca z drogowskazem na przodzie"
                   width={500}
                   height={400}
                   className="h-64 w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
@@ -103,7 +103,7 @@ const Gallery: React.FC = () => {
                 </p>
                 <img
                   src={nh_living_room_wide}
-                  alt="Wnętrze"
+                  alt="Wnętrze domu z przestronnym salonem"
                   width={500}
                   height={400}
                   className="h-64 w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
@@ -124,7 +124,7 @@ const Gallery: React.FC = () => {
                 </p>
                 <img
                   src={w_arbor_bottom}
-                  alt="Zima"
+                  alt="Drewniana altana pokryta śniegiem"
                   width={500}
                   height={400}
                   className="h-64 w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
