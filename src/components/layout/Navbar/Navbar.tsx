@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="flex justify-end sm:w-1/2  lg:h-full lg:w-1/3 lg:items-center">
+      <nav className="flex justify-end sm:w-1/2 lg:h-full lg:items-center">
         <div className="hidden h-full w-full items-center justify-between md:flex">
           <NavLinks closeDrawer={closeDrawer} />
         </div>
