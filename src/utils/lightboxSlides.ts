@@ -86,18 +86,15 @@ export const summerSlides = [
 
 export const woodenHouseSlides = [
   {
-    src: src.s_arbor_entrance,
+    src: src.oh_kitchen,
   },
   {
-    src: src.s_grass,
+    src: src.oh_living_room,
   },
   {
-    src: src.s_hay_bale,
+    src: src.oh_room,
   },
   {
-    src: src.s_playground_stairs,
-  },
-  {
-    src: src.s_signpost,
+    src: src.oh_bathroom,
   },
 ];

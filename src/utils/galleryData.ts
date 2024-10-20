@@ -1,6 +1,7 @@
 import {
   m_arbor,
   nh_living_room_wide,
+  oh_living_room,
   s_signpost,
   w_arbor_bottom,
 } from "../utils/assets";
@@ -57,7 +58,7 @@ export const galleryData: GalleryItemType[] = [
   },
   {
     id: "wooden-house",
-    image: w_arbor_bottom,
+    image: oh_living_room,
     alt: "Drewniany dom w otoczeniu natury",
     title: "Drewniany dom",
     description: "Odkryj urok naszego drewnianego domu w sercu natury.",
