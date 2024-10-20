@@ -4,8 +4,9 @@ import AboutUs from "../components/sections/AboutUs/AboutUs";
 import Attractions from "../components/sections/Attractions/Attractions";
 import Contact from "../components/sections/Contact/Contact";
 import Directions from "../components/sections/Directions/Directions";
-// import Faq from "../components/sections/Faq/Faq";
 import Hero from "../components/sections/Hero/Hero";
+// import Faq from "../components/sections/Faq/Faq";
+// import ExpHero from "../components/sections/Hero/ExperimentalHero";
 import Offer from "../components/sections/Offer/Offer";
 
 const Home: React.FC = () => {
@@ -14,6 +15,7 @@ const Home: React.FC = () => {
   return (
     <div className="overflow-hidden">
       <Hero />
+      {/* <ExpHero /> */}
       <AboutUs />
       <Offer />
       <Attractions />
