@@ -30,6 +30,7 @@ import hero_us from "../assets/HeroAssets/us.jpg";
 
 // SVGS //
 import bullet_point from "../assets/svgs/bullet_point.svg";
+import logoDark from "../assets/svgs/darkLogo.svg";
 import logo from "../assets/svgs/logo.svg";
 // * ----- * //
 
@@ -78,6 +79,7 @@ export {
   hero_sauna,
   hero_us,
   logo,
+  logoDark,
   m_arbor,
   m_new_home,
   m_outdoor_look,
