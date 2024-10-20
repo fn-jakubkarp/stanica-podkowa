@@ -51,7 +51,6 @@ import s_arbor_entrance from "../assets/GalleryAssets/Summer/s_arbor_entrance.jp
 import s_grass from "../assets/GalleryAssets/Summer/s_grass.jpg";
 import s_hay_bale from "../assets/GalleryAssets/Summer/s_hay_bale.jpg";
 import s_playground_stairs from "../assets/GalleryAssets/Summer/s_playground_stairs.jpg";
-import s_sauna from "../assets/GalleryAssets/Summer/s_sauna.jpg";
 import s_signpost from "../assets/GalleryAssets/Summer/s_signpost.jpg";
 // > Winter
 import w_arbor from "../assets/GalleryAssets/Winter/w_arbor.jpg";
@@ -103,7 +102,6 @@ export {
   s_grass,
   s_hay_bale,
   s_playground_stairs,
-  s_sauna,
   s_signpost,
   w_arbor,
   w_arbor_bottom,
