@@ -30,12 +30,12 @@ const PriceList: React.FC = () => {
       </div>
       <div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-col gap-4">
         <h2 className="flex w-full justify-center text-3xl font-bold lg:mb-2 lg:text-5xl">
-          NASZA OFERTA 
+          NASZA OFERTA
         </h2>
         <p>
-          W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo
-          powstały dom. Drewniany domek posiada 3 dwuosobowe sypialnie oraz
-          salon w którym pomieści się do czterech osób.
+          W gospodarstwie posiadamy drewniany klimatyczny dom o powierzchni
+          120m2, który wynajmowany jest w całości na wyłączność. Do Waszej
+          dyspozycji oddajemy również pokoje gościnne w drugim budynku.
         </p>
         <p>
           Nowy dom posiada 4 odrębne sypialnie, każda wyposażona w osobną

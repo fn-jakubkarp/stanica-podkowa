@@ -47,9 +47,9 @@ export default function RoomsPriceList() {
               ))}
             </Swiper>
             <div className="bg-secondary p-4">
-              <h3 className="font-bold">Nowy dom</h3>
+              <h3 className="font-bold">Pokoje gościnne</h3>
               <p className="my-4">
-                5 funkcjonalnych sypialnii wyposażonych we własną łazienkę
+                4 funkcjonalne pokoje wraz z prywatną łazienką
               </p>
               <h4 className="text-lg font-semibold md:text-xl">
                 Od 130 zł / noc
@@ -80,9 +80,9 @@ export default function RoomsPriceList() {
               ))}
             </Swiper>
             <div className="bg-secondary p-4">
-              <h3 className="font-bold">Stary domek</h3>
+              <h3 className="font-bold">Drewniany dom</h3>
               <p className="my-4">
-                Domek z kominkiem, tarasem i altaną. Wynajmowany w całości.
+                Przestronny dom z 4 sypialniami, salonem, jadalnią oraz tarasem
               </p>
               <h4 className="text-lg font-semibold md:text-xl">
                 Cena ustalana indywidualnie

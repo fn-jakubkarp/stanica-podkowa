@@ -80,9 +80,6 @@ export const summerSlides = [
     src: src.s_playground_stairs,
   },
   {
-    src: src.s_sauna,
-  },
-  {
     src: src.s_signpost,
   },
 ];
