@@ -29,7 +29,6 @@ import hero_us from "../assets/HeroAssets/us.jpg";
 // * ------ * //
 
 // SVGS //
-import mask5 from "../assets/masks/5.svg";
 import bullet_point from "../assets/svgs/bullet_point.svg";
 import logo from "../assets/svgs/logo.svg";
 // * ----- * //
@@ -82,7 +81,6 @@ export {
   m_arbor,
   m_new_home,
   m_outdoor_look,
-  mask5,
   nh_bathroom,
   nh_bathroom_top,
   nh_hall,
