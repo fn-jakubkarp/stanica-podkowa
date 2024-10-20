@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { hero_night_sky } from "../../../utils/assets";
+// @ts-ignore
 import { hero_plain } from "../../../utils/assets";
 
 const ExpHero = () => {
