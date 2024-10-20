@@ -39,7 +39,10 @@ export default function RoomsPriceList() {
             >
               {cards_new_house.map((card) => (
                 <SwiperSlide key={card.id} className="">
-                  <CardPictureOnly card={card} className="w-full h-auto object-cover" />
+                  <CardPictureOnly
+                    card={card}
+                    className="h-auto w-full object-cover"
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -87,9 +90,9 @@ export default function RoomsPriceList() {
             </div>
           </div>
         </div>
-        <div className="defaultPaddings mx-auto lg:py-12 w-full max-w-screen-xl">
+        <div className="defaultPaddings mx-auto w-full max-w-screen-xl lg:py-12">
           <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl ">
-            Nasze ceny za pokój
+            Cennik pokoi gościnnych
           </h3>
           <p className="flex py-8 sm:w-full">
             <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
@@ -102,9 +105,7 @@ export default function RoomsPriceList() {
                   <th className="px-4 py-3 text-left font-medium text-text-DARK">
                     Produkt
                   </th>
-                  <th className="px-4 py-3 text-left font-medium text-text-DARK">
-                    Opis
-                  </th>
+
                   <th className="px-4 py-3 text-right font-medium text-text-DARK">
                     Cena
                   </th>
@@ -119,11 +120,7 @@ export default function RoomsPriceList() {
                       </h3>
                     </div>
                   </td>
-                  <td className="py-4">
-                    <p className="text-sm text-gray-500 sm:text-2xl">
-                      Pokój w nowym domku
-                    </p>
-                  </td>
+
                   <td className="px-4 py-4 text-right font-medium">
                     130 zł / noc
                   </td>
@@ -136,11 +133,7 @@ export default function RoomsPriceList() {
                       </h3>
                     </div>
                   </td>
-                  <td className=" py-4">
-                    <p className="text-sm text-gray-500 sm:text-2xl">
-                      Pokój w nowym domku
-                    </p>
-                  </td>
+
                   <td className="px-4 py-4 text-right font-medium">
                     200 zł / noc
                   </td>
@@ -153,11 +146,7 @@ export default function RoomsPriceList() {
                       </h3>
                     </div>
                   </td>
-                  <td className="py-4">
-                    <p className="text-sm  text-gray-500 sm:text-2xl">
-                      Pokój w nowym domku
-                    </p>
-                  </td>
+
                   <td className="px-4 py-4 text-right font-medium">
                     270 zł / noc
                   </td>
@@ -170,11 +159,7 @@ export default function RoomsPriceList() {
                       </h3>
                     </div>
                   </td>
-                  <td className="py-4">
-                    <p className="text-sm  text-gray-500 sm:text-2xl">
-                      Pokój w nowym domku
-                    </p>
-                  </td>
+
                   <td className="px-4 py-4 text-right font-medium">
                     320 zł / noc
                   </td>

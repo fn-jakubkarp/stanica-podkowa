@@ -30,7 +30,7 @@ const PriceList: React.FC = () => {
       </div>
       <div className="defaultPaddings mx-auto flex max-w-screen-2xl flex-col gap-4">
         <h2 className="flex w-full justify-center text-3xl font-bold lg:mb-2 lg:text-5xl">
-          POKOJE
+          NASZA OFERTA 
         </h2>
         <p>
           W gospodarstwie posiadamy stary, drewniany klimatyczny domek oraz nowo

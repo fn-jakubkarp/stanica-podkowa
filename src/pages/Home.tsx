@@ -4,7 +4,7 @@ import AboutUs from "../components/sections/AboutUs/AboutUs";
 import Attractions from "../components/sections/Attractions/Attractions";
 import Contact from "../components/sections/Contact/Contact";
 import Directions from "../components/sections/Directions/Directions";
-import Faq from "../components/sections/Faq/Faq";
+// import Faq from "../components/sections/Faq/Faq";
 import Hero from "../components/sections/Hero/Hero";
 import Offer from "../components/sections/Offer/Offer";
 
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
       <Attractions />
       <Contact />
       <Directions />
-      <Faq />
+      {/* <Faq /> */}
     </div>
   );
 };

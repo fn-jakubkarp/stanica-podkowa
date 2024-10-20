@@ -34,7 +34,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
             <div className="space-y-2">
               <p className=" md:text-lg ">
                 Nasza agroturystyka to również miejsce idealne na duże imprezy i
-                grille. Przestronne tereny pozwalają na organizację
+                grille. Rozbudowany dziedziniec pozwala na organizację
                 niezapomnianych przyjęć, gdzie dzieci mogą bawić się na placu
                 zabaw, a dorośli cieszyć się wieczornymi biesiadami pod gołym
                 niebem. Wszystko to w otoczeniu pięknych krajobrazów, które
@@ -44,12 +44,12 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
             <div className="space-y-2">
               <h3 className="text-2xl font-bold">Wypoczynek</h3>
               <p className=" md:text-lg ">
-                Dla miłośników aktywnego wypoczynku. Znajdziecie w pobliżu
-                mnóstwo atrakcji – od pieszych wędrówek po licznych szlakach,
-                przez malownicze przejażdżki rowerowe, aż po niezapomniane
-                chwile spędzone w siodle. Nasze konie są gotowe, by zabrać Was
-                na wspaniałe wyprawy po okolicy, gdzie natura odsłania swoje
-                najpiękniejsze oblicze.
+                Jako miłośnicy aktywnego wypoczynku znajdziecie w pobliżu
+                mnóstwo atrakcji – od pieszych wędrówek po licznych szlakach, po
+                malownicze przejażdżki rowerowe. Beskid Niski jest idealnym
+                miejscem by spędzać wolny czas w taki właśnie sposób. Nasze
+                konie są gotowe, by zabrać Was na wspaniałe wyprawy po okolicy,
+                gdzie natura odsłania swoje najpiękniejsze oblicze.
               </p>
             </div>
           </div>

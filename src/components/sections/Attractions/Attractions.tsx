@@ -2,7 +2,7 @@ import CardAtractions from "../../UI/Card/CardAtractions";
 
 export default function Attractions() {
   return (
-    <section className="mx-auto w-full max-w-screen-xl py-12 md:py-24 lg:py-32 flex justify-center">
+    <section className="mx-auto flex w-full max-w-screen-xl justify-center py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
         <div className="space-y-6">
           <div className="text-center">
@@ -48,7 +48,7 @@ export default function Attractions() {
             <CardAtractions
               card={{
                 title: "Biecz - 20km",
-                text: "Biecz to stare królewskie miasto, znane z wieży ratuszowej z punktem widokowym, XV-wiecznego Kościoła Bożego Ciała, licznych starych muzeów oraz najstarszego szpitala w Polsce.",
+                text: "Biecz to stare królewskie miasto, znane z wieży ratuszowej z punktem widokowym, XV-wiecznego Kościoła Bożego Ciała, licznych starych muzeów, najstarszego szpitala w Polsce oraz szkoły katów.",
                 id: 1,
               }}
             />

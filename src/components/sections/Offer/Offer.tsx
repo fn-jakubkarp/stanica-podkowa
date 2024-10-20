@@ -6,14 +6,15 @@ export default function Offer() {
   const handleClick = () => {
     navigate("/cennik");
   };
+
   return (
-    <section className="w-full bg-secondary py-12 md:py-24 lg:py-32 ">
-      <div className="container mx-auto w-full max-w-screen-xl px-4 md:px-6 ">
+    <section className="w-full bg-secondary py-12 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="space-y-6 text-center">
           <h3 className="text-3xl font-bold sm:text-4xl md:text-5xl">
             Nasza oferta
           </h3>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed ">
+          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
             Poznaj bogactwo atrakcji i możliwości wypoczynku, jakie oferuje
             nasza agroturystyka.
           </p>
@@ -25,54 +26,44 @@ export default function Offer() {
             Odkryj ofertę w całości
           </button>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="rounded-lg bg-white p-6 shadow-lg ">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100 ">
-              <HouseIcon className="h-6 w-6 text-green-500 " />
+        <div className="mt-12 flex justify-center">
+          <div className="grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="rounded-lg bg-white p-6 shadow-lg">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-green-100">
+                <HouseIcon className="h-6 w-6 text-green-500" />
+              </div>
+              <h4 className="mb-2 text-xl font-bold">Noclegi</h4>
+              <p className="text-gray-500">
+                Zapraszamy do naszych dwóch uroczych domów na wynajem. Każdy
+                oferuje przestronne, przytulnie urządzone pokoje oraz w pełni
+                wyposażoną kuchnię. Z balkonu rozciąga się malowniczy widok,
+                który zachwyca o każdej porze roku.
+              </p>
             </div>
-            <h4 className="mb-2 text-xl font-bold">Noclegi</h4>
-            <p className="text-gray-500 ">
-              Zapraszamy do naszych dwóch uroczych domów na wynajem. Każdy
-              oferuje przestronne, przytulnie urządzone pokoje oraz w pełni
-              wyposażoną kuchnię. Z balkonu rozciąga się malowniczy widok, który
-              zachwyca o każdej porze roku.
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-lg ">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100 ">
-              <FlameKindlingIcon className="h-6 w-6 text-yellow-500 " />
+            <div className="rounded-lg bg-white p-6 shadow-lg">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-yellow-100">
+                <FlameKindlingIcon className="h-6 w-6 text-yellow-500" />
+              </div>
+              <h4 className="mb-2 text-xl font-bold">Grill</h4>
+              <p className="text-gray-500">
+                Nasza przestrzeń grillowa to idealne miejsce na wieczorne
+                spotkania z rodziną i przyjaciółmi. Oferujemy przytulne miejsce
+                do biesiadowania na świeżym powietrzu. Ciesz się smakiem
+                grillowanych potraw w wyjątkowej atmosferze!
+              </p>
             </div>
-            <h4 className="mb-2 text-xl font-bold">Grill</h4>
-            <p className="text-gray-500 ">
-              Nasza przestrzeń grillowa to idealne miejsce na wieczorne
-              spotkania z rodziną i przyjaciółmi. Oferujemy przytulne miejsce do
-              biesiadowania na świeżym powietrzu. Ciesz się smakiem grillowanych
-              potraw w wyjątkowej atmosferze!
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-lg ">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 ">
-              <PlaygroundIcon className="h-6 w-6 text-blue-500 " />
+            <div className="rounded-lg bg-white p-6 shadow-lg">
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                <PlaygroundIcon className="h-6 w-6 text-blue-500" />
+              </div>
+              <h4 className="mb-2 text-xl font-bold">Atrakcje dla Dzieci</h4>
+              <p className="text-gray-500">
+                Dla najmłodszych mamy prosty plac zabaw z huśtawkami,
+                zjeżdżalnią i piaskownicą. Jest to idealne miejsce na beztroską
+                zabawę na świeżym powietrzu. Dbamy o to, aby dzieci miały
+                wspaniałe wspomnienia z pobytu.
+              </p>
             </div>
-            <h4 className="mb-2 text-xl font-bold">Atrakcje dla Dzieci</h4>
-            <p className="text-gray-500 ">
-              Dla najmłodszych mamy prosty plac zabaw z huśtawkami, zjeżdżalnią
-              i piaskownicą. Jest to idealne miejsce na beztroską zabawę na
-              świeżym powietrzu. Dbamy o to, aby dzieci miały wspaniałe
-              wspomnienia z pobytu.
-            </p>
-          </div>
-          <div className="rounded-lg bg-white p-6 shadow-lg ">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-red-100 ">
-              <MountainIcon className="h-6 w-6 text-red-500 " />
-            </div>
-            <h4 className="mb-2 text-xl font-bold">Jazda Konna</h4>
-            <p className="text-gray-500 ">
-              Oferujemy jazdę konną dla początkujących i zaawansowanych. Nasze
-              dobrze wyszkolone konie gwarantują bezpieczne i przyjemne
-              przejażdżki. Organizujemy lekcje oraz wycieczki po okolicznych
-              szlakach, pozwalając na podziwianie piękna przyrody.
-            </p>
           </div>
         </div>
       </div>
@@ -140,25 +131,6 @@ function FlameKindlingIcon(props: any) {
       <path d="M12 2c1 3 2.5 3.5 3.5 4.5A5 5 0 0 1 17 10a5 5 0 1 1-10 0c0-.3 0-.6.1-.9a2 2 0 1 0 3.3-2C8 4.5 11 2 12 2Z" />
       <path d="m5 22 14-4" />
       <path d="m5 18 14 4" />
-    </svg>
-  );
-}
-
-function MountainIcon(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }
