@@ -183,12 +183,12 @@ const cards_new_house: CardType[] = [
 
 const cards_old_house: CardType[] = [
   {
-    url: cottageImages.room,
+    url: cottageImages.room.double,
     alt: "Zdjęcie pokoju",
     id: 1,
   },
   {
-    url: cottageImages.bathroom,
+    url: cottageImages.bathroom.bottom,
     alt: "Zdjęcie łazienki",
     id: 2,
   },

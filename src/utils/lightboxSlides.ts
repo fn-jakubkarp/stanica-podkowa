@@ -5,7 +5,6 @@ import {
   outdoorWinter,
 } from "./assets";
 
-// Summer Slides
 const summerSlides = [
   { src: outdoorSummer.arbor.main },
   { src: outdoorSummer.arbor.entrance },
@@ -17,7 +16,6 @@ const summerSlides = [
   { src: outdoorSummer.signpost },
 ];
 
-// Winter Slides
 const winterSlides = [
   { src: outdoorWinter.arbor.main },
   { src: outdoorWinter.arbor.bottom },
@@ -31,15 +29,17 @@ const winterSlides = [
   { src: outdoorWinter.sauna },
 ];
 
-// Old House/Cottage Slides
 const cottageSlides = [
-  { src: cottageImages.room },
   { src: cottageImages.kitchen },
-  { src: cottageImages.bathroom },
+  { src: cottageImages.room.big },
+  { src: cottageImages.room.double },
+  { src: cottageImages.bathroom.bottom },
   { src: cottageImages.livingRoom },
+  { src: cottageImages.wallCarpet },
+  { src: cottageImages.salon },
+  { src: cottageImages.bathroom.top },
 ];
 
-// New House Slides
 const newHouseSlides = [
   { src: newHouseImages.bathroom.top },
   { src: newHouseImages.bathroom.bottom },

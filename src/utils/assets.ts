@@ -37,10 +37,14 @@ import newHousePricelist from "../assets/Indoor/House/room_top.jpg";
 import newHouseRoomDouble from "../assets/Indoor/House/room_two.jpg";
 
 // Old House/Cottage
-import cottageRoom from "../assets/Indoor/Cottage/big_room.jpg";
-import cottageKitchen from "../assets/Indoor/Cottage/oh_legacy_kitchen.jpg";
-import cottageBathroom from "../assets/Indoor/Cottage/top_bathroom.jpg";
-import cottageLivingRoom from "../assets/Indoor/Cottage/wall_carpet.jpg";
+import cottageBigRoom from "../assets/Indoor/Cottage/big_room.jpg";
+import cottageBottomBathroom from "../assets/Indoor/Cottage/bottom_bathroom.jpg";
+import cottageDoubleRoom from "../assets/Indoor/Cottage/double_room.jpg";
+import cottageKitchen from "../assets/Indoor/Cottage/kitchen.jpg";
+import cottageLivingRoom from "../assets/Indoor/Cottage/living_room.jpg";
+import cottageSalon from "../assets/Indoor/Cottage/salon.jpg";
+import cottageTopBathroom from "../assets/Indoor/Cottage/top_bathroom.jpg";
+import cottageWallCarpet from "../assets/Indoor/Cottage/wall_carpet.jpg";
 
 // Outdoor Images
 // Summer
@@ -110,10 +114,18 @@ export const newHouseImages = {
 };
 
 export const cottageImages = {
-  room: cottageRoom,
+  room: {
+    big: cottageBigRoom,
+    double: cottageDoubleRoom,
+  },
+  bathroom: {
+    top: cottageTopBathroom,
+    bottom: cottageBottomBathroom,
+  },
   kitchen: cottageKitchen,
-  bathroom: cottageBathroom,
   livingRoom: cottageLivingRoom,
+  salon: cottageSalon,
+  wallCarpet: cottageWallCarpet,
 };
 
 export const outdoorSummer = {

@@ -3,17 +3,17 @@ import { allSlides } from "./lightboxSlides";
 
 export interface GalleryItemType {
   id: string;
-  image: string;
+  image: any;
   alt: string;
   title: string;
   description: string;
-  slides: { src: string }[];
+  slides: any;
 }
 
-const mansion = assets.outdoorSummer.forecourt
+const mansion = assets.outdoorSummer.forecourt;
 const summer = assets.outdoorSummer.signpost;
 const winter = assets.outdoorWinter.arbor.bottom;
-const cottage = assets.cottageImages.room;
+const cottage = assets.cottageImages.salon;
 const house = assets.newHouseImages.livingRoom.wide;
 
 export const galleryData: GalleryItemType[] = [
