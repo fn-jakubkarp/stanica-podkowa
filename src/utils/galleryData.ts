@@ -1,13 +1,4 @@
-
-// For thumbnails
-import {
-  m_arbor,
-  nh_living_room_wide,
-  oh_living_room,
-  s_signpost,
-  w_arbor_bottom,
-} from "../utils/assets";
-
+import * as assets from "../utils/assets";
 import { allSlides } from "./lightboxSlides";
 
 export interface GalleryItemType {
@@ -19,10 +10,16 @@ export interface GalleryItemType {
   slides: { src: string }[];
 }
 
+const mansion = assets.outdoorSummer.forecourt
+const summer = assets.outdoorSummer.signpost;
+const winter = assets.outdoorWinter.arbor.bottom;
+const cottage = assets.cottageImages.room;
+const house = assets.newHouseImages.livingRoom.wide;
+
 export const galleryData: GalleryItemType[] = [
   {
     id: "mansion",
-    image: m_arbor,
+    image: mansion,
     alt: "Zdjęcie drewnianej altany, z placem zabaw w tle",
     title: "Posiadłość",
     description: "Zachwyć się malowniczymi widokami naszej posiadłości.",
@@ -30,7 +27,7 @@ export const galleryData: GalleryItemType[] = [
   },
   {
     id: "summer",
-    image: s_signpost,
+    image: summer,
     alt: "Krajobraz zachodu słońca z drogowskazem na przodzie",
     title: "Lato",
     description: "Ciesz się urokami lata w otoczeniu natury.",
@@ -38,7 +35,7 @@ export const galleryData: GalleryItemType[] = [
   },
   {
     id: "interior",
-    image: nh_living_room_wide,
+    image: house,
     alt: "Wnętrze domu z przestronnym salonem",
     title: "Pokoje gościnne",
     description: "Odkryj przytulne i komfortowe wnętrza naszych domów.",
@@ -46,7 +43,7 @@ export const galleryData: GalleryItemType[] = [
   },
   {
     id: "winter",
-    image: w_arbor_bottom,
+    image: winter,
     alt: "Drewniana altana pokryta śniegiem",
     title: "Zima",
     description: "Doświadcz magii zimy w naszej malowniczej okolicy.",
@@ -54,7 +51,7 @@ export const galleryData: GalleryItemType[] = [
   },
   {
     id: "wooden-house",
-    image: oh_living_room,
+    image: cottage,
     alt: "Drewniany dom w otoczeniu natury",
     title: "Drewniany dom",
     description: "Odkryj urok naszego drewnianego domu w sercu natury.",
