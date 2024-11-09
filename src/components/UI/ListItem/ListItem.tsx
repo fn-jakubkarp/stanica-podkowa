@@ -1,5 +1,5 @@
 import React from "react";
-import { bullet_point } from "../../../utils/assets";
+import { brandAssets } from "../../../utils/assets";
 
 interface ListItemProps {
   children: React.ReactNode;
@@ -8,9 +8,10 @@ interface ListItemProps {
 }
 
 const ListItem: React.FC<ListItemProps> = ({ children, className = "" }) => {
+  const bulletPoint = brandAssets.bulletPoint;
   return (
     <li className={`flex h-full w-full items-center ${className}`}>
-      <img src={bullet_point} className="h-4" />
+      <img src={bulletPoint} className="h-4" />
       <p className={`ml-2 text-lg  ${className}`}>{children}</p>
     </li>
   );

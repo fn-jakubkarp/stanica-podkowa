@@ -1,7 +1,7 @@
-import { hero_plain } from "../../../utils/assets";
-interface AboutUsProps {}
+import { heroImages } from "../../../utils/assets";
 
-const AboutUs: React.FC<AboutUsProps> = ({}) => {
+const AboutUs: React.FC = ({}) => {
+  const abousUsImage = heroImages.plain;
   return (
     <>
       <section
@@ -10,7 +10,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
       >
         <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
           <img
-            src={hero_plain}
+            src={abousUsImage}
             width="550"
             height="550"
             alt="Dom i altana na tle lasu"
@@ -47,9 +47,7 @@ const AboutUs: React.FC<AboutUsProps> = ({}) => {
                 Jako miłośnicy aktywnego wypoczynku znajdziecie w pobliżu
                 mnóstwo atrakcji – od pieszych wędrówek po licznych szlakach, po
                 malownicze przejażdżki rowerowe. Beskid Niski jest idealnym
-                miejscem by spędzać wolny czas w taki właśnie sposób. Nasze
-                konie są gotowe, by zabrać Was na wspaniałe wyprawy po okolicy,
-                gdzie natura odsłania swoje najpiękniejsze oblicze.
+                miejscem by spędzać wolny czas w taki właśnie sposób.
               </p>
             </div>
           </div>

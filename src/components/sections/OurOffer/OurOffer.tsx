@@ -7,11 +7,12 @@ import { revealImageFromBelow, slidingText } from "../../../utils/animations";
 
 // Assets
 
-import { hero_macro } from "../../../utils/assets";
+import { heroImages } from "../../../utils/assets";
 
-interface OurOfferProps {}
 
-const OurOffer: React.FC<OurOfferProps> = () => {
+
+const OurOffer: React.FC = () => {
+  const macroImage = heroImages.macro
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -32,7 +33,7 @@ const OurOffer: React.FC<OurOfferProps> = () => {
             ref={imageRef}
           >
             <img
-              src={hero_macro}
+              src={macroImage}
               className="relative left-0 top-0 h-full w-full object-cover"
               alt="Doniczka"
               style={revealImageFromBelow(imageView)}

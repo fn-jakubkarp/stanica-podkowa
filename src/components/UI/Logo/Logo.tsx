@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { logo, logoDark } from "../../../utils/assets";
+import { brandAssets } from "../../../utils/assets";
 
 interface LogoProps {
   className?: string;
@@ -8,6 +8,8 @@ interface LogoProps {
 
 const Logo: React.FC<LogoProps> = ({ className, variant = "light" }) => {
   const navigate = useNavigate();
+  const logo = brandAssets.logo;
+  const logoDark = brandAssets.logoDark;
   const logoSrc = variant === "dark" ? logoDark : logo;
 
   const handleClick = () => {

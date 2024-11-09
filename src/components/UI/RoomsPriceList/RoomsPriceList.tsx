@@ -1,17 +1,8 @@
 import { Autoplay, FreeMode, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import {
-  nh_bathroom,
-  nh_kid_section,
-  nh_kitchen,
-  nh_living_room,
-  nh_room,
-  oh_bathroom,
-  oh_kitchen,
-  oh_living_room,
-  oh_room,
-} from "../../../utils/assets";
+
+import { cottageImages, newHouseImages } from "../../../utils/assets";
 import CardPictureOnly from "../Card/CardPictureOnly";
 import { CardType } from "../Card/CardType";
 
@@ -100,17 +91,6 @@ export default function RoomsPriceList() {
           </p>
           <div className="overflow-x-auto">
             <table className="w-full table-auto border-collapse">
-              <thead>
-                <tr className="border-b border-text-DARK">
-                  <th className="px-4 py-3 text-left font-medium text-text-DARK">
-                    Produkt
-                  </th>
-
-                  <th className="px-4 py-3 text-right font-medium text-text-DARK">
-                    Cena
-                  </th>
-                </tr>
-              </thead>
               <tbody>
                 <tr className="border-b border-gray-200 ">
                   <td className="flex items-center gap-4 px-4 py-4">
@@ -175,27 +155,27 @@ export default function RoomsPriceList() {
 
 const cards_new_house: CardType[] = [
   {
-    url: nh_room,
+    url: newHouseImages.rooms.double,
     alt: "Zdjęcie pokoju",
     id: 1,
   },
   {
-    url: nh_bathroom,
+    url: newHouseImages.bathroom.top, 
     alt: "Zdjęcie łazienki",
     id: 2,
   },
   {
-    url: nh_living_room,
+    url: newHouseImages.livingRoom.main,
     alt: "Zdjęcie salonu",
     id: 3,
   },
   {
-    url: nh_kitchen,
+    url: newHouseImages.kitchen.main,
     alt: "Zdjęcie kuchnii",
     id: 4,
   },
   {
-    url: nh_kid_section,
+    url: newHouseImages.kidsArea,
     alt: "Zdjęcie sekcji dla dzieci",
     id: 5,
   },
@@ -203,22 +183,22 @@ const cards_new_house: CardType[] = [
 
 const cards_old_house: CardType[] = [
   {
-    url: oh_room,
+    url: cottageImages.room,
     alt: "Zdjęcie pokoju",
     id: 1,
   },
   {
-    url: oh_bathroom,
+    url: cottageImages.bathroom,
     alt: "Zdjęcie łazienki",
     id: 2,
   },
   {
-    url: oh_living_room,
+    url: cottageImages.livingRoom,
     alt: "Zdjęcie salonu",
     id: 3,
   },
   {
-    url: oh_kitchen,
+    url: cottageImages.kitchen,
     alt: "Zdjęcie kuchnii",
     id: 4,
   },

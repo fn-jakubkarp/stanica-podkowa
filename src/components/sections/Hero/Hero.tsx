@@ -1,10 +1,9 @@
-import { hero_night_sky } from "../../../utils/assets";
+import { heroImages } from "../../../utils/assets";
 
 import { animated } from "@react-spring/web";
 import useInViewTrailAnimation from "../../../hooks/useInViewTrailAnimation";
-interface HeroProps {}
 
-const Hero: React.FC<HeroProps> = ({}) => {
+const Hero: React.FC = ({}) => {
   const letters = ["P", "O", "Z", "N", "A", "J"];
   const words = ["NASZE", "UROKI"];
 
@@ -18,6 +17,8 @@ const Hero: React.FC<HeroProps> = ({}) => {
     400,
     false,
   );
+
+  const heroImage = heroImages.nightSky;
 
   return (
     <>
@@ -54,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
         </h1>
 
         <img
-          src={hero_night_sky}
+          src={heroImage}
           alt="Drewniany domek na tle gwieździstego nieba"
           className="h-[320px] w-[320px] self-end rounded-l-md object-cover   sm:aspect-video sm:h-full sm:w-full sm:self-center"
         />
