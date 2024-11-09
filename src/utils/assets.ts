@@ -1,116 +1,155 @@
-// Price list section
-import nh_bathroom from "../assets/PriceListAssets/New/bathroom.jpg";
-import nh_kid_section from "../assets/PriceListAssets/New/kid_section.jpg";
-import nh_kitchen from "../assets/PriceListAssets/New/kitchen.jpg";
-import nh_living_room from "../assets/PriceListAssets/New/living_room.jpg";
-import nh_room from "../assets/PriceListAssets/New/room.jpg";
+/**
+ * Asset Imports and Modular Exports
+ * Organized by category with semantic naming
+ */
 
-import oh_bathroom from "../assets/PriceListAssets/Old/bathroom.jpg";
-import oh_kitchen from "../assets/PriceListAssets/Old/kitchen.jpg";
-import oh_living_room from "../assets/PriceListAssets/Old/living_room.jpg";
-import oh_room from "../assets/PriceListAssets/Old/room.jpg";
-
-import pricelist_header from "../assets/PriceListAssets/header.jpg";
-// End of price list section
-// * ------ * //
-
-// Hero section
-import hero_accommodation from "../assets/HeroAssets/accommodation.jpg";
-import hero_events from "../assets/HeroAssets/events.jpg";
-import hero_grill from "../assets/HeroAssets/grill.jpg";
-import hero_hero from "../assets/HeroAssets/hero.webp";
-import hero_horses from "../assets/HeroAssets/horses.jpg";
-import hero_macro from "../assets/HeroAssets/macro.jpg";
-import hero_night_sky from "../assets/HeroAssets/night_sky.webp?url";
-import hero_old_house from "../assets/HeroAssets/old_house.jpg";
-import hero_plain from "../assets/HeroAssets/plain.jpg";
-import hero_sauna from "../assets/HeroAssets/sauna.jpg";
-import hero_us from "../assets/HeroAssets/us.jpg";
-// * ------ * //
-
-// SVGS //
-import bullet_point from "../assets/svgs/bullet_point.svg";
+// Brand Assets
+import bulletPoint from "../assets/svgs/bullet_point.svg";
 import logoDark from "../assets/svgs/darkLogo.svg";
 import logo from "../assets/svgs/logo.svg";
-// * ----- * //
 
-// Gallery
-// > Interior
-import nh_bathroom_top from "../assets/GalleryAssets/Interior/nh_bathroom_top.jpg";
-import nh_hall from "../assets/GalleryAssets/Interior/nh_hall.jpg";
-import nh_kitchen_closeup from "../assets/GalleryAssets/Interior/nh_kitchen_closeup.jpg";
-import nh_living_room_wide from "../assets/GalleryAssets/Interior/nh_living_room_wide.jpg";
-import nh_room_four_beds from "../assets/GalleryAssets/Interior/nh_room_four_beds.jpg";
-import nh_room_three_beds from "../assets/GalleryAssets/Interior/nh_room_three_beds.jpg";
-// > Mansion
-import m_arbor from "../assets/GalleryAssets/Mansion/m_arbor.jpg";
-import m_new_home from "../assets/GalleryAssets/Mansion/m_new_home.jpg";
-import m_outdoor_look from "../assets/GalleryAssets/Mansion/m_outdoor_look.jpg";
-// > Summer
-import s_arbor_entrance from "../assets/GalleryAssets/Summer/s_arbor_entrance.jpg";
-import s_grass from "../assets/GalleryAssets/Summer/s_grass.jpg";
-import s_hay_bale from "../assets/GalleryAssets/Summer/s_hay_bale.jpg";
-import s_playground_stairs from "../assets/GalleryAssets/Summer/s_playground_stairs.jpg";
-import s_signpost from "../assets/GalleryAssets/Summer/s_signpost.jpg";
-// > Winter
-import w_arbor from "../assets/GalleryAssets/Winter/w_arbor.jpg";
-import w_arbor_bottom from "../assets/GalleryAssets/Winter/w_arbor_bottom.jpg";
-import w_arbor_interior from "../assets/GalleryAssets/Winter/w_arbor_interior.jpg";
-import w_arbor_interior2 from "../assets/GalleryAssets/Winter/w_arbor_interior2.jpg";
-import w_arbor_top from "../assets/GalleryAssets/Winter/w_arbor_top.jpg";
-import w_oh_full from "../assets/GalleryAssets/Winter/w_oh_full.jpg";
-import w_oh_full2 from "../assets/GalleryAssets/Winter/w_oh_full2.jpg";
-import w_oh_icicle from "../assets/GalleryAssets/Winter/w_oh_icicle.jpg";
-import w_oh_terrace from "../assets/GalleryAssets/Winter/w_oh_terrace.jpg";
-import w_sauna from "../assets/GalleryAssets/Winter/w_sauna.jpg";
+// Hero Section Images
+import heroAccommodation from "../assets/Hero/accommodation.jpg";
+import heroEvents from "../assets/Hero/events.jpg";
+import heroGrill from "../assets/Hero/grill.jpg";
+import heroMain from "../assets/Hero/hero.webp";
+import heroHorses from "../assets/Hero/horses.jpg";
+import heroMacro from "../assets/Hero/macro.jpg";
+import heroNightSky from "../assets/Hero/night_sky.webp?url";
+import heroOldHouse from "../assets/Hero/old_house.jpg";
+import heroPlain from "../assets/Hero/plain.jpg";
+import heroSauna from "../assets/Hero/sauna.jpg";
+import heroUs from "../assets/Hero/us.jpg";
 
-export {
-  bullet_point,
-  hero_accommodation,
-  hero_events,
-  hero_grill,
-  hero_hero,
-  hero_horses,
-  hero_macro,
-  hero_night_sky,
-  hero_old_house,
-  hero_plain,
-  hero_sauna,
-  hero_us,
+// Indoor Images
+// New House
+import newHouseBathroomBottom from "../assets/Indoor/House/bathroom_bottom.jpg";
+import newHouseBathroomTop from "../assets/Indoor/House/bathroom_top.jpg";
+import newHouseKidsArea from "../assets/Indoor/House/kid_section.jpg";
+import newHouseKitchen from "../assets/Indoor/House/kitchen.jpg";
+import newHouseKitchenDetail from "../assets/Indoor/House/kitchen_closeup.jpg";
+import newHouseLivingRoomWide from "../assets/Indoor/House/living_room.jpg";
+import newHouseLivingRoom from "../assets/Indoor/House/living_room_2.jpg";
+import newHouseHall from "../assets/Indoor/House/main_hall.jpg";
+import newHouseRoomQuad from "../assets/Indoor/House/room_four.jpg";
+import newHouseRoomTriple from "../assets/Indoor/House/room_three.jpg";
+import newHousePricelist from "../assets/Indoor/House/room_top.jpg";
+import newHouseRoomDouble from "../assets/Indoor/House/room_two.jpg";
+
+// Old House/Cottage
+import cottageRoom from "../assets/Indoor/Cottage/big_room.jpg";
+import cottageKitchen from "../assets/Indoor/Cottage/oh_legacy_kitchen.jpg";
+import cottageBathroom from "../assets/Indoor/Cottage/top_bathroom.jpg";
+import cottageLivingRoom from "../assets/Indoor/Cottage/wall_carpet.jpg";
+
+// Outdoor Images
+// Summer
+import summerArbor from "../assets/Outdoor/Summer/arbor.jpg";
+import summerArborEntrance from "../assets/Outdoor/Summer/arbor_enterance.jpg";
+import summerForecourt from "../assets/Outdoor/Summer/forecourt.jpg";
+import summerHayBales from "../assets/Outdoor/Summer/hay_bales.jpg";
+import summerHouse from "../assets/Outdoor/Summer/house.jpg";
+import summerLand from "../assets/Outdoor/Summer/land.jpg";
+import summerPlayground from "../assets/Outdoor/Summer/playground_stairs.jpg";
+import summerSignpost from "../assets/Outdoor/Summer/signpost.jpg";
+
+// Winter
+import winterArbor from "../assets/Outdoor/Winter/arbor.jpg";
+import winterArborBottom from "../assets/Outdoor/Winter/arbor_bottom.jpg";
+import winterArborInterior1 from "../assets/Outdoor/Winter/arbor_interior.jpg";
+import winterArborInterior2 from "../assets/Outdoor/Winter/arbor_interior2.jpg";
+import winterArborTop from "../assets/Outdoor/Winter/arbor_top.jpg";
+import winterCottage from "../assets/Outdoor/Winter/cottage.jpg";
+import winterCottageIcicle1 from "../assets/Outdoor/Winter/cottage_icicle.jpg";
+import winterCottageIcicle2 from "../assets/Outdoor/Winter/cottage_icicle_2.jpg";
+import winterCottageTerrace from "../assets/Outdoor/Winter/cottage_terrace.jpg";
+import winterSauna from "../assets/Outdoor/Winter/sauna.jpg";
+
+// Export groups
+export const brandAssets = {
   logo,
   logoDark,
-  m_arbor,
-  m_new_home,
-  m_outdoor_look,
-  nh_bathroom,
-  nh_bathroom_top,
-  nh_hall,
-  nh_kid_section,
-  nh_kitchen,
-  nh_kitchen_closeup,
-  nh_living_room,
-  nh_living_room_wide,
-  nh_room,
-  nh_room_four_beds,
-  nh_room_three_beds,
-  oh_bathroom,
-  oh_kitchen,
-  oh_living_room,
-  oh_room,
-  pricelist_header,
-  s_arbor_entrance,
-  s_grass,
-  s_hay_bale,
-  s_playground_stairs,
-  s_signpost,
-  w_arbor,
-  w_arbor_bottom,
-  w_arbor_interior,
-  w_arbor_interior2,
-  w_arbor_top,
-  w_oh_full,
-  w_oh_full2,
-  w_oh_icicle,
-  w_oh_terrace,
-  w_sauna,
+  bulletPoint,
+};
+
+export const heroImages = {
+  main: heroMain,
+  nightSky: heroNightSky,
+  accommodation: heroAccommodation,
+  events: heroEvents,
+  grill: heroGrill,
+  horses: heroHorses,
+  macro: heroMacro,
+  oldHouse: heroOldHouse,
+  plain: heroPlain,
+  sauna: heroSauna,
+  us: heroUs,
+};
+
+export const newHouseImages = {
+  bathroom: {
+    top: newHouseBathroomTop,
+    bottom: newHouseBathroomBottom,
+  },
+  hall: newHouseHall,
+  kidsArea: newHouseKidsArea,
+  kitchen: {
+    main: newHouseKitchen,
+    detail: newHouseKitchenDetail,
+  },
+  livingRoom: {
+    main: newHouseLivingRoom,
+    wide: newHouseLivingRoomWide,
+  },
+  rooms: {
+    double: newHouseRoomDouble,
+    triple: newHouseRoomTriple,
+    quad: newHouseRoomQuad,
+  },
+  pricelist: newHousePricelist,
+};
+
+export const cottageImages = {
+  room: cottageRoom,
+  kitchen: cottageKitchen,
+  bathroom: cottageBathroom,
+  livingRoom: cottageLivingRoom,
+};
+
+export const outdoorSummer = {
+  arbor: {
+    main: summerArbor,
+    entrance: summerArborEntrance,
+  },
+  forecourt: summerForecourt,
+  hayBales: summerHayBales,
+  house: summerHouse,
+  land: summerLand,
+  playground: summerPlayground,
+  signpost: summerSignpost,
+};
+
+export const outdoorWinter = {
+  arbor: {
+    main: winterArbor,
+    bottom: winterArborBottom,
+    top: winterArborTop,
+    interior: [winterArborInterior1, winterArborInterior2],
+  },
+  cottage: {
+    main: winterCottage,
+    icicle: [winterCottageIcicle1, winterCottageIcicle2],
+    terrace: winterCottageTerrace,
+  },
+  sauna: winterSauna,
+};
+
+// Default export with all images
+export default {
+  brandAssets,
+  heroImages,
+  newHouseImages,
+  cottageImages,
+  outdoorSummer,
+  outdoorWinter,
 };

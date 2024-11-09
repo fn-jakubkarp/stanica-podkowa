@@ -1,100 +1,78 @@
-import * as src from "../utils/assets";
+import {
+  cottageImages,
+  newHouseImages,
+  outdoorSummer,
+  outdoorWinter,
+} from "./assets";
 
-export const mansionSlides = [
-  {
-    src: src.m_arbor,
-  },
-  {
-    src: src.m_new_home,
-  },
-  {
-    src: src.m_outdoor_look,
-  },
+// Summer Slides
+const summerSlides = [
+  { src: outdoorSummer.arbor.main },
+  { src: outdoorSummer.arbor.entrance },
+  { src: outdoorSummer.forecourt },
+  { src: outdoorSummer.hayBales },
+  { src: outdoorSummer.house },
+  { src: outdoorSummer.land },
+  { src: outdoorSummer.playground },
+  { src: outdoorSummer.signpost },
 ];
 
-export const interiorSlides = [
-  {
-    src: src.nh_bathroom_top,
-  },
-  {
-    src: src.nh_hall,
-  },
-  {
-    src: src.nh_kitchen_closeup,
-  },
-  {
-    src: src.nh_living_room_wide,
-  },
-  {
-    src: src.nh_room_four_beds,
-  },
-  {
-    src: src.nh_room_three_beds,
-  },
+// Winter Slides
+const winterSlides = [
+  { src: outdoorWinter.arbor.main },
+  { src: outdoorWinter.arbor.bottom },
+  { src: outdoorWinter.arbor.top },
+  { src: outdoorWinter.arbor.interior[0] },
+  { src: outdoorWinter.arbor.interior[1] },
+  { src: outdoorWinter.cottage.main },
+  { src: outdoorWinter.cottage.icicle[0] },
+  { src: outdoorWinter.cottage.icicle[1] },
+  { src: outdoorWinter.cottage.terrace },
+  { src: outdoorWinter.sauna },
 ];
 
-export const winterSlides = [
-  {
-    src: src.w_arbor,
-  },
-  {
-    src: src.w_arbor_bottom,
-  },
-  {
-    src: src.w_arbor_interior,
-  },
-  {
-    src: src.w_arbor_interior2,
-  },
-  {
-    src: src.w_arbor_top,
-  },
-  {
-    src: src.w_oh_full,
-  },
-  {
-    src: src.w_oh_full2,
-  },
-  {
-    src: src.w_oh_icicle,
-  },
-  {
-    src: src.w_oh_terrace,
-  },
-  {
-    src: src.w_sauna,
-  },
+// Old House/Cottage Slides
+const cottageSlides = [
+  { src: cottageImages.room },
+  { src: cottageImages.kitchen },
+  { src: cottageImages.bathroom },
+  { src: cottageImages.livingRoom },
 ];
 
-export const summerSlides = [
-  {
-    src: src.s_arbor_entrance,
-  },
-  {
-    src: src.s_grass,
-  },
-  {
-    src: src.s_hay_bale,
-  },
-  {
-    src: src.s_playground_stairs,
-  },
-  {
-    src: src.s_signpost,
-  },
+// New House Slides
+const newHouseSlides = [
+  { src: newHouseImages.bathroom.top },
+  { src: newHouseImages.bathroom.bottom },
+  { src: newHouseImages.hall },
+  { src: newHouseImages.kidsArea },
+  { src: newHouseImages.kitchen.main },
+  { src: newHouseImages.kitchen.detail },
+  { src: newHouseImages.livingRoom.main },
+  { src: newHouseImages.livingRoom.wide },
+  { src: newHouseImages.rooms.double },
+  { src: newHouseImages.rooms.triple },
+  { src: newHouseImages.rooms.quad },
 ];
 
-export const woodenHouseSlides = [
-  {
-    src: src.oh_kitchen,
-  },
-  {
-    src: src.oh_living_room,
-  },
-  {
-    src: src.oh_room,
-  },
-  {
-    src: src.oh_bathroom,
-  },
+// TODO: Change ====> Mansion Slides (using same images as newHouse for now)
+const mansionSlides = [
+  { src: newHouseImages.bathroom.top },
+  { src: newHouseImages.bathroom.bottom },
+  { src: newHouseImages.hall },
+  { src: newHouseImages.kidsArea },
+  { src: newHouseImages.kitchen.main },
+  { src: newHouseImages.kitchen.detail },
+  { src: newHouseImages.livingRoom.main },
+  { src: newHouseImages.livingRoom.wide },
+  { src: newHouseImages.rooms.double },
+  { src: newHouseImages.rooms.triple },
+  { src: newHouseImages.rooms.quad },
 ];
+
+export const allSlides = {
+  summer: summerSlides,
+  winter: winterSlides,
+  cottage: cottageSlides,
+  newHouse: newHouseSlides,
+  mansion: mansionSlides,
+};

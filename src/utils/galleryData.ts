@@ -1,3 +1,5 @@
+
+// For thumbnails
 import {
   m_arbor,
   nh_living_room_wide,
@@ -6,13 +8,7 @@ import {
   w_arbor_bottom,
 } from "../utils/assets";
 
-import {
-  interiorSlides,
-  mansionSlides,
-  summerSlides,
-  winterSlides,
-  woodenHouseSlides,
-} from "./lightboxSlides";
+import { allSlides } from "./lightboxSlides";
 
 export interface GalleryItemType {
   id: string;
@@ -30,7 +26,7 @@ export const galleryData: GalleryItemType[] = [
     alt: "Zdjęcie drewnianej altany, z placem zabaw w tle",
     title: "Posiadłość",
     description: "Zachwyć się malowniczymi widokami naszej posiadłości.",
-    slides: mansionSlides,
+    slides: allSlides.mansion,
   },
   {
     id: "summer",
@@ -38,7 +34,7 @@ export const galleryData: GalleryItemType[] = [
     alt: "Krajobraz zachodu słońca z drogowskazem na przodzie",
     title: "Lato",
     description: "Ciesz się urokami lata w otoczeniu natury.",
-    slides: summerSlides,
+    slides: allSlides.summer,
   },
   {
     id: "interior",
@@ -46,7 +42,7 @@ export const galleryData: GalleryItemType[] = [
     alt: "Wnętrze domu z przestronnym salonem",
     title: "Pokoje gościnne",
     description: "Odkryj przytulne i komfortowe wnętrza naszych domów.",
-    slides: interiorSlides,
+    slides: allSlides.newHouse,
   },
   {
     id: "winter",
@@ -54,7 +50,7 @@ export const galleryData: GalleryItemType[] = [
     alt: "Drewniana altana pokryta śniegiem",
     title: "Zima",
     description: "Doświadcz magii zimy w naszej malowniczej okolicy.",
-    slides: winterSlides,
+    slides: allSlides.winter,
   },
   {
     id: "wooden-house",
@@ -62,6 +58,6 @@ export const galleryData: GalleryItemType[] = [
     alt: "Drewniany dom w otoczeniu natury",
     title: "Drewniany dom",
     description: "Odkryj urok naszego drewnianego domu w sercu natury.",
-    slides: woodenHouseSlides,
+    slides: allSlides.cottage,
   },
 ];
