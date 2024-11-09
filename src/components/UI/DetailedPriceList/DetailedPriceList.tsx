@@ -6,29 +6,31 @@ export default function DetailedPriceList() {
       </h3>
       <div className="overflow-x-auto">
         <table className="w-full table-auto border-collapse">
-          <thead>
-            <tr className="border-b border-text-DARK">
-              <th className="px-4 py-3 text-left font-medium text-text-DARK">
-                Produkt
-              </th>
-
-              <th className="px-4 py-3 text-right font-medium text-text-DARK">
-                Cena
-              </th>
-            </tr>
-          </thead>
+          <thead></thead>
           <tbody>
             <tr className="border-b border-gray-200 ">
               <td className="flex items-center gap-4 px-4 py-4">
                 <div>
-                  <h3 className="text-base font-medium sm:text-3xl">
-                    Sauna lub balia
-                  </h3>
+                  <h3 className="text-base font-medium sm:text-3xl">Sauna</h3>
+                </div>
+              </td>
+
+              <td className="px-4 py-4 text-right font-medium">150zł / 1,5h</td>
+            </tr>
+            <tr className="border-b border-gray-200 ">
+              <td className="flex items-center gap-4 px-4 py-4">
+                <div>
+                  <h3 className="text-base font-medium sm:text-3xl">Balnia</h3>
                 </div>
               </td>
 
               <td className="px-4 py-4 text-right font-medium">
-                Ustalana indywidualnie
+                2h / 150 zł
+                <br />
+                Do 4h - 200 zł
+                <br />
+                Powyżej 4h - 250 zł*
+                <br />
               </td>
             </tr>
             <tr className="border-b border-gray-200 ">
@@ -58,6 +60,10 @@ export default function DetailedPriceList() {
               </td>
             </tr>
           </tbody>
+          <p className="defaultPaddings">
+            *Ceny obowiązują od 1 kwietnia do 31 października. W okresie od 1
+            listopada do 31 marca koszt wynajęcia bani wzrasta o 50 zł.{" "}
+          </p>
         </table>
       </div>
     </div>

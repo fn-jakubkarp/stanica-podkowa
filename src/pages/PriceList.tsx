@@ -37,10 +37,6 @@ const PriceList: React.FC = () => {
           120m2, który wynajmowany jest w całości na wyłączność. Do Waszej
           dyspozycji oddajemy również pokoje gościnne w drugim budynku.
         </p>
-        <p>
-          Nowy dom posiada 4 odrębne sypialnie, każda wyposażona w osobną
-          łazienkę
-        </p>
       </div>
 
       <RoomsPriceList />
