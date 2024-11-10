@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { phoneNumbers } from "../../../constants/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
+
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
