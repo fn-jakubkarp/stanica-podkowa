@@ -1,13 +1,13 @@
 import { useScrollToElement } from "../hooks/useScrollToElement";
 // Import section components
-import AboutUs from "../components/sections/AboutUs/AboutUs";
-import Attractions from "../components/sections/Attractions/Attractions";
-import Contact from "../components/sections/Contact/Contact";
-import Directions from "../components/sections/Directions/Directions";
-import Hero from "../components/sections/Hero/Hero";
-// import Faq from "../components/sections/Faq/Faq";
-// import ExpHero from "../components/sections/Hero/ExperimentalHero";
-import Offer from "../components/sections/Offer/Offer";
+import AboutUs from "../components/views/AboutUs/AboutUs";
+import Attractions from "../components/views/Attractions/Attractions";
+import Contact from "../components/views/Contact/Contact";
+import Directions from "../components/views/Directions/Directions";
+import Hero from "../components/views/Hero/Hero";
+// import Faq from "../components/views/Faq/Faq";
+// import ExpHero from "../components/views/Hero/ExperimentalHero";
+import Offer from "../components/views/Offer/Offer";
 
 const Home: React.FC = () => {
   useScrollToElement();
