@@ -1,8 +1,3 @@
-/**
- * Asset Imports and Modular Exports
- * Organized by category with semantic naming
- */
-
 // Brand Assets
 import bulletPoint from "../assets/svgs/bullet_point.svg";
 import logoDark from "../assets/svgs/darkLogo.svg";

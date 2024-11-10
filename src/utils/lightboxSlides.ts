@@ -54,19 +54,16 @@ const newHouseSlides = [
   { src: newHouseImages.rooms.quad },
 ];
 
-// TODO: Change ====> Mansion Slides (using same images as newHouse for now)
 const mansionSlides = [
-  { src: newHouseImages.bathroom.top },
-  { src: newHouseImages.bathroom.bottom },
-  { src: newHouseImages.hall },
-  { src: newHouseImages.kidsArea },
-  { src: newHouseImages.kitchen.main },
-  { src: newHouseImages.kitchen.detail },
-  { src: newHouseImages.livingRoom.main },
-  { src: newHouseImages.livingRoom.wide },
-  { src: newHouseImages.rooms.double },
-  { src: newHouseImages.rooms.triple },
-  { src: newHouseImages.rooms.quad },
+  { src: outdoorSummer.arbor.main },
+  { src: outdoorSummer.forecourt },
+  { src: outdoorSummer.hayBales },
+  { src: outdoorWinter.arbor.top },
+  { src: outdoorSummer.arbor.entrance },
+  { src: outdoorSummer.arbor.main },
+  { src: outdoorWinter.cottage.main },
+  { src: outdoorSummer.playground },
+  { src: outdoorWinter.cottage.icicle[0] },
 ];
 
 export const allSlides = {
