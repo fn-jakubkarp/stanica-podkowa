@@ -1,4 +1,4 @@
-import Accordion from "../../UI/Accordion/Accordion";
+import Accordion from "../Accordion/Accordion";
 interface FaqProps {}
 
 const Faq: React.FC<FaqProps> = ({}) => {

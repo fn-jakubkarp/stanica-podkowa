@@ -20,6 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "include": ["src", "archive/Faq", "archive/Accordion"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

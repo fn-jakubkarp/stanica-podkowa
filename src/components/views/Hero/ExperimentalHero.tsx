@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 // @ts-ignore
-import { hero_plain } from "../../../utils/assets";
-
+import { heroImages } from "../../../utils/assets";
 const ExpHero = () => {
   const letters = "POZNAJ".split("");
   const words = ["NASZE", "UROKI"];
-
+  const heroImage = heroImages.plain;
   return (
     <section
       className="relative h-screen w-full overflow-hidden text-white"
@@ -14,7 +13,7 @@ const ExpHero = () => {
     >
       <div className="absolute inset-0">
         <img
-          src={hero_plain}
+          src={heroImage}
           alt="Drewniany domek na tle gwieździstego nieba"
           className="h-full w-full object-cover object-center"
         />
