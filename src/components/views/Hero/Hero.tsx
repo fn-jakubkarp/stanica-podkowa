@@ -1,77 +1,111 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-// @ts-ignore
 import { heroImages } from "../../../utils/assets";
-const ExpHero = () => {
+
+const Hero = () => {
   const letters = "POZNAJ".split("");
   const words = ["NASZE", "UROKI"];
   const heroImage = heroImages.plain;
+
+  // Animation variants
+  const letterVariants = {
+    hidden: { y: "100%" },
+    visible: (i: number) => ({
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: i * 0.1,
+      },
+    }),
+  };
+
+  const fadeUpVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (delay: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: delay,
+      },
+    }),
+  };
+
   return (
     <section
-      className="relative h-screen w-full overflow-hidden text-white"
       id="hero"
+      className="bg-primary-700 relative h-screen w-full overflow-hidden"
     >
+      {/* Hero Image with Overlay */}
       <div className="absolute inset-0">
         <img
           src={heroImage}
           alt="Drewniany domek na tle gwieździstego nieba"
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/0 to-slate-900/10"></div>
+        <div className="from-primary-700/10 via-primary-700/20 to-primary-700/60 absolute inset-0 bg-gradient-to-b" />
       </div>
 
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
-        <h1 className="mb-4">
+      {/* Content Container */}
+      <div className="container-custom relative z-10 flex h-full flex-col items-center justify-center text-center">
+        {/* Main Heading */}
+        <h1 className="mb-8">
+          {/* Animated Letters */}
           <motion.div
-            className="flex justify-center overflow-hidden text-6xl font-bold sm:text-8xl"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 0.5, staggerChildren: 0.1 }}
+            className="flex justify-center overflow-hidden"
+            initial="hidden"
+            animate="visible"
           >
             {letters.map((letter, index) => (
               <motion.span
                 key={index}
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="font-open text-7xl text-white sm:text-[9rem]"
+                variants={letterVariants}
+                custom={index}
+                className="font-josefin text-6xl font-bold text-white sm:text-8xl lg:text-9xl"
               >
                 {letter}
               </motion.span>
             ))}
           </motion.div>
+
+          {/* Subheading */}
           <motion.div
-            className="mt-2 text-3xl text-white sm:text-4xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.5 }}
+            variants={fadeUpVariants}
+            custom={0.7}
+            initial="hidden"
+            animate="visible"
+            className="text-primary-100 mt-4 font-josefin text-2xl font-medium sm:text-3xl lg:text-4xl"
           >
             {words.join(" ")}
           </motion.div>
         </h1>
 
+        {/* CTA Button */}
         <motion.button
-          className="rounded-full bg-white px-8 py-3 text-lg font-semibold text-text-DARK transition-all hover:bg-opacity-90"
+          variants={fadeUpVariants}
+          custom={1.1}
+          initial="hidden"
+          animate="visible"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.1, duration: 0.5 }}
+          className="btn btn-primary text-primary-700 hover:bg-primary-50 hover:text-primary-500 bg-white px-8 py-4 text-lg"
         >
           Rozpocznij podróż
         </motion.button>
-      </div>
 
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.3, duration: 0.5 }}
-      >
-        <ChevronDown className="h-8 w-8 animate-bounce" />
-      </motion.div>
+        {/* Scroll Indicator */}
+        <motion.div
+          variants={fadeUpVariants}
+          custom={1.3}
+          initial="hidden"
+          animate="visible"
+          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+        >
+          <ChevronDown className="h-8 w-8 animate-bounce text-white opacity-80" />
+        </motion.div>
+      </div>
     </section>
   );
 };
 
-export default ExpHero;
+export default Hero;
