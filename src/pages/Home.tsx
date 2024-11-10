@@ -1,7 +1,6 @@
 import AboutUs from "../components/views/AboutUs/AboutUs";
 import Attractions from "../components/views/Attractions/Attractions";
 import Contact from "../components/views/Contact/Contact";
-import Directions from "../components/views/Directions/Directions";
 import Hero from "../components/views/Hero/Hero";
 import Offer from "../components/views/Offer/Offer";
 
@@ -17,7 +16,6 @@ const Home: React.FC = () => {
       <Offer />
       <Attractions />
       <Contact />
-      <Directions />
     </div>
   );
 };

@@ -8,142 +8,137 @@ import { CardType } from "../Card/CardType";
 
 export default function RoomsPriceList() {
   return (
-    <section className="defaultPaddings mx-auto w-full max-w-screen-xl py-6 md:py-8">
-      <div className="grid gap-8 md:gap-12">
+    <section className="container py-8 md:py-16">
+      <div className="space-y-12 md:space-y-16">
+        {/* Accommodation Cards */}
         <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-          <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out  hover:shadow-xl">
+          {/* Guest Rooms Card */}
+          <div className="card group">
             <Swiper
-              direction={"horizontal"}
+              direction="horizontal"
               slidesPerView={1}
-              spaceBetween={1}
               loop={true}
-              width={600}
-              height={400}
-              pagination={true}
-              freeMode={true}
-              style={{
-                // @ts-expect-error
-                "--swiper-pagination-color": "#fff",
+              pagination={{
+                clickable: true,
               }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              freeMode={true}
               modules={[Autoplay, Pagination, FreeMode]}
-              className="mySwiper"
+              className="h-64 w-full sm:h-72 md:h-80 lg:h-96"
+              style={
+                {
+                  "--swiper-pagination-color": "#4d7c3f",
+                  "--swiper-pagination-bullet-inactive-color": "#e8f0e3",
+                } as React.CSSProperties
+              }
             >
               {cards_new_house.map((card) => (
-                <SwiperSlide key={card.id} className="">
+                <SwiperSlide key={card.id}>
                   <CardPictureOnly
                     card={card}
-                    className="h-auto w-full object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="bg-secondary p-4">
-              <h3 className="font-bold">Pokoje gościnne</h3>
-              <p className="my-4">
+            <div className="bg-primary-50 p-4 md:p-6">
+              <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
+                Pokoje gościnne
+              </h3>
+              <p className="my-3 text-primary-700/80 md:my-4">
                 4 funkcjonalne pokoje wraz z prywatną łazienką
               </p>
-              <h4 className="text-lg font-semibold md:text-xl">
+              <p className="text-lg font-semibold text-primary-500 md:text-xl">
                 Od 130 zł / noc
-              </h4>
+              </p>
             </div>
           </div>
-          <div className="group relative overflow-hidden rounded-lg shadow-lg transition-transform duration-300 ease-in-out hover:-translate-y-2 hover:shadow-xl">
+
+          {/* Wooden House Card */}
+          <div className="card group">
             <Swiper
-              direction={"horizontal"}
+              direction="horizontal"
               slidesPerView={1}
-              spaceBetween={1}
               loop={true}
-              width={600}
-              height={400}
-              pagination={true}
-              freeMode={true}
-              style={{
-                // @ts-expect-error
-                "--swiper-pagination-color": "#fff",
+              pagination={{
+                clickable: true,
               }}
+              autoplay={{
+                delay: 5000,
+                disableOnInteraction: false,
+              }}
+              freeMode={true}
               modules={[Autoplay, Pagination, FreeMode]}
-              className="mySwiper "
+              className="h-64 w-full sm:h-72 md:h-80 lg:h-96"
+              style={
+                {
+                  "--swiper-pagination-color": "#4d7c3f",
+                  "--swiper-pagination-bullet-inactive-color": "#e8f0e3",
+                } as React.CSSProperties
+              }
             >
               {cards_old_house.map((card) => (
-                <SwiperSlide key={card.id} className="">
-                  <CardPictureOnly card={card} className="object-cover" />
+                <SwiperSlide key={card.id}>
+                  <CardPictureOnly
+                    card={card}
+                    className="h-full w-full object-cover"
+                  />
                 </SwiperSlide>
               ))}
             </Swiper>
-            <div className="bg-secondary p-4">
-              <h3 className="font-bold">Drewniany dom</h3>
-              <p className="my-4">
+            <div className="bg-primary-50 p-4 md:p-6">
+              <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
+                Drewniany dom
+              </h3>
+              <p className="my-3 text-primary-700/80 md:my-4">
                 Przestronny dom z 4 sypialniami, salonem, jadalnią oraz tarasem
               </p>
-              <h4 className="text-lg font-semibold md:text-xl">
+              <p className="text-lg font-semibold text-primary-500 md:text-xl">
                 Cena ustalana indywidualnie
-              </h4>
+              </p>
             </div>
           </div>
         </div>
-        <div className="defaultPaddings mx-auto w-full max-w-screen-xl lg:py-12">
-          <h3 className="flex w-full justify-center text-3xl font-bold md:text-5xl ">
-            Cennik pokoi gościnnych
-          </h3>
-          <p className="flex py-8 sm:w-full">
-            <span>*</span>Ceny za pokój przy wynajmnie na minimum 2 doby. Przy
-            wynajmie na jedną dobę ceny ustalane są indywidualnie
-          </p>
-          <div className="overflow-x-auto">
-            <table className="w-full table-auto border-collapse">
+
+        {/* Price List Section */}
+        <div className="space-y-8">
+          <div className="text-center">
+            <h3 className="mb-6 text-2xl font-bold text-primary-700 md:text-4xl lg:text-5xl">
+              Cennik pokoi gościnnych
+            </h3>
+            <p className="text-sm text-primary-700/80 md:text-base">
+              <span className="mr-2 text-accent-500">*</span>
+              Ceny za pokój przy wynajmnie na minimum 2 doby. Przy wynajmie na
+              jedną dobę ceny ustalane są indywidualnie
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-xl bg-white shadow-lg">
+            <table className="w-full table-auto">
               <tbody>
-                <tr className="border-b border-gray-200 ">
-                  <td className="flex items-center gap-4 px-4 py-4">
-                    <div>
-                      <h3 className="text-base font-medium sm:text-3xl">
-                        1 osoba
-                      </h3>
-                    </div>
-                  </td>
-
-                  <td className="px-4 py-4 text-right font-medium">
-                    130 zł / noc
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-200 ">
-                  <td className="flex items-center gap-4 px-4 py-4">
-                    <div>
-                      <h3 className="text-base font-medium sm:text-3xl">
-                        2 osoby
-                      </h3>
-                    </div>
-                  </td>
-
-                  <td className="px-4 py-4 text-right font-medium">
-                    200 zł / noc
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-200 ">
-                  <td className="flex items-center gap-4 px-4 py-4">
-                    <div>
-                      <h3 className="text-base font-medium sm:text-3xl">
-                        3 osoby
-                      </h3>
-                    </div>
-                  </td>
-
-                  <td className="px-4 py-4 text-right font-medium">
-                    270 zł / noc
-                  </td>
-                </tr>
-                <tr className="border-b border-gray-200 ">
-                  <td className="flex items-center gap-4 px-4 py-4">
-                    <div>
-                      <h3 className="text-base font-medium sm:text-3xl">
-                        4 osoby
-                      </h3>
-                    </div>
-                  </td>
-
-                  <td className="px-4 py-4 text-right font-medium">
-                    320 zł / noc
-                  </td>
-                </tr>
+                {[
+                  { people: "1 osoba", price: "130" },
+                  { people: "2 osoby", price: "200" },
+                  { people: "3 osoby", price: "270" },
+                  { people: "4 osoby", price: "320" },
+                ].map((row, index) => (
+                  <tr
+                    key={index}
+                    className="border-b border-primary-100 last:border-none"
+                  >
+                    <td className="p-4 md:p-6">
+                      <h4 className="text-lg font-medium text-primary-700 md:text-xl lg:text-2xl">
+                        {row.people}
+                      </h4>
+                    </td>
+                    <td className="p-4 text-right text-lg font-medium text-primary-500 md:p-6 md:text-xl lg:text-2xl">
+                      {row.price} zł / noc
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -160,7 +155,7 @@ const cards_new_house: CardType[] = [
     id: 1,
   },
   {
-    url: newHouseImages.bathroom.top, 
+    url: newHouseImages.bathroom.top,
     alt: "Zdjęcie łazienki",
     id: 2,
   },
