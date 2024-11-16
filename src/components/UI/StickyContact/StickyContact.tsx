@@ -43,30 +43,38 @@ const StickyContact: React.FC = () => {
 
   return (
     <animated.div
-      className="text-text fixed bottom-0 z-50 flex h-[50px] w-full -translate-x-1/2 transform justify-around bg-white sm:hidden"
+      className="fixed bottom-0 z-50 w-full sm:hidden"
       style={stickySpring}
     >
-      <button
-        className="flex w-1/4 items-center justify-center border-r hover:bg-gray-200 "
-        aria-label="Map"
-        role="button"
-      >
+      <div className="flex h-16 w-full items-center bg-primary-50 justify-around shadow-lg">
         <a
           href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex h-full  items-center justify-center gap-3 bg-primary-50 px-4 text-primary-700 transition-all hover:bg-primary-100"
         >
-          <FaMapMarkerAlt aria-hidden="true" />
+          <div className="flex items-center justify-center gap-2 rounded-full bg-primary-100 p-2 px-4">
+            <FaMapMarkerAlt className="text-lg" aria-hidden="true" />
+            <span className="font-josefin text-base font-semibold">Mapa</span>
+          </div>
         </a>
-      </button>
-      <button
-        onClick={() => handleCall(phoneNumbers.kamil)}
-        className="flex w-3/4 items-center justify-center gap-2 hover:bg-gray-200 "
-        aria-label="Call for reservation"
-        role="button"
-      >
-        <FaPhoneAlt aria-hidden="true" /> Rezerwacja
-      </button>
+
+        <button
+          onClick={() => handleCall(phoneNumbers.kamil)}
+          className="flex h-full  items-center justify-center gap-3 bg-primary-50 px-4 text-primary-700 transition-all hover:bg-primary-100"
+          aria-label="Zadzwoń, aby zarezerwować"
+        >
+          <div className="flex items-center justify-center gap-2 rounded-full bg-primary-100 p-2 px-4">
+            <FaPhoneAlt className="text-lg" aria-hidden="true" />
+            <span className="font-josefin text-base font-semibold">
+              Rezerwacja
+            </span>
+          </div>
+        </button>
+      </div>
+
+      {/* Safe area for devices with home indicator */}
+      <div className="h-safe-area bg-white" />
     </animated.div>
   );
 };
