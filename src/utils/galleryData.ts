@@ -1,6 +1,6 @@
 import * as assets from "../utils/assets";
 import { allSlides } from "./lightboxSlides";
-
+import { CardType } from "../components/UI/Card/CardType";
 export interface GalleryItemType {
   id: string;
   image: any;
@@ -58,3 +58,56 @@ export const galleryData: GalleryItemType[] = [
     slides: allSlides.cottage,
   },
 ];
+
+
+export const showcaseNewHouse: CardType[] = [
+  {
+    url: assets.newHouseImages.rooms.double,
+    alt: "Zdjęcie pokoju",
+    id: 1,
+  },
+  {
+    url: assets.newHouseImages.bathroom.top,
+    alt: "Zdjęcie łazienki",
+    id: 2,
+  },
+  {
+    url: assets.newHouseImages.livingRoom.main,
+    alt: "Zdjęcie salonu",
+    id: 3,
+  },
+  {
+    url: assets.newHouseImages.kitchen.main,
+    alt: "Zdjęcie kuchnii",
+    id: 4,
+  },
+  {
+    url: assets.newHouseImages.kidsArea,
+    alt: "Zdjęcie sekcji dla dzieci",
+    id: 5,
+  },
+];
+
+export const showcaseCottage: CardType[] = [
+  {
+    url: assets.cottageImages.room.double,
+    alt: "Zdjęcie pokoju",
+    id: 1,
+  },
+  {
+    url: assets.cottageImages.bathroom.bottom,
+    alt: "Zdjęcie łazienki",
+    id: 2,
+  },
+  {
+    url: assets.cottageImages.livingRoom,
+    alt: "Zdjęcie salonu",
+    id: 3,
+  },
+  {
+    url: assets.cottageImages.kitchen,
+    alt: "Zdjęcie kuchnii",
+    id: 4,
+  },
+];
+

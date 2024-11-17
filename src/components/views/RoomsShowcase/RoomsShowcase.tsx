@@ -1,7 +1,5 @@
-import { cottageImages, newHouseImages } from "../../../utils/assets";
-import { CardType } from "../../UI/Card/CardType";
+import { showcaseCottage, showcaseNewHouse } from "../../../utils/galleryData";
 import ImageCarousel from "../../UI/ImageCarousel/ImageCarousel";
-
 export default function RoomsShowcase() {
   return (
     <section className="container py-8 md:py-16">
@@ -11,7 +9,7 @@ export default function RoomsShowcase() {
           {/* Guest Rooms Card */}
           <div className="card group">
             <div className="h-64 w-full sm:h-72 md:h-80 lg:h-96">
-              <ImageCarousel images={cards_new_house} />
+              <ImageCarousel images={showcaseNewHouse} />
             </div>
             <div className="bg-primary-50 p-4 md:p-6">
               <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
@@ -29,7 +27,7 @@ export default function RoomsShowcase() {
           {/* Wooden House Card */}
           <div className="card group">
             <div className="h-64 w-full sm:h-72 md:h-80 lg:h-96">
-              <ImageCarousel images={cards_old_house} />
+              <ImageCarousel images={showcaseCottage} />
             </div>
             <div className="bg-primary-50 p-4 md:p-6">
               <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
@@ -48,54 +46,3 @@ export default function RoomsShowcase() {
     </section>
   );
 }
-
-const cards_new_house: CardType[] = [
-  {
-    url: newHouseImages.rooms.double,
-    alt: "Zdjęcie pokoju",
-    id: 1,
-  },
-  {
-    url: newHouseImages.bathroom.top,
-    alt: "Zdjęcie łazienki",
-    id: 2,
-  },
-  {
-    url: newHouseImages.livingRoom.main,
-    alt: "Zdjęcie salonu",
-    id: 3,
-  },
-  {
-    url: newHouseImages.kitchen.main,
-    alt: "Zdjęcie kuchnii",
-    id: 4,
-  },
-  {
-    url: newHouseImages.kidsArea,
-    alt: "Zdjęcie sekcji dla dzieci",
-    id: 5,
-  },
-];
-
-const cards_old_house: CardType[] = [
-  {
-    url: cottageImages.room.double,
-    alt: "Zdjęcie pokoju",
-    id: 1,
-  },
-  {
-    url: cottageImages.bathroom.bottom,
-    alt: "Zdjęcie łazienki",
-    id: 2,
-  },
-  {
-    url: cottageImages.livingRoom,
-    alt: "Zdjęcie salonu",
-    id: 3,
-  },
-  {
-    url: cottageImages.kitchen,
-    alt: "Zdjęcie kuchnii",
-    id: 4,
-  },
-];
