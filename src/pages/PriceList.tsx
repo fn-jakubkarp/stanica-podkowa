@@ -1,8 +1,8 @@
 import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
+import PriceDetails from "../components/UI/PriceDetails/PriceDetails";
+import RoomsShowcase from "../components/views/RoomsShowcase/RoomsShowcase";
 import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
-import RoomsPriceList from "../components/UI/RoomsPriceList/RoomsPriceList";
-import DetailedPriceList from "../components/UI/DetailedPriceList/DetailedPriceList";
 
 const animations = {
   container: {
@@ -31,21 +31,21 @@ const PriceList = () => {
   const { ref: lettersRef, trail: lettersTrail } = useInViewTrailAnimation(
     letters,
     200,
-    true // Changed to true to ensure animation triggers
+    true,
   );
 
   return (
     <div className="min-h-screen bg-primary-50">
-      <div className="bg-primary-700 py-12 sm:py-16 md:py-24 text-white">
+      <div className="bg-primary-700 py-12 text-white sm:py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <animated.header 
-            className="flex justify-center items-center gap-1 sm:gap-2" 
+          <animated.header
+            className="flex items-center justify-center gap-1 sm:gap-2"
             ref={lettersRef}
           >
             {lettersTrail.map((props, index) => (
               <animated.h1
                 key={index}
-                className="font-josefin text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold"
+                className="font-josefin text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
                 style={props}
               >
                 {letters[index]}
@@ -59,28 +59,34 @@ const PriceList = () => {
         initial="hidden"
         animate="visible"
         variants={animations.container}
-        className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16"
+        className="container-custom mx-auto px-4 py-8 sm:px-6 sm:py-12 md:py-16 lg:px-8"
       >
-        <motion.div variants={animations.item} className="mb-8 sm:mb-12 md:mb-16 text-center">
-          <h2 className="mb-4 sm:mb-6 font-josefin text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-primary-700">
+        <motion.div
+          variants={animations.item}
+          className="mb-8 text-center sm:mb-12 md:mb-16"
+        >
+          <h2 className="mb-4 font-josefin text-2xl font-bold text-primary-700 sm:mb-6 sm:text-3xl md:text-4xl lg:text-5xl">
             NASZA OFERTA
           </h2>
-          <p className="mx-auto max-w-3xl text-base sm:text-lg text-primary-700/80">
+          <p className="mx-auto max-w-3xl text-base text-primary-700/80 sm:text-lg">
             W gospodarstwie posiadamy drewniany klimatyczny dom o powierzchni
             120m2, który wynajmowany jest w całości na wyłączność. Do Waszej
             dyspozycji oddajemy również pokoje gościnne w drugim budynku.
           </p>
         </motion.div>
 
-        <RoomsPriceList />
-        <DetailedPriceList />
-        
-        <motion.div variants={animations.item} className="mt-8 sm:mt-12 md:mt-16 space-y-8 sm:space-y-12">
+        <RoomsShowcase />
+        <PriceDetails />
+
+        <motion.div
+          variants={animations.item}
+          className="mt-8 space-y-8 sm:mt-12 sm:space-y-12 md:mt-16"
+        >
           <div className="card p-4 sm:p-6 md:p-8">
-            <h3 className="mb-3 sm:mb-4 text-center font-josefin text-xl sm:text-2xl md:text-3xl font-bold text-primary-700">
+            <h3 className="mb-3 text-center font-josefin text-xl font-bold text-primary-700 sm:mb-4 sm:text-2xl md:text-3xl">
               Potwierdzenie rezerwacji
             </h3>
-            <p className="text-sm sm:text-base text-primary-700/80">
+            <p className="text-sm text-primary-700/80 sm:text-base">
               Rezerwacji pobytu można dokonać osobiście, telefonicznie lub
               pocztą elektroniczną. Potwierdzeniem rezerwacji jest wpłata 40%
               kosztów pobytu w formie zadatku. Na wpłatę lub przesłanie
@@ -92,24 +98,24 @@ const PriceList = () => {
 
           <div className="card p-4 sm:p-6 md:p-8">
             <div className="text-center">
-              <h3 className="mb-1 sm:mb-2 font-josefin text-xl sm:text-2xl md:text-3xl font-bold text-primary-700">
+              <h3 className="mb-1 font-josefin text-xl font-bold text-primary-700 sm:mb-2 sm:text-2xl md:text-3xl">
                 Dane do przelewu
               </h3>
-              <p className="mb-4 sm:mb-6 text-lg sm:text-xl md:text-2xl text-primary-700/80">
+              <p className="mb-4 text-lg text-primary-700/80 sm:mb-6 sm:text-xl md:text-2xl">
                 na poczet zadatku
               </p>
             </div>
             <ul className="space-y-2 rounded-lg bg-primary-50 p-4 sm:p-6">
-              <li className="font-josefin text-base sm:text-lg font-medium text-primary-700">
+              <li className="font-josefin text-base font-medium text-primary-700 sm:text-lg">
                 Kamil Haluch
               </li>
-              <li className="text-sm sm:text-base text-primary-700/80">
+              <li className="text-sm text-primary-700/80 sm:text-base">
                 Męcina Wielka 115, 38-307 Sękowa
               </li>
-              <li className="font-mono text-sm sm:text-base md:text-lg font-medium text-primary-700 break-all">
+              <li className="break-all font-mono text-sm font-medium text-primary-700 sm:text-base md:text-lg">
                 04862700013028370086260001
               </li>
-              <li className="text-sm sm:text-base text-primary-700/80">
+              <li className="text-sm text-primary-700/80 sm:text-base">
                 Tytułem: Zadatek - Imię Nazwisko - termin rezerwacji
               </li>
             </ul>
