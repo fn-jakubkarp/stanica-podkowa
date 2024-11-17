@@ -1,14 +1,21 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { heroImages } from "../../../utils/assets";
+import HeroCTA from "../../UI/HeroCTA";
 
 const Hero = () => {
   const letters = "POZNAJ".split("");
   const words = ["NASZE", "UROKI"];
   const heroImage = heroImages.plain;
 
-  // Animation variants
-  const letterVariants = {
+  const handleScroll = () => {
+    const element = document.getElementById("o-nas");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const letterVariants: Variants = {
     hidden: { y: "100%" },
     visible: (i: number) => ({
       y: 0,
@@ -19,7 +26,7 @@ const Hero = () => {
     }),
   };
 
-  const fadeUpVariants = {
+  const fadeUpVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (delay: number) => ({
       opacity: 1,
@@ -32,41 +39,44 @@ const Hero = () => {
   };
 
   return (
-    <section
-      id="hero"
-      className="bg-primary-700 relative h-screen w-full overflow-hidden"
-    >
-      {/* Hero Image with Overlay */}
-      <div className="absolute inset-0">
+    <section className="bg-primary-900 relative h-screen w-full overflow-hidden">
+      {/* Background Image Container */}
+      <motion.div
+        initial={{ scale: 1.2, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.5 }}
+        className="absolute inset-0"
+      >
         <img
           src={heroImage}
           alt="Drewniany domek na tle gwieździstego nieba"
           className="h-full w-full object-cover object-center"
         />
-        <div className="from-primary-700/10 via-primary-700/20 to-primary-700/60 absolute inset-0 bg-gradient-to-b" />
-      </div>
+        <div className="from-primary-900/70 via-primary-900/50 to-primary-900/80 absolute inset-0 bg-gradient-to-b" />
+      </motion.div>
 
-      {/* Content Container */}
-      <div className="container-custom relative z-10 flex h-full flex-col items-center justify-center text-center">
-        {/* Main Heading */}
-        <h1 className="mb-8">
-          {/* Animated Letters */}
-          <motion.div
-            className="flex justify-center overflow-hidden"
-            initial="hidden"
-            animate="visible"
-          >
-            {letters.map((letter, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                custom={index}
-                className="font-josefin text-6xl font-bold text-white sm:text-8xl lg:text-9xl"
-              >
-                {letter}
-              </motion.span>
-            ))}
-          </motion.div>
+      {/* Main Content */}
+      <div className="container mx-auto flex h-full items-center justify-center px-4">
+        <div className="z-10 text-center">
+          {/* Main Heading with Animated Letters */}
+          <div className="mb-6">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              className="flex justify-center"
+            >
+              {letters.map((letter, index) => (
+                <motion.span
+                  key={index}
+                  variants={letterVariants}
+                  custom={index}
+                  className="font-josefin text-7xl font-bold text-white sm:text-8xl lg:text-9xl"
+                >
+                  {letter}
+                </motion.span>
+              ))}
+            </motion.div>
+          </div>
 
           {/* Subheading */}
           <motion.div
@@ -74,36 +84,26 @@ const Hero = () => {
             custom={0.7}
             initial="hidden"
             animate="visible"
-            className="text-primary-100 mt-4 font-josefin text-2xl font-medium sm:text-3xl lg:text-4xl"
+            className="mb-12"
           >
-            {words.join(" ")}
+            <h2 className="font-josefin text-3xl font-medium text-primary-100 lg:text-4xl">
+              {words.join(" ")}
+            </h2>
           </motion.div>
-        </h1>
 
-        {/* CTA Button */}
-        <motion.button
-          variants={fadeUpVariants}
-          custom={1.1}
-          initial="hidden"
-          animate="visible"
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="btn btn-primary text-primary-700 hover:bg-primary-50 hover:text-primary-500 bg-white px-8 py-4 text-lg"
-        >
-          Rozpocznij podróż
-        </motion.button>
-
-        {/* Scroll Indicator */}
-        <motion.div
-          variants={fadeUpVariants}
-          custom={1.3}
-          initial="hidden"
-          animate="visible"
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <ChevronDown className="h-8 w-8 animate-bounce text-white opacity-80" />
-        </motion.div>
+          <HeroCTA onClick={handleScroll}>Rozpocznij podróż</HeroCTA>
+        </div>
       </div>
+
+      <motion.div
+        variants={fadeUpVariants}
+        custom={1.3}
+        initial="hidden"
+        animate="visible"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2"
+      >
+        <ChevronDown className="h-8 w-8 animate-bounce text-white opacity-80" />
+      </motion.div>
     </section>
   );
 };

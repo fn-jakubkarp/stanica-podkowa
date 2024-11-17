@@ -5,7 +5,10 @@ const AboutUs: React.FC = () => {
   const aboutUsImage = heroImages.nightSky;
 
   return (
-    <section id="o-nas" className="container-custom py-8 md:py-12 lg:py-24">
+    <section
+      id="o-nas"
+      className="container-custom mt-8 py-8 md:py-12 lg:py-24"
+    >
       <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
         <div className="card">
           <img
