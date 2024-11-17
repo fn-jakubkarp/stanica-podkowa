@@ -1,7 +1,7 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { phoneNumbers } from "../../../constants/phoneNumbers";
+import { phoneNumbers } from "../../../utils/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
 
 const StickyContact: React.FC = () => {
