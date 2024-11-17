@@ -46,7 +46,7 @@ const StickyContact: React.FC = () => {
       className="fixed bottom-0 z-50 w-full sm:hidden"
       style={stickySpring}
     >
-      <div className="flex h-16 w-full items-center bg-primary-50 justify-around shadow-lg">
+      <div className="flex h-16 w-full items-center bg-primary-50 justify-around shadow-lg border border-top">
         <a
           href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
           target="_blank"
