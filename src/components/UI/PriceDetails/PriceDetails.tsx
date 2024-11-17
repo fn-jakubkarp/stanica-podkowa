@@ -34,7 +34,7 @@ const PriceDetails = () => {
   ];
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 pt-12 md:py-20 lg:pt-24">
       {/* Room Prices Section */}
       <div className="space-y-8">
         <div className="text-center">
