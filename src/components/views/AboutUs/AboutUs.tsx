@@ -26,7 +26,7 @@ const AboutUs: React.FC = () => {
             <p className="text-pretty text-lg text-gray-800">
               Witajcie w{" "}
               <span className="font-bold text-primary-500">
-                Stanica Podkowa
+                Stanicy Podkowa
               </span>
               , oazie spokoju i relaksu pośród malowniczych krajobrazów. Nasza
               posiadłość oferuje dwa urocze domy na wynajem, idealne na rodzinne

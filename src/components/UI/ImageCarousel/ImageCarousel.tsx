@@ -2,7 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
-
+import { CardType } from "../Card/CardType";
 const animations = {
   slide: {
     hidden: { opacity: 0, scale: 0.95 },
@@ -25,12 +25,6 @@ const animations = {
     },
   },
 };
-
-interface CardType {
-  id: string | number;
-  url?: string;
-  alt?: string;
-}
 
 interface CarouselProps {
   images: CardType[];
@@ -161,7 +155,7 @@ const ImageCarousel = ({
             key={index}
             onClick={() => goToSlide(index)}
             disabled={isTransitioning}
-            className={`h-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:opacity-50 ${
+            className={`h-2 focus:outline-none focus:ring-2 focus:ring-primary-500 disabled:opacity-50 ${
               index === currentIndex
                 ? "bg-primary-600 w-6 rounded-full"
                 : "hover:bg-primary-200 w-2 rounded-full bg-primary-100"
