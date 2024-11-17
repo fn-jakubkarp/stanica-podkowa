@@ -1,6 +1,6 @@
 import { cottageImages, newHouseImages } from "../../../utils/assets";
 import { CardType } from "../../UI/Card/CardType";
-import ImageCarousel from "../../UI/Carousel/Carousel";
+import ImageCarousel from "../../UI/ImageCarousel/ImageCarousel";
 
 export default function RoomsShowcase() {
   return (
