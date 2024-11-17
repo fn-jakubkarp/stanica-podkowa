@@ -3,14 +3,11 @@ import { brandAssets } from "../../../utils/assets";
 
 interface LogoProps {
   className?: string;
-  variant?: "light" | "dark";
 }
 
-const Logo: React.FC<LogoProps> = ({ className, variant = "light" }) => {
+const Logo: React.FC<LogoProps> = ({ className }) => {
   const navigate = useNavigate();
   const logo = brandAssets.logo;
-  const logoDark = brandAssets.logoDark;
-  const logoSrc = variant === "dark" ? logoDark : logo;
 
   const handleClick = () => {
     navigate("/");
@@ -19,7 +16,7 @@ const Logo: React.FC<LogoProps> = ({ className, variant = "light" }) => {
   return (
     <div className="flex items-center gap-2">
       <img
-        src={logoSrc}
+        src={logo}
         alt="Logo"
         className={`h-auto w-[100px] lg:w-[175px] ${className} cursor-pointer`}
         onClick={handleClick}

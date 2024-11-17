@@ -5,46 +5,60 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-open text-gray-800 bg-primary-50;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-josefin font-bold text-primary-700;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-lg font-medium transition-all duration-200;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply bg-earth-500 text-white hover:bg-earth-300;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-lg overflow-hidden;
+  }
+
+  .container-custom {
+    @apply px-4 mx-auto max-w-7xl sm:px-6 lg:px-8;
+  }
 }
 
-img {
-  @apply max-h-full;
-}
-
-h1,
-h2,
-h3 {
-  @apply font-open;
-  @apply text-text-DARK;
-  @apply text-xl;
-  @apply sm:text-3xl;
-}
-
-div,
-p,
-a,
-button,
-span,
-ul,
-li {
-  @apply font-josefin;
-  @apply text-text-DARK;
-  @apply font-light;
-  @apply sm:text-xl;
-}
-
-.defaultPaddings {
-  @apply p-4;
-  @apply sm:px-8;
-  @apply sm:py-6;
-  @apply md:px-6;
-  @apply xl:px-0;
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .text-pretty {
+    text-wrap: pretty;
+  }
 }

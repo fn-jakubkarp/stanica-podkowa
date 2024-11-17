@@ -1,59 +1,65 @@
+import React from "react";
 import { heroImages } from "../../../utils/assets";
 
-const AboutUs: React.FC = ({}) => {
-  const abousUsImage = heroImages.plain;
+const AboutUs: React.FC = () => {
+  const aboutUsImage = heroImages.nightSky;
+
   return (
-    <>
-      <section
-        id="o-nas"
-        className="defaultPaddings mx-auto flex w-full max-w-screen-xl justify-center py-12 md:py-24"
-      >
-        <div className="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+    <section
+      id="o-nas"
+      className="container-custom mt-8 py-8 md:py-12 lg:py-24"
+    >
+      <div className="grid items-center gap-6 lg:grid-cols-2 lg:gap-10">
+        <div className="card">
           <img
-            src={abousUsImage}
+            src={aboutUsImage}
             width="550"
             height="550"
             alt="Dom i altana na tle lasu"
-            className="mx-auto aspect-square overflow-hidden rounded-xl object-cover object-center sm:w-full"
+            className="aspect-square w-full object-cover object-center"
           />
+        </div>
+
+        <div className="space-y-8">
           <div className="space-y-4">
-            <div className="space-y-2">
-              <h3 className="pb-2 text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                Nasza agroturystyka
-              </h3>
-              <p className=" overflow-hidden md:text-xl">
-                Witajcie w <span className="font-bold">Stanicy Podkowa</span>,
-                oazie spokoju i relaksu pośród malowniczych krajobrazów. Nasza
-                posiadłość oferuje dwa urocze domy na wynajem, idealne na
-                rodzinne wakacje lub romantyczne wypady. W sercu natury
-                znajdziecie tu wszystko, czego potrzeba do pełnego relaksu – od
-                przestronnych terenów zielonych po zaciszne zakątki, gdzie można
-                odetchnąć świeżym powietrzem i zapomnieć o codziennych troskach.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <p className=" md:text-lg ">
-                Nasza agroturystyka to również miejsce idealne na duże imprezy i
-                grille. Rozbudowany dziedziniec pozwala na organizację
-                niezapomnianych przyjęć, gdzie dzieci mogą bawić się na placu
-                zabaw, a dorośli cieszyć się wieczornymi biesiadami pod gołym
-                niebem. Wszystko to w otoczeniu pięknych krajobrazów, które
-                zachwycą każdego.
-              </p>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-2xl font-bold">Wypoczynek</h3>
-              <p className=" md:text-lg ">
-                Jako miłośnicy aktywnego wypoczynku znajdziecie w pobliżu
-                mnóstwo atrakcji – od pieszych wędrówek po licznych szlakach, po
-                malownicze przejażdżki rowerowe. Beskid Niski jest idealnym
-                miejscem by spędzać wolny czas w taki właśnie sposób.
-              </p>
-            </div>
+            <h2 className="text-balance">Nasza agroturystyka</h2>
+            <p className="text-pretty text-lg text-gray-800">
+              Witajcie w{" "}
+              <span className="font-bold text-primary-500">
+                Stanica Podkowa
+              </span>
+              , oazie spokoju i relaksu pośród malowniczych krajobrazów. Nasza
+              posiadłość oferuje dwa urocze domy na wynajem, idealne na rodzinne
+              wakacje lub romantyczne wypady. W sercu natury znajdziecie tu
+              wszystko, czego potrzeba do pełnego relaksu – od przestronnych
+              terenów zielonych po zaciszne zakątki, gdzie można odetchnąć
+              świeżym powietrzem i zapomnieć o codziennych troskach.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-pretty text-lg text-gray-800">
+              Nasza agroturystyka to również miejsce idealne na duże imprezy i
+              grille. Rozbudowany dziedziniec pozwala na organizację
+              niezapomnianych przyjęć, gdzie dzieci mogą bawić się na placu
+              zabaw, a dorośli cieszyć się wieczornymi biesiadami pod gołym
+              niebem. Wszystko to w otoczeniu pięknych krajobrazów, które
+              zachwycą każdego.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <h3>Wypoczynek</h3>
+            <p className="text-pretty text-lg text-gray-800">
+              Jako miłośnicy aktywnego wypoczynku znajdziecie w pobliżu mnóstwo
+              atrakcji – od pieszych wędrówek po licznych szlakach, po
+              malownicze przejażdżki rowerowe. Beskid Niski jest idealnym
+              miejscem by spędzać wolny czas w taki właśnie sposób.
+            </p>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
