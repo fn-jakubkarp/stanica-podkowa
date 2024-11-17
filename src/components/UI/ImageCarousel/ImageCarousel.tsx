@@ -78,7 +78,6 @@ const ImageCarousel = ({
     }
   };
 
-  // Enhanced autoplay with pause on hover and transition check
   useEffect(() => {
     let intervalId: NodeJS.Timeout | undefined;
 
