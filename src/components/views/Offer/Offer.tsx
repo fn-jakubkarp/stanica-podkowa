@@ -54,7 +54,7 @@ const Offer = () => {
   ];
 
   return (
-    <section className="bg-primary-50 py-16 md:py-24 lg:py-32">
+    <section className="bg-primary-50 py-12 md:py-24 ">
       <div className="container-custom">
         <motion.div
           initial="hidden"
