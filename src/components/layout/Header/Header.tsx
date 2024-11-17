@@ -42,7 +42,7 @@ const Header = () => {
   };
 
   return (
-    <animated.header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-primary-100 shadow-sm">
+    <animated.header className="fixed top-0 left-0 right-0 z-50 bg-primary-50 backdrop-blur-sm border-b border-primary-100 shadow-sm">
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}

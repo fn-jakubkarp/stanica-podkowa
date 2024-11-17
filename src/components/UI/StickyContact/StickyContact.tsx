@@ -1,8 +1,8 @@
 import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { phoneNumbers } from "../../../utils/phoneNumbers";
 import { handleCall } from "../../../utils/handleCall";
+import { phoneNumbers } from "../../../utils/phoneNumbers";
 
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);
@@ -46,7 +46,7 @@ const StickyContact: React.FC = () => {
       className="fixed bottom-0 z-50 w-full sm:hidden"
       style={stickySpring}
     >
-      <div className="flex h-16 w-full items-center bg-primary-50 justify-around shadow-lg border border-top">
+      <div className="border-top flex h-16 w-full items-center justify-around border bg-primary-50 shadow-lg">
         <a
           href="https://maps.app.goo.gl/1prR5CRuaxLkR8UT6"
           target="_blank"

@@ -2,7 +2,7 @@ const FloatingFacebookButton = () => {
   return (
     <a
       href="https://www.facebook.com/agroturystykapodkowa/"
-      className="fixed bottom-16 right-4 rounded-full bg-blue-600 p-3 text-white shadow-lg transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+      className="fixed bottom-20 right-6 rounded-full bg-blue-600 p-3 text-white shadow-lg transition-colors duration-300 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Visit our Facebook page"
