@@ -1,5 +1,4 @@
 import { Outlet } from "react-router-dom";
-
 import FloatingFacebookButton from "../components/UI/FloatingFacebookButton/FloatingFacebookButton";
 import StickyContact from "../components/UI/StickyContact/StickyContact";
 import Footer from "../components/layout/Footer/Footer";

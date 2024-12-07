@@ -11,29 +11,46 @@ const Header = () => {
   const closeDrawer = () => setIsDrawerOpen(false);
 
   const NavLinks = () => {
-    const linkClasses = "font-josefin text-primary-700 hover:text-primary-500 transition-colors duration-200";
+    const linkClasses =
+      "font-josefin text-primary-700 hover:text-primary-500 transition-colors duration-200";
     const activeLinkClasses = "text-primary-500 font-bold";
+
+    const handleNavLinkClick = () => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+
+      closeDrawer();
+    };
 
     return (
       <>
-        <NavLink 
-          to="/" 
-          onClick={closeDrawer}
-          className={({ isActive }) => `${linkClasses} ${isActive ? activeLinkClasses : ''}`}
+        <NavLink
+          to="/"
+          onClick={handleNavLinkClick}
+          className={({ isActive }) =>
+            `${linkClasses} ${isActive ? activeLinkClasses : ""}`
+          }
         >
           Strona główna
         </NavLink>
-        <NavLink 
-          to="/cennik" 
-          onClick={closeDrawer}
-          className={({ isActive }) => `${linkClasses} ${isActive ? activeLinkClasses : ''}`}
+        <NavLink
+          to="/cennik"
+          onClick={handleNavLinkClick}
+          className={({ isActive }) =>
+            `${linkClasses} ${isActive ? activeLinkClasses : ""}`
+          }
         >
           Cennik
         </NavLink>
-        <NavLink 
-          to="/galeria" 
-          onClick={closeDrawer}
-          className={({ isActive }) => `${linkClasses} ${isActive ? activeLinkClasses : ''}`}
+        <NavLink
+          to="/galeria"
+          onClick={handleNavLinkClick}
+          className={({ isActive }) =>
+            `${linkClasses} ${isActive ? activeLinkClasses : ""}`
+          }
         >
           Galeria
         </NavLink>
@@ -42,9 +59,9 @@ const Header = () => {
   };
 
   return (
-    <animated.header className="fixed top-0 left-0 right-0 z-50 bg-primary-50 backdrop-blur-sm border-b border-primary-100 shadow-sm">
+    <animated.header className="fixed left-0 right-0 top-0 z-50 border-b border-primary-100 bg-primary-50 shadow-sm backdrop-blur-sm">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex h-16 items-center justify-between md:h-20">
           {/* Logo */}
           <Logo />
 
@@ -56,9 +73,9 @@ const Header = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button 
+          <button
             onClick={toggleDrawer}
-            className="md:hidden p-2 text-primary-700 hover:text-primary-500 transition-colors"
+            className="p-2 text-primary-700 transition-colors hover:text-primary-500 md:hidden"
             aria-label="Toggle menu"
           >
             {isDrawerOpen ? <X size={24} /> : <Menu size={24} />}
@@ -68,7 +85,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isDrawerOpen && (
           <div className="md:hidden">
-            <div className="flex flex-col space-y-4 py-4 px-2">
+            <div className="flex flex-col space-y-4 px-2 py-4">
               <NavLinks />
             </div>
           </div>
