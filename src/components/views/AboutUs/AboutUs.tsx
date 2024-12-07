@@ -39,12 +39,11 @@ const AboutUs: React.FC = () => {
 
           <div>
             <p className="text-pretty text-lg text-gray-800">
-              Nasza agroturystyka to również miejsce idealne na duże imprezy i
-              grille. Rozbudowany dziedziniec pozwala na organizację
-              niezapomnianych przyjęć, gdzie dzieci mogą bawić się na placu
-              zabaw, a dorośli cieszyć się wieczornymi biesiadami pod gołym
-              niebem. Wszystko to w otoczeniu pięknych krajobrazów, które
-              zachwycą każdego.
+              Nasza agroturystyka to również miejsce idealne na wspólne
+              biesiadowanie przy grillu . Dzieci mogą bawić się na placu zabaw,
+              a dorośli cieszyć się wieczornymi biesiadami pod gołym niebem.
+              Wszystko to w otoczeniu pięknych krajobrazów, które zachwycą
+              każdego.
             </p>
           </div>
 

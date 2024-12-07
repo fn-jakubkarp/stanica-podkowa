@@ -2,17 +2,17 @@ const PriceDetails = () => {
   const additionalPrices = [
     {
       name: "Sauna",
-      price: "150zł / 1,5h",
+      price: "100zł / 1,5h",
     },
     {
-      name: "Balnia",
+      name: "Balia",
       price: (
         <>
-          2h / 150 zł
+          150zł / 1.5h
           <br />
-          Do 4h - 200 zł
+          200zł / 2h
           <br />
-          Powyżej 4h - 250 zł*
+          250zł / 4h*
         </>
       ),
     },
@@ -101,8 +101,7 @@ const PriceDetails = () => {
           </table>
           <div className="p-4 md:p-6">
             <p className="text-sm italic text-primary-700/80 md:text-base">
-              *Ceny obowiązują od 1 kwietnia do 31 października. W okresie od 1
-              listopada do 31 marca koszt wynajęcia bani wzrasta o 50 zł.
+              *W okresie 1 listopada do 31 marca koszt wynajęcia bani wzrasta o 50zł.
             </p>
           </div>
         </div>

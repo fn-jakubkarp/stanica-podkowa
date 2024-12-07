@@ -2,7 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { handleCall } from "../../../utils/handleCall";
-import { phoneNumbers } from "../../../utils/phoneNumbers";
+import { phoneNumbers } from "../../../utils/contact";
 
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);

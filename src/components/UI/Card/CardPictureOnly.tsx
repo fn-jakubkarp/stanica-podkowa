@@ -1,7 +1,6 @@
 import { CardType } from "./CardType";
 const CardPictureOnly = ({
   card,
-
   className = "",
 }: {
   card: CardType;
@@ -9,7 +8,7 @@ const CardPictureOnly = ({
   className?: string;
 }) => {
   return (
-    <div className="flex justify-center flex-col items-start">
+    <div className="flex flex-col items-start justify-center">
       <div className="">
         <img
           src={card.url}

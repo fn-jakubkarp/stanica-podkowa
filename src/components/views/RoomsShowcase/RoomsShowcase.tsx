@@ -15,8 +15,8 @@ export default function RoomsShowcase() {
             <p className="my-3 text-primary-700/80 md:my-4">
               4 funkcjonalne pokoje wraz z prywatną łazienką
             </p>
-            <p className="text-lg font-semibold text-primary-500 md:text-xl">
-              Od 130 zł / noc
+            <p className="mt-10 text-lg font-semibold text-primary-500 md:text-xl">
+              Od 80 zł / noc
             </p>
           </div>
         </div>
@@ -30,7 +30,8 @@ export default function RoomsShowcase() {
               Drewniany dom
             </h3>
             <p className="my-3 text-primary-700/80 md:my-4">
-              Przestronny dom z 4 sypialniami, salonem, jadalnią oraz tarasem
+              Przestronny dom z 4 sypialniami, salonem z kominkiem, jadalnią
+              oraz tarasem
             </p>
             <p className="text-lg font-semibold text-primary-500 md:text-xl">
               Cena ustalana indywidualnie

@@ -1,10 +1,5 @@
 import { MdEmail, MdLocalPhone, MdLocationOn } from "react-icons/md";
-
-// Constants
-const phoneNumbers = {
-  kamil: "+48 123 456 789",
-  katarzyna: "+48 987 654 321",
-};
+import { emailAddresses, phoneNumbers } from "../../../utils/contact";
 
 // Utility function
 const handleCall = (phoneNumber: string) => {
@@ -16,7 +11,6 @@ const Contact = () => {
     <section id="kontakt" className="w-full bg-primary-50 py-12 md:py-24">
       <div className="container-custom">
         <div className="space-y-12">
-          {/* Contact Information */}
           <div className="space-y-6 text-center">
             <div className="space-y-2">
               <h2 className="font-bold">SKONTAKTUJ SIĘ</h2>
@@ -47,7 +41,7 @@ const Contact = () => {
                 className="btn btn-secondary flex w-full items-center justify-center gap-2"
               >
                 <MdEmail className="text-xl" />
-                <span>stanicapodkowa@gmail.com</span>
+                <span>{emailAddresses.main}</span>
               </a>
             </div>
           </div>
