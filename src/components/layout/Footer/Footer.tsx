@@ -1,12 +1,8 @@
 import { MdEmail, MdLocalPhone, MdLocationOn } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Logo from "../../UI/Logo/Logo";
-
+import { CContact } from "../../views/Contact/content";
 const Footer = () => {
-  const phoneNumbers = {
-    kamil: "+48 123 456 789",
-  };
-
   const handleCall = (phoneNumber: string) => {
     window.location.href = `tel:${phoneNumber}`;
   };
@@ -68,11 +64,11 @@ const Footer = () => {
               </li>
               <li>
                 <button
-                  onClick={() => handleCall(phoneNumbers.kamil)}
+                  onClick={() => handleCall(CContact.phoneNumbers.kamil)}
                   className="flex items-center gap-2 text-gray-500 transition-colors duration-200 hover:text-primary-500"
                 >
                   <MdLocalPhone className="text-primary-500" />
-                  {phoneNumbers.kamil}
+                  {CContact.phoneNumbers.kamil}
                 </button>
               </li>
             </ul>

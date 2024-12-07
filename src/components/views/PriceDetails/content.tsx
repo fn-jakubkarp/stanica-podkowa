@@ -23,11 +23,11 @@ export const additionalPrices = [
     name: "Balia",
     price: (
       <>
-        150zł / 1,5h
+        150 zł / 1,5h
         <br />
-        200zł / 2h
+        200 zł / 2h
         <br />
-        250zł / 4h*
+        250 zł / 4h*
       </>
     ),
   },
