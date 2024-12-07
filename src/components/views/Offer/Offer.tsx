@@ -66,7 +66,7 @@ const Offer = () => {
           {/* Header */}
           <motion.div variants={itemVariants} className="space-y-4">
             <h3 className="text-3xl font-bold text-primary-700 sm:text-4xl md:text-5xl">
-              Nasza oferta
+              NASZA OFERTA
             </h3>
             <p className="mx-auto max-w-2xl text-lg text-primary-700/80 md:text-xl">
               Poznaj bogactwo atrakcji i możliwości wypoczynku, jakie oferuje
