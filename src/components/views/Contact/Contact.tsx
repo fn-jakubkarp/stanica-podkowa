@@ -8,7 +8,7 @@ const handleCall = (phoneNumber: string) => {
 
 const Contact = () => {
   return (
-    <section id="kontakt" className="w-full bg-primary-50 py-12 md:py-24">
+    <section id="kontakt" className="w-full bg-primary-50 py-6 md:py-12">
       <div className="container-custom">
         <div className="space-y-12">
           <div className="space-y-6 text-center">

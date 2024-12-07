@@ -39,7 +39,10 @@ const Hero = () => {
   };
 
   return (
-    <section className="bg-primary-900 relative h-screen w-full overflow-hidden">
+    <section
+      className="bg-primary-900 relative h-screen w-full overflow-hidden"
+      id="glowna"
+    >
       {/* Background Image Container */}
       <motion.div
         initial={{ scale: 1.2, opacity: 0 }}

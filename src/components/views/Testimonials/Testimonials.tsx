@@ -6,7 +6,7 @@ import { CTestimonials, testimonialData } from "./content";
 const Testimonials: React.FC = () => {
   return (
     <section className="bg-primary-50">
-      <div className="container-custom py-4 lg:py-8">
+      <div className="container-custom py-12 md:py-8">
         <div className="mb-8 flex flex-col items-center">
           <div className="max-w-xl text-center">
             <h2 className=" font-bold">{CTestimonials.header}</h2>

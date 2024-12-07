@@ -12,7 +12,7 @@ const Footer = () => {
   };
 
   const navigationLinks = [
-    { name: "Strona główna", href: "/#top" },
+    { name: "Strona główna", href: "/#glowna" },
     { name: "O nas", href: "/#o-nas" },
     { name: "Galeria", href: "/galeria" },
     { name: "Jak dojechać?", href: "/#jak-dojechac" },

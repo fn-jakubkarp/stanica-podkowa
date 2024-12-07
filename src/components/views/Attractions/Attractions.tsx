@@ -10,7 +10,7 @@ const Attractions = () => {
       : attractionsList.slice(0, 2);
 
   return (
-    <section className="w-full bg-primary-50 py-8 md:py-12 lg:py-24">
+    <section className="w-full bg-primary-50 py-12 md:py-6 lg:py-24">
       <div className="container-custom">
         <div className="space-y-6">
           <div className="text-center">
