@@ -2,7 +2,7 @@ import { animated, useSpring } from "@react-spring/web";
 import { useEffect, useState } from "react";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { handleCall } from "../../../utils/handleCall";
-import { phoneNumbers } from "../../../utils/contact";
+import { CContact } from "../../views/Contact/content";
 
 const StickyContact: React.FC = () => {
   const [hidden, setHidden] = useState(true);
@@ -60,7 +60,7 @@ const StickyContact: React.FC = () => {
         </a>
 
         <button
-          onClick={() => handleCall(phoneNumbers.kamil)}
+          onClick={() => handleCall(CContact.phoneNumbers.kamil)}
           className="flex h-full  items-center justify-center gap-3 bg-primary-50 px-4 text-primary-700 transition-all hover:bg-primary-100"
           aria-label="Zadzwoń, aby zarezerwować"
         >

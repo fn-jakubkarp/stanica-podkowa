@@ -1,6 +1,6 @@
 import React from "react";
 import { heroImages } from "../../../utils/assets";
-
+import { CAboutUs } from "./content";
 const AboutUs: React.FC = () => {
   const aboutUsImage = heroImages.nightSky;
 
@@ -22,38 +22,26 @@ const AboutUs: React.FC = () => {
 
         <div className="space-y-8">
           <div className="space-y-4">
-            <h2 className="text-balance">Nasza agroturystyka</h2>
+            <h2 className="text-balance">{CAboutUs.heading}</h2>
             <p className="text-pretty text-lg text-gray-800">
-              Witajcie w{" "}
+              {CAboutUs.welcome}{" "}
               <span className="font-bold text-primary-500">
-                Stanicy Podkowa
+                {CAboutUs.title}
               </span>
-              , oazie spokoju i relaksu pośród malowniczych krajobrazów. Nasza
-              posiadłość oferuje dwa urocze domy na wynajem, idealne na rodzinne
-              wakacje lub romantyczne wypady. W sercu natury znajdziecie tu
-              wszystko, czego potrzeba do pełnego relaksu – od przestronnych
-              terenów zielonych po zaciszne zakątki, gdzie można odetchnąć
-              świeżym powietrzem i zapomnieć o codziennych troskach.
+              {CAboutUs.section1}
             </p>
           </div>
 
           <div>
             <p className="text-pretty text-lg text-gray-800">
-              Nasza agroturystyka to również miejsce idealne na wspólne
-              biesiadowanie przy grillu . Dzieci mogą bawić się na placu zabaw,
-              a dorośli cieszyć się wieczornymi biesiadami pod gołym niebem.
-              Wszystko to w otoczeniu pięknych krajobrazów, które zachwycą
-              każdego.
+              {CAboutUs.section2}
             </p>
           </div>
 
           <div className="space-y-4">
             <h3>Wypoczynek</h3>
             <p className="text-pretty text-lg text-gray-800">
-              Jako miłośnicy aktywnego wypoczynku znajdziecie w pobliżu mnóstwo
-              atrakcji – od pieszych wędrówek po licznych szlakach, po
-              malownicze przejażdżki rowerowe. Beskid Niski jest idealnym
-              miejscem by spędzać wolny czas w taki właśnie sposób.
+              {CAboutUs.section3}
             </p>
           </div>
         </div>

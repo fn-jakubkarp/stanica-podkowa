@@ -1,6 +1,6 @@
 import { animated } from "@react-spring/web";
 import { motion } from "framer-motion";
-import PriceDetails from "../components/UI/PriceDetails/PriceDetails";
+import PriceDetails from "../components/views/PriceDetails/PriceDetails";
 import RoomsShowcase from "../components/views/RoomsShowcase/RoomsShowcase";
 import useInViewTrailAnimation from "../hooks/useInViewTrailAnimation";
 

@@ -1,5 +1,5 @@
 import { MdEmail, MdLocalPhone, MdLocationOn } from "react-icons/md";
-import { emailAddresses, phoneNumbers } from "../../../utils/contact";
+import { CContact } from "./content";
 
 // Utility function
 const handleCall = (phoneNumber: string) => {
@@ -13,27 +13,27 @@ const Contact = () => {
         <div className="space-y-12">
           <div className="space-y-6 text-center">
             <div className="space-y-2">
-              <h2 className="font-bold">SKONTAKTUJ SIĘ</h2>
+              <h2 className="font-bold">{CContact.header}</h2>
               <p className="text-balance text-lg text-gray-500 md:text-xl">
-                Masz pytania lub chcesz poznać szczegóły? Zadzwoń!
+                {CContact.subheader}
               </p>
             </div>
 
             <div className="mx-auto max-w-md space-y-4">
               <button
-                onClick={() => handleCall(phoneNumbers.kamil)}
+                onClick={() => handleCall(CContact.phoneNumbers.kamil)}
                 className="btn btn-primary flex w-full items-center justify-center gap-2"
               >
                 <MdLocalPhone className="text-xl" />
-                <span>{phoneNumbers.kamil}</span>
+                <span>{CContact.phoneNumbers.kamil}</span>
               </button>
 
               <button
-                onClick={() => handleCall(phoneNumbers.katarzyna)}
+                onClick={() => handleCall(CContact.phoneNumbers.katarzyna)}
                 className="btn btn-primary flex w-full items-center justify-center gap-2"
               >
                 <MdLocalPhone className="text-xl" />
-                <span>{phoneNumbers.katarzyna}</span>
+                <span>{CContact.phoneNumbers.katarzyna}</span>
               </button>
 
               <a
@@ -41,7 +41,7 @@ const Contact = () => {
                 className="btn btn-secondary flex w-full items-center justify-center gap-2"
               >
                 <MdEmail className="text-xl" />
-                <span>{emailAddresses.main}</span>
+                <span>{CContact.email}</span>
               </a>
             </div>
           </div>
@@ -51,7 +51,7 @@ const Contact = () => {
             <div className="space-y-2 text-center">
               <h3 className="flex items-center justify-center gap-2 text-2xl font-bold md:text-3xl">
                 <MdLocationOn className="text-primary-500" />
-                Jak do nas trafić?
+                {CContact.direction}
               </h3>
             </div>
 

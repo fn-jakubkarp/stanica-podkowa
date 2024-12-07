@@ -1,8 +1,9 @@
 import { showcaseCottage, showcaseNewHouse } from "../../../utils/galleryData";
 import ImageCarousel from "../../UI/ImageCarousel/ImageCarousel";
+import { CRoomsShowcase } from "./content";
 export default function RoomsShowcase() {
   return (
-    <section className="">
+    <section>
       <div className="grid gap-8 md:gap-12 lg:grid-cols-2">
         <div className="card">
           <div className="h-64 w-full sm:h-72 md:h-80 lg:h-96">
@@ -10,13 +11,13 @@ export default function RoomsShowcase() {
           </div>
           <div className="bg-primary-50 p-4 md:p-6">
             <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
-              Pokoje gościnne
+              {CRoomsShowcase.newHouse.title}
             </h3>
             <p className="my-3 text-primary-700/80 md:my-4">
-              4 funkcjonalne pokoje wraz z prywatną łazienką
+              {CRoomsShowcase.newHouse.description}
             </p>
             <p className="mt-10 text-lg font-semibold text-primary-500 md:text-xl">
-              Od 80 zł / noc
+              {CRoomsShowcase.newHouse.price}
             </p>
           </div>
         </div>
@@ -27,14 +28,13 @@ export default function RoomsShowcase() {
           </div>
           <div className="bg-primary-50 p-4 md:p-6">
             <h3 className="text-xl font-bold text-primary-700 md:text-2xl">
-              Drewniany dom
+              {CRoomsShowcase.cottage.title}
             </h3>
             <p className="my-3 text-primary-700/80 md:my-4">
-              Przestronny dom z 4 sypialniami, salonem z kominkiem, jadalnią
-              oraz tarasem
+              {CRoomsShowcase.cottage.description}
             </p>
             <p className="text-lg font-semibold text-primary-500 md:text-xl">
-              Cena ustalana indywidualnie
+              {CRoomsShowcase.cottage.price}
             </p>
           </div>
         </div>
