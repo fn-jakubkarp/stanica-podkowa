@@ -9,11 +9,9 @@ const Testimonials: React.FC = () => {
       <div className="container-custom py-4 lg:py-8">
         <div className="mb-8 flex flex-col items-center">
           <div className="max-w-xl text-center">
-            <h2 className="text-3xl font-bold text-primary-700 md:text-4xl lg:text-5xl">
-              {CTestimonials.header}
-            </h2>
+            <h2 className=" font-bold">{CTestimonials.header}</h2>
 
-            <p className="mt-6 max-w-lg text-gray-500 md:text-xl">
+            <p className=" max-w-lg text-gray-500 md:text-xl">
               {CTestimonials.description}
             </p>
           </div>
