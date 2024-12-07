@@ -36,8 +36,8 @@ const Testimonials: React.FC = () => {
   return (
     <section className="bg-primary-50">
       <div className="container-custom py-4 lg:py-8">
-        <div className="mb-8 md:flex md:items-end md:justify-between">
-          <div className="max-w-xl">
+        <div className="mb-8 flex flex-col items-center">
+          <div className="max-w-xl text-center">
             <h2 className="text-3xl font-bold text-primary-700 md:text-4xl lg:text-5xl">
               OPINIE
             </h2>
@@ -47,11 +47,11 @@ const Testimonials: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex cursor-pointer items-center gap-2 font-medium text-primary-700">
-            <button className="btn btn-primary flex w-full ">
+          <div className="mt-6 w-full md:w-auto">
+            <button className="btn btn-primary flex w-full items-center justify-center gap-2">
               <a
                 href={reviewsUrl}
-                className="flex flex-row items-center justify-center gap-2"
+                className="flex items-center gap-2"
                 target="_blank"
                 rel="noopener noreferrer"
               >
