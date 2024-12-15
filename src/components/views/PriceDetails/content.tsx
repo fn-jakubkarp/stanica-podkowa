@@ -17,7 +17,7 @@ export const roomPrices = [
 export const additionalPrices = [
   {
     name: "Sauna",
-    price: "100zł / 1,5h",
+    price: "100zł / 1h",
   },
   {
     name: "Balia",

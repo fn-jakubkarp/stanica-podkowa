@@ -59,7 +59,7 @@ const Footer = () => {
                   className="flex items-center gap-2 text-gray-500 transition-colors duration-200 hover:text-primary-500"
                 >
                   <MdEmail className="text-primary-500" />
-                  stanica.podkowa@gmail.com
+                  stanicapodkowa@gmail.com
                 </a>
               </li>
               <li>
