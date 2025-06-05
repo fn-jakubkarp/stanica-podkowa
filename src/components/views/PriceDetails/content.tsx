@@ -1,7 +1,7 @@
 export const CPriceDetails = {
   header: "Cennik pokoi gościnnych",
   roomNote:
-    "Ceny za pokój przy wynajmnie na minimum 2 doby. Przy wynajmie na jedną dobę ceny ustalane są indywidualnie",
+    "Ceny za pokój przy wynajmnie na minimum 2 doby. Przy wynajmie na jedną dobę, Święta, długie weekendy, Sylwestra itp. ceny ustalane są indywidualnie.",
   additionalNote:
     "W okresie 1 listopada do 31 marca koszt wynajęcia balii wzrasta o 50zł.",
   additional: "Dodatkowe atrakcje",
