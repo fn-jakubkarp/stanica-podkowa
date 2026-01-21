@@ -1,13 +1,13 @@
+import { CardType } from "../components/UI/Card/CardType";
 import * as assets from "../utils/assets";
 import { allSlides } from "./lightboxSlides";
-import { CardType } from "../components/UI/Card/CardType";
 export interface GalleryItemType {
   id: string;
-  image: any;
+  image: string;
   alt: string;
   title: string;
   description: string;
-  slides: any;
+  slides: Array<{ src: string }>;
 }
 
 const mansion = assets.outdoorSummer.forecourt;
@@ -59,7 +59,6 @@ export const galleryData: GalleryItemType[] = [
   },
 ];
 
-
 export const showcaseNewHouse: CardType[] = [
   {
     url: assets.newHouseImages.rooms.double,
@@ -110,4 +109,3 @@ export const showcaseCottage: CardType[] = [
     id: 4,
   },
 ];
-
